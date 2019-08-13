@@ -4,7 +4,6 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 
@@ -17,4 +16,47 @@ class AnimalsController extends AbstractController
     {
         return $this->render('farm.html.twig');
     }
+
+    /**
+     * @Route("bugs", name="bugs_page")
+     */
+    public function bugsController()
+    {
+        return $this->render('bugs.html.twig');
+    }
+
+    /**
+     * @Route("birds", name="birds_page")
+     */
+    public function birdsController()
+    {
+        return $this->render('birds.html.twig');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

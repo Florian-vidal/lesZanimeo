@@ -1,43 +1,46 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Les Zaniméo</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/js/main.js') }}">
-</head>
-<body>
-    <header>
-        <div class="head">
-            <img class="quiz" src="{{ asset('assets/img/quiz.png') }}" alt="" onmouseover="PlaySound('quizSound')"
-                 onmouseout="StopSound('quizSound')">
-            <img class="vigne" src="{{ asset('assets/img/vigne3.png') }}" alt="">
-        </div>
-    </header>
+{% extends 'base/base.html.twig' %}
+
+{% block main %}
     <!--------------------------FARM IMG--------------------------------->
     <main>
-        <div class="content">
+        <div class="contentFamily">
             <div class="farmFamily">
-                <img src="{{ asset('assets/img/farm.png') }}" alt="" onmouseover="PlaySound('farmSound')" onmouseout="StopSound('farmSound')">
+                <img src="{{ asset('assets/img/farm.png') }}" alt="">
                 <div class="dog">
                     <img src="{{ asset('assets/img/dog.png') }}" alt="" onmouseover="PlaySound('dogSound')" onmouseout="StopSound('dogSound')">
+                    <div class="dogText">Salut !</div>
                 </div>
                 <div class="horse">
                     <img src="{{ asset('assets/img/horse.png') }}" alt="" onmouseover="PlaySound('horseSound')" onmouseout="StopSound('horseSound')">
                 </div>
+                <div class="pig">
+                    <img src="{{ asset('assets/img/pig.png') }}" alt="" onmouseover="PlaySound('pigSound')" onmouseout="StopSound('pigSound')">
+                </div>
+
+
+
+
 
             </div>
         </div>
+
+        <!--------------------------MESSAGES POP-UP--------------------------------->
+        <div class="popUpFamily">
+            <span id="f">Clique sur ton animal préféré et écoute son histoire !</span>
+        </div>
+
+        <script>
+            $( document ).ready(function() {
+                $('.popUpFamily').slideUp().delay(1000).slideDown()
+                $('.popUpFamily').slideDown().delay(4000).slideUp()
+            });
+        </script>
 
         <!-----------------------------SONS POP-UP--------------------------------->
         <audio id='quizSound' src="{{ asset('assets/song/quiz.mp3') }}"/>
         <audio id='dogSound' src="{{ asset('assets/song/dog.mp3') }}"/>
         <audio id='horseSound' src="{{ asset('assets/song/horse.mp3') }}"/>
+        <audio id='pigSound' src="{{ asset('assets/song/pig.mp3') }}"/>
 
         <script>
             function PlaySound(soundobj) {
@@ -51,14 +54,6 @@
                 thissound.currentTime = 0;
             }
         </script>
+
     </main>
-    <footer>
-        <div class="foot">
-            <img class="herbe" src="{{ asset('assets/img/herbe2.png') }}" alt="">
-        </div>
-    </footer>
-
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-
-</body>
-</html>
+{% endblock %}

@@ -240,10 +240,8 @@ body {
 }
 /* ---------END ZOOM----------*/
 
-
-
 /* ---------POP UP----------*/
-.popUpMegaphone, .popUpQuiz, .popUpAnimals {
+.popUpMegaphone, .popUpQuiz, .popUpAnimals, .popUpFamily {
     padding: 10px;
     position: absolute;
     background: linear-gradient(#C2976A, rosybrown);
@@ -270,52 +268,91 @@ body {
     border-radius: 10px 10px 10px 10px;
 }
 
-#m, #q, #a {
+#m, #q, #a, #f {
     color: white;
     text-align: center;
 }
 
 /* -------------------------------------FARM PAGE---------------------------------*/
+.contentFamily {
+    width: 100%;
+}
+
 .farmFamily {
-    width: 50%;
-    position: relative;
+    width: 48%;
+    margin: 0 auto;
 }
 
 .farmFamily img {
     width: 100%;
 }
 
-.dog, .horse {
-    cursor: pointer;
-    position: absolute;
-    opacity: 0;
-    /* ---------ZOOM----------*/
-    transition-property: transform;
-    -webkit-transition-property: transform;
-    transition-duration: .5s;
-    transition-timing-function: ease-out;
+.popUpFamily {
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px 10px 10px 10px;
 }
 
-.dog img, .horse img {
+.dog, .horse, .pig {
+    cursor: pointer;
+    position: absolute;
+    opacity: 1;
+}
+
+.dog img, .horse img, .pig img {
     width: 100%;
 }
 
-.dog:hover, .horse:hover {
-    opacity: 1;
-    transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-}
-
 .dog {
-    width: 22%;
-    top: 235px;
-    right: 16px;
+    width: 12%;
+    top: 52%;
+    right: 25%;
 }
 
 .horse {
-    width: 40%;
-    top: 0;
-    left: 250px;
+    width: 15%;
+    top: 20%;
+    left: 40%;
+}
+
+.pig {
+    width: 15%;
+    top: 59%;
+    left: 48%;
+}
+
+.dog .dogText {
+    display: none;
+}
+
+.dog:hover .dogText {
+    display: block;
+}
+
+
+
+
+/* -------------------------------------BUGS PAGE---------------------------------*/
+.bugsFamily {
+    width: 43%;
+    margin: 0 auto;
+}
+
+.bugsFamily img {
+    width: 100%;
+}
+
+
+
+/* -------------------------------------BIRDS PAGE---------------------------------*/
+.birdsFamily {
+    width: 48%;
+    margin: 0 auto;
+}
+
+.birdsFamily img {
+    width: 100%;
 }
 
 

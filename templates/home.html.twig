@@ -1,86 +1,30 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Les Zaniméo</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/js/main.js') }}">
-</head>
-<body>
-    <header>
-        <div class="head">
-            <img class="quiz" src="{{ asset('assets/img/quiz.png') }}" alt="" onmouseover="PlaySound('quizSound')"
-                 onmouseout="StopSound('quizSound')">
-            <img class="vigne" src="{{ asset('assets/img/vigne3.png') }}" alt="">
+{% extends 'base/base.html.twig' %}
+
+{% block main %}
+
+<main>
+    <!--------------------------INTRO VOCALE "Les Zaniméo"--------------------->
+    <div>
+        <div class="title">
+            <img src="{{ asset('assets/img/title2.png') }}" alt="">
         </div>
+        <object data="lesZanimeo.mp3" type="audio/x-mpeg" width="0" height="0">
+            <param name="src" value="lesZanimeo.mp3"/>
+            <param name="controls" value="console"/>
+            <param name="autostart" value="true"/>
+            <param name="loop" value="false"/>
+            <script type="text/javascript">
+                <!--
+                document.write('<embed src="{{ asset('assets/song/lesZanimeo.mp3') }}" width="0" height="0" controls="console" loop="false" autostart="true" ></embed>');
+                //-->
+            </script>
+        </object>
+    </div>
 
-        <!---------------------------ICONE MEGAPHONE------------------------------->
-        <div class="circleMegaphone">
-        </div>
-        <div class="boite play">
-            <img src="{{ asset('assets/img/megaphone.svg') }}" id="player">
-        </div>
-
-        <!--------------------------INTRO VOCALE "Les Zaniméo"--------------------->
-        <div>
-            <div class="title">
-                <img src="{{ asset('assets/img/title2.png') }}" alt="">
-            </div>
-            <object data="lesZanimeo.mp3" type="audio/x-mpeg" width="0" height="0">
-                <param name="src" value="lesZanimeo.mp3"/>
-                <param name="controls" value="console"/>
-                <param name="autostart" value="true"/>
-                <param name="loop" value="false"/>
-                <script type="text/javascript">
-                    <!--
-                    document.write('<embed src="{{ asset('assets/song/lesZanimeo.mp3') }}" width="0" height="0" controls="console" loop="false" autostart="true" ></embed>');
-                    //-->
-                </script>
-            </object>
-        </div>
-
-        <!---------------------------BACKGROUND AUDIO------------------------------->
-        <audio id="background_audio" autoplay="autoplay">
-            <source src="{{ asset('assets/song/nature.mp3') }}" />
-        </audio>
-
-        <!-------------------------BACKGROUND AUDIO ON/OFF--------------------------->
-        <script>
-            var audio = document.getElementById('background_audio');
-
-            document.getElementById('player').addEventListener('click', function (e)
-            {
-                e = e || window.event;
-                audio.muted = !audio.muted;
-                e.preventDefault();
-            }, false);
-        </script>
-
-        <!------------------------SWITCH ICONE MEGAPHONE---------------------------->
-        <script
-                src="https://code.jquery.com/jquery-3.4.1.slim.js"
-                integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
-                crossorigin="anonymous">
-        </script>
-
-        <script>
-            $(function() {
-                $('#player').click(function() {
-                    $('.boite').toggleClass('play').toggleClass('mute');
-                })
-            })
-        </script>
-    </header>
-    <main>
         <div class="content">
             <a href="{{ path('farm_page') }}" class="farm"><img src="{{ asset('assets/img/farm.png') }}" alt="" onmouseover="PlaySound('farmSound')" onmouseout="StopSound('farmSound')"></a>
-            <a href="{{ path('farm_page') }}" class="bugs"><img src="{{ asset('assets/img/bugs.png') }}" alt="" onmouseover="PlaySound('bugsSound')" onmouseout="StopSound('bugsSound')"></a>
-            <a href="{{ path('farm_page') }}" class="birds"><img src="{{ asset('assets/img/birds.png') }}" alt="" onmouseover="PlaySound('birdsSound')" onmouseout="StopSound('birdsSound')"></a>
+            <a href="{{ path('bugs_page') }}" class="bugs"><img src="{{ asset('assets/img/bugs.png') }}" alt="" onmouseover="PlaySound('bugsSound')" onmouseout="StopSound('bugsSound')"></a>
+            <a href="{{ path('birds_page') }}" class="birds"><img src="{{ asset('assets/img/birds.png') }}" alt="" onmouseover="PlaySound('birdsSound')" onmouseout="StopSound('birdsSound')"></a>
 
             <!--------------------------MESSAGES POP-UP--------------------------------->
             <div class="popUpMegaphone">
@@ -136,13 +80,5 @@
             </script>
         </div>
     </main>
-    <footer>
-        <div class="foot">
-            <img class="herbe" src="{{ asset('assets/img/herbe2.png') }}" alt="">
-        </div>
-    </footer>
 
-<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-
-</body>
-</html>
+{% endblock %}
