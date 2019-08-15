@@ -3,6 +3,8 @@
 {% block main %}
 
 <main>
+    <img class="quiz" src="{{ asset('assets/img/quiz.png') }}" alt="" onmouseover="PlaySound('quizSound')"
+     onmouseout="StopSound('quizSound')">
     <!--------------------------INTRO VOCALE "Les Zaniméo"--------------------->
     <div>
         <div class="title">
@@ -51,7 +53,7 @@
             </script>
 
             <div class="popUpAnimals">
-                <span id="a">Choisi ta famille d'animaux et écoute ce qu'ils ont à te raconter !</span>
+                <span id="a">Choisis ta famille d'animaux et écoute ce qu'ils ont à te raconter !</span>
             </div>
             <script>
                 $( document ).ready(function() {

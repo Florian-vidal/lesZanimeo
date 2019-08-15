@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+</head>
+<body>
+
+<header>
+    <div class="home">
+        <a href="{{ path('home_lesZanimeo') }}"><img src="{{ asset('assets/img/title2.png') }}" alt=""></a>
+    </div>
+    <h1>Le chien</h1>
+</header>
+
+<main>
+    <div class="contentAnimals">
+        <div class="dogPicture">
+            <img src="{{ asset('assets/img/dog.png') }}" alt="">
+        </div>
+        <div class="dogStory">
+            <p>J’appartiens à la famille des canidés et je suis le plus ancien animal domestique.
+                De nos jours, je suis considéré comme le meilleur ami de l’homme.<br><br>
+
+                Mes pattes postérieures ont 4 doigts et mes pattes antérieures en ont 5.
+                Chacun de mes doigts est recouvert d’un coussinet dur.<br><br>
+
+                Je ne manque jamais de flair. Bien dressé, j’aide les aveugles à traverser la rue et
+                je peux aussi être un excellent pisteur dans les avalanches.<br><br>
+
+                Je suis sociable et joueur et souvent lorsque je suis content, je remue la queue.<br><br>
+
+                Il existe plus de 300 races de chiens, comme mon cousin le beauceron, le husky,
+                le berger allemand et beaucoup d’autres.<br><br>
+
+                Le chien aboie, jappe, hurle, gronde ou clabaude.</p>
+        </div>
+    </div>
+    <figure>
+        <figcaption>Ecoute l'histoire du chien !</figcaption>
+        <br>
+        <audio controls src="{{ asset('assets/song/leCochon.m4a') }}"><code>audio</code> element.
+        </audio>
+    </figure>
+</main>
+
+<footer>
+
+</footer>
+
+</body>
+</html>

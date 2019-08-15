@@ -1,0 +1,156 @@
+/* -------------------------------------FARM PAGE---------------------------------*/
+.titleFarm {
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  top: 18%;
+  transform: translateX(-50%);
+  z-index: -1;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+}
+
+.titleFarm img {
+  width: 100%;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.contentFamily {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.farmFamily {
+  width: 46%;
+}
+
+.farmFamily img {
+  width: 100%;
+}
+
+/* ---------FAMILLES ANNEXES----------*/
+.sideFamily1, .sideFamily2 {
+  cursor: pointer;
+  width: 15%;
+  opacity: 0.5;
+  transition-property: transform;
+  -webkit-transition-property: transform;
+  transition-duration: .5s;
+  transition-timing-function: ease-out;
+}
+
+.sideFamily1 img, .sideFamily2 img {
+  width: 100%;
+}
+
+.sideFamily1:hover, .sideFamily2:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+}
+
+.popUpFamily {
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px 10px 10px 10px;
+}
+
+.popUpSideFamily {
+  top: 80%;
+  right: 10%;
+  border-radius: 10px 0px 10px 10px;
+}
+
+.dog, .horse, .pig {
+  cursor: pointer;
+  position: absolute;
+  opacity: 1;
+}
+
+.dog img, .horse img, .pig img {
+  width: 100%;
+}
+
+.dog {
+  width: 12%;
+  top: 52%;
+  right: 25%;
+}
+
+.horse {
+  width: 15%;
+  top: 20%;
+  left: 40%;
+}
+
+.pig {
+  width: 12%;
+  top: 57%;
+  left: 50%;
+}
+
+.dog .animalText, .horse .animalText, .pig .animalText {
+  display: none;
+}
+
+.dog:hover .animalText, .horse:hover .animalText, .pig:hover .animalText{
+  display: block;
+  -webkit-animation-name: jello;
+  animation-name: jello;
+  animation-duration: 1.5s;
+}

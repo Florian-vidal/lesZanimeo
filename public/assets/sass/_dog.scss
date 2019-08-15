@@ -1,0 +1,44 @@
+/* ------------------DOG PAGE-----------------*/
+
+.contentAnimals {
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h1 {
+  font-size: 400%;
+  text-align: center;
+  color: rosybrown;
+}
+
+.dogPicture {
+  width: 20%;
+  margin-left: 100px;
+}
+
+.dogPicture img {
+  width: 100%;
+}
+
+.dogStory {
+  width: 50%;
+  margin: 50px;
+}
+
+.dogStory p {
+
+}
+
+figure {
+  width: 20%;
+  margin-left: 150px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.test {
+  font-size: 600%;
+  color: black;
+}

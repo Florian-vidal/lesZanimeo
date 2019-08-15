@@ -4,11 +4,18 @@
     <!--------------------------FARM IMG--------------------------------->
     <main>
         <div class="contentFamily">
+            <div class="sideFamily2">
+                <img src="{{ asset('assets/img/birds.png') }}" alt="">
+            </div>
+            <div class="titleFarm">
+                <img src="{{ asset('assets/img/titleFarm.png') }}" alt="">
+            </div>
             <div class="farmFamily">
                 <img src="{{ asset('assets/img/farm.png') }}" alt="">
                 <div class="dog">
-                    <img src="{{ asset('assets/img/dogHitbox.png') }}" alt="" onmouseover="PlaySound('dogSound')" onmouseout="StopSound('dogSound')">
-                    <div class="animalText">Je suis le Chien !</div>
+                    <a href="{{ path('dog_page') }}"><img src="{{ asset('assets/img/dogHitbox.png') }}" alt="" onmouseover="PlaySound('dogSound')" onmouseout="StopSound('dogSound')">
+                        <div class="animalText">Je suis le Chien !</div>
+                    </a>
                 </div>
                 <div class="horse">
                     <img src="{{ asset('assets/img/horseHitbox.png') }}" alt="" onmouseover="PlaySound('horseSound')" onmouseout="StopSound('horseSound')">
@@ -17,13 +24,10 @@
                 <div class="pig">
                     <img src="{{ asset('assets/img/pigHitbox.png') }}" alt="" onmouseover="PlaySound('pigSound')" onmouseout="StopSound('pigSound')">
                     <div class="animalText">Je suis le Cochon !</div>
-
                 </div>
-
-
-
-
-
+            </div>
+            <div class="sideFamily1">
+                <img src="{{ asset('assets/img/bugs2.png') }}" alt="">
             </div>
         </div>
 
@@ -38,6 +42,19 @@
                 $('.popUpFamily').slideDown().delay(4000).slideUp()
             });
         </script>
+
+        <div class="popUpSideFamily">
+            <span id="s">Clique ici pour découvrir les autres familles d'animaux !</span>
+        </div>
+
+        <script>
+            $( document ).ready(function() {
+                $('.popUpSideFamily').slideUp().delay(6000).slideDown()
+                $('.popUpSideFamily').slideDown().delay(4000).slideUp()
+            });
+        </script>
+
+
 
         <!-----------------------------SONS POP-UP--------------------------------->
         <audio id='quizSound' src="{{ asset('assets/song/quiz.mp3') }}"/>

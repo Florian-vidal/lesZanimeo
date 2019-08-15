@@ -1,0 +1,44 @@
+{% extends 'base/base.html.twig' %}
+
+{% block main %}
+    <!--------------------------FARM IMG--------------------------------->
+    <main>
+        <div class="contentFamily">
+            <div class="bugsFamily">
+                <img src="{{ asset('assets/img/bugs2.png') }}" alt="">
+            </div>
+        </div>
+
+        <!--------------------------MESSAGES POP-UP--------------------------------->
+        <div class="popUpFamily">
+            <span id="f">Clique sur ton animal préféré et écoute son histoire !</span>
+        </div>
+
+        <script>
+            $( document ).ready(function() {
+                $('.popUpFamily').slideUp().delay(1000).slideDown()
+                $('.popUpFamily').slideDown().delay(4000).slideUp()
+            });
+        </script>
+
+        <!-----------------------------SONS POP-UP--------------------------------->
+        <audio id='quizSound' src="{{ asset('assets/song/quiz.mp3') }}"/>
+        <audio id='dogSound' src="{{ asset('assets/song/dog.mp3') }}"/>
+        <audio id='horseSound' src="{{ asset('assets/song/horse.mp3') }}"/>
+        <audio id='pigSound' src="{{ asset('assets/song/pig.mp3') }}"/>
+
+        <script>
+            function PlaySound(soundobj) {
+                var thissound=document.getElementById(soundobj);
+                thissound.play();
+            }
+
+            function StopSound(soundobj) {
+                var thissound=document.getElementById(soundobj);
+                thissound.pause();
+                thissound.currentTime = 0;
+            }
+        </script>
+
+    </main>
+{% endblock %}

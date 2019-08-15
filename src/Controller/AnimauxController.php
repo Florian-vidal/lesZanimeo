@@ -1,13 +1,12 @@
 <?php
 
-
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 
-class AnimalsController extends AbstractController
+class AnimauxController extends AbstractController
 {
     /**
      * @Route("farm", name="farm_page")
@@ -33,26 +32,13 @@ class AnimalsController extends AbstractController
         return $this->render('birds.html.twig');
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    /**
+     * @Route("dog", name="dog_page")
+     */
+    public function dogController()
+    {
+        return $this->render('animals/dog.html.twig');
+    }
 
 
 
