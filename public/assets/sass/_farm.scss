@@ -1,4 +1,3 @@
-/* -------------------------------------FARM PAGE---------------------------------*/
 .titleFarm {
   width: 70%;
   position: absolute;
@@ -15,6 +14,7 @@
   width: 100%;
 }
 
+/*--------------FONDU---------------*/
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -67,6 +67,7 @@
     transform: translate3d(0, 0, 0);
   }
 }
+/*--------------END FONDU---------------*/
 
 .contentFamily {
   width: 100%;
@@ -83,7 +84,7 @@
   width: 100%;
 }
 
-/* ---------FAMILLES ANNEXES----------*/
+/* ---------FAMILLES ANIMAUX ANNEXES----------*/
 .sideFamily1, .sideFamily2 {
   cursor: pointer;
   width: 15%;
@@ -101,19 +102,6 @@
 .sideFamily1:hover, .sideFamily2:hover {
   transform: scale(1.2);
   -webkit-transform: scale(1.2);
-}
-
-.popUpFamily {
-  top: 12%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 10px 10px 10px 10px;
-}
-
-.popUpSideFamily {
-  top: 80%;
-  right: 10%;
-  border-radius: 10px 0px 10px 10px;
 }
 
 .dog, .horse, .pig {
@@ -144,13 +132,3 @@
   left: 50%;
 }
 
-.dog .animalText, .horse .animalText, .pig .animalText {
-  display: none;
-}
-
-.dog:hover .animalText, .horse:hover .animalText, .pig:hover .animalText{
-  display: block;
-  -webkit-animation-name: jello;
-  animation-name: jello;
-  animation-duration: 1.5s;
-}

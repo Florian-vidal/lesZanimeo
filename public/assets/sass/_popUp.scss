@@ -1,0 +1,56 @@
+.popUpMegaphone, .popUpQuiz, .popUpHome, .popUpFamily, .animalText, .popUpSideFamily {
+  padding: 10px;
+  position: absolute;
+  background: linear-gradient(#C2976A, rosybrown);
+  box-shadow: 5px 5px 7px -1px rgba(207,207,207,1);
+  display: none;
+}
+
+#m, #q, #a, #f, .animalText, #s {
+  color: white;
+  text-align: center;
+}
+
+.popUpMegaphone {
+  top: 13%;
+  right: 5%;
+  border-radius: 10px 0px 10px 10px;
+}
+
+.popUpQuiz {
+  top: 20%;
+  left: 6%;
+  border-radius: 0px 10px 10px 10px;
+}
+
+.popUpHome {
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px 10px 10px 10px;
+}
+
+.popUpFamily {
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px 10px 10px 10px;
+}
+
+.popUpSideFamily {
+  top: 80%;
+  right: 10%;
+  border-radius: 10px 0px 10px 10px;
+}
+
+
+.dog .animalText, .horse .animalText, .pig .animalText {
+  display: none;
+}
+
+.dog:hover .animalText, .horse:hover .animalText, .pig:hover .animalText{
+  display: block;
+  -webkit-animation-name: jello;
+  animation-name: jello;
+  animation-duration: 1.5s;
+}

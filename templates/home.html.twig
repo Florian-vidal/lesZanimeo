@@ -1,11 +1,12 @@
-{% extends 'base/base1.html.twig' %}
+{% extends 'base/base.html.twig' %}
 
 {% block main %}
 
 <main>
+
     <img class="quiz" src="{{ asset('assets/img/quiz.png') }}" alt="" onmouseover="PlaySound('quizSound')"
-     onmouseout="StopSound('quizSound')">
-    <!--------------------------INTRO VOCALE "Les Zaniméo"--------------------->
+         onmouseout="StopSound('quizSound')">
+    <!--------------------------TITLE + INTRO VOCALE "Les Zaniméo"--------------------->
     <div>
         <div class="title">
             <img src="{{ asset('assets/img/title2.png') }}" alt="">
@@ -23,64 +24,104 @@
         </object>
     </div>
 
-        <div class="content">
-            <a href="{{ path('farm_page') }}" class="farm"><img src="{{ asset('assets/img/farm.png') }}" alt="" onmouseover="PlaySound('farmSound')" onmouseout="StopSound('farmSound')"></a>
-            <a href="{{ path('bugs_page') }}" class="bugs"><img src="{{ asset('assets/img/bugs.png') }}" alt="" onmouseover="PlaySound('bugsSound')" onmouseout="StopSound('bugsSound')"></a>
-            <a href="{{ path('birds_page') }}" class="birds"><img src="{{ asset('assets/img/birds.png') }}" alt="" onmouseover="PlaySound('birdsSound')" onmouseout="StopSound('birdsSound')"></a>
+    <!---------------------------ICONE MEGAPHONE------------------------------->
+    <div class="circleMegaphone">
+    </div>
+    <div class="button play">
+        <img src="{{ asset('assets/img/megaphone.svg') }}" id="player">
+    </div>
 
-            <!--------------------------MESSAGES POP-UP--------------------------------->
-            <div class="popUpMegaphone">
-                <span id="m">Tu peux désactiver le son en cliquant sur l'icône !</span>
-            </div>
-            <script>
-                $( document ).ready(function() {
-                    $('.circleMegaphone').slideUp().delay(2000).slideDown();
-                    $('.boite').slideUp().delay(2000).slideDown();
-                    $('.popUpMegaphone').slideUp().delay(2000).slideDown();
-                    $('.popUpMegaphone').slideDown().delay(5000).slideUp()
-                });
-            </script>
+    <!---------------------------BACKGROUND AUDIO (SON NATURE)------------------------------->
+    <audio id="background_audio" autoplay="autoplay">
+        <source src="{{ asset('assets/song/nature.mp3') }}" />
+    </audio>
 
-            <div class="popUpQuiz">
-                <span id="q">Clique ici pour jouer au Quiz !</span>
-            </div>
-            <script>
-                $( document ).ready(function() {
-                    $('.quiz').slideUp().delay(8000).slideDown()
-                    $('.popUpQuiz').slideUp().delay(8000).slideUp()
-                    $('.popUpQuiz').slideDown().delay(3000).slideUp()
-                });
-            </script>
+    <!-------------------------BACKGROUND AUDIO ON/OFF--------------------------->
+    <script>
+        var audio = document.getElementById('background_audio');
 
-            <div class="popUpAnimals">
-                <span id="a">Choisis ta famille d'animaux et écoute ce qu'ils ont à te raconter !</span>
-            </div>
-            <script>
-                $( document ).ready(function() {
-                    $('.popUpAnimals').slideUp().delay(12000).slideDown()
-                    $('.popUpAnimals').slideDown().delay(5000).slideUp()
-                });
-            </script>
+        document.getElementById('player').addEventListener('click', function (e)
+        {
+            e = e || window.event;
+            audio.muted = !audio.muted;
+            e.preventDefault();
+        }, false);
+    </script>
 
-            <!-----------------------------SONS POP-UP--------------------------------->
-            <audio id='quizSound' src="{{ asset('assets/song/quiz.mp3') }}"/>
-            <audio id='farmSound' src="{{ asset('assets/song/farm.mp3') }}"/>
-            <audio id='bugsSound' src="{{ asset('assets/song/bugs.mp3') }}"/>
-            <audio id='birdsSound' src="{{ asset('assets/song/birds.mp3') }}"/>
+    <!------------------------SWITCH ICONE MEGAPHONE---------------------------->
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.js"
+            integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+            crossorigin="anonymous">
+    </script>
 
-            <script>
-                function PlaySound(soundobj) {
-                    var thissound=document.getElementById(soundobj);
-                    thissound.play();
-                }
+    <script>
+        $(function() {
+            $('#player').click(function() {
+                $('.button').toggleClass('play').toggleClass('mute');
+            })
+        })
+    </script>
 
-                function StopSound(soundobj) {
-                    var thissound=document.getElementById(soundobj);
-                    thissound.pause();
-                    thissound.currentTime = 0;
-                }
-            </script>
+    <!--------------------------IMAGES FAMILLES ANIMAUX--------------------------------->
+    <div class="content">
+        <a href="{{ path('farm_page') }}" class="farmHome"><img src="{{ asset('assets/img/farm.png') }}" alt="" onmouseover="PlaySound('farmSound')" onmouseout="StopSound('farmSound')"></a>
+        <a href="{{ path('bugs_page') }}" class="bugsHome"><img src="{{ asset('assets/img/bugs.png') }}" alt="" onmouseover="PlaySound('bugsSound')" onmouseout="StopSound('bugsSound')"></a>
+        <a href="{{ path('birds_page') }}" class="birdsHome"><img src="{{ asset('assets/img/birds.png') }}" alt="" onmouseover="PlaySound('birdsSound')" onmouseout="StopSound('birdsSound')"></a>
+
+        <!--------------------------MESSAGES POP-UP--------------------------------->
+        <div class="popUpMegaphone">
+            <span id="m">Tu peux désactiver le son en cliquant sur l'icône !</span>
         </div>
-    </main>
+        <script>
+            $( document ).ready(function() {
+                $('.circleMegaphone').slideUp().delay(2000).slideDown();
+                $('.button').slideUp().delay(2000).slideDown();
+                $('.popUpMegaphone').slideUp().delay(2000).slideDown();
+                $('.popUpMegaphone').slideDown().delay(5000).slideUp()
+            });
+        </script>
+
+        <div class="popUpQuiz">
+            <span id="q">Clique ici pour jouer au Quiz !</span>
+        </div>
+        <script>
+            $( document ).ready(function() {
+                $('.quiz').slideUp().delay(8000).slideDown()
+                $('.popUpQuiz').slideUp().delay(8000).slideUp()
+                $('.popUpQuiz').slideDown().delay(3000).slideUp()
+            });
+        </script>
+
+        <div class="popUpHome">
+            <span id="a">Choisis ta famille d'animaux et écoute ce qu'ils ont à te raconter !</span>
+        </div>
+        <script>
+            $( document ).ready(function() {
+                $('.popUpHome').slideUp().delay(12000).slideDown()
+                $('.popUpHome').slideDown().delay(5000).slideUp()
+            });
+        </script>
+
+        <!-----------------------------SONS POP-UP--------------------------------->
+        <audio id='quizSound' src="{{ asset('assets/song/quiz.mp3') }}"/>
+        <audio id='farmSound' src="{{ asset('assets/song/farm.mp3') }}"/>
+        <audio id='bugsSound' src="{{ asset('assets/song/bugs.mp3') }}"/>
+        <audio id='birdsSound' src="{{ asset('assets/song/birds.mp3') }}"/>
+
+        <script>
+            function PlaySound(soundobj) {
+                var thissound=document.getElementById(soundobj);
+                thissound.play();
+            }
+
+            function StopSound(soundobj) {
+                var thissound=document.getElementById(soundobj);
+                thissound.pause();
+                thissound.currentTime = 0;
+            }
+        </script>
+    </div>
+</main>
 
 {% endblock %}

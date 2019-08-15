@@ -1,15 +1,19 @@
-{% extends 'base/base1.html.twig' %}
+{% extends 'base/base.html.twig' %}
 
 {% block main %}
-    <!--------------------------FARM IMG--------------------------------->
+
     <main>
         <div class="contentFamily">
-            <div class="sideFamily2">
-                <img src="{{ asset('assets/img/birds.png') }}" alt="">
-            </div>
             <div class="titleFarm">
                 <img src="{{ asset('assets/img/titleFarm.png') }}" alt="">
             </div>
+
+            <!--------------------------IMAGE BIRDS--------------------------------->
+            <div class="sideFamily1">
+                <img src="{{ asset('assets/img/birds.png') }}" alt="">
+            </div>
+
+            <!--------------------------IMAGE FARM--------------------------------->
             <div class="farmFamily">
                 <img src="{{ asset('assets/img/farm.png') }}" alt="">
                 <div class="dog">
@@ -26,7 +30,9 @@
                     <div class="animalText">Je suis le Cochon !</div>
                 </div>
             </div>
-            <div class="sideFamily1">
+
+            <!--------------------------IMAGE BUGS--------------------------------->
+            <div class="sideFamily2">
                 <img src="{{ asset('assets/img/bugs2.png') }}" alt="">
             </div>
         </div>
@@ -54,8 +60,6 @@
             });
         </script>
 
-
-
         <!-----------------------------SONS POP-UP--------------------------------->
         <audio id='quizSound' src="{{ asset('assets/song/quiz.mp3') }}"/>
         <audio id='dogSound' src="{{ asset('assets/song/dog.mp3') }}"/>
@@ -74,6 +78,5 @@
                 thissound.currentTime = 0;
             }
         </script>
-
     </main>
 {% endblock %}
