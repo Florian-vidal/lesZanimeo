@@ -45,12 +45,16 @@ table {
 body {
   font-family: "Avenir Next"; }
 
-.popUpMegaphone, .popUpQuiz, .popUpHome, .popUpFamily, .animalText, .popUpSideFamily1, .popUpSideFamily2 {
+.popUpMegaphone, .popUpQuiz, .popUpHome, .popUpFamily, .animalText, .popUpSideFamily {
   padding: 10px;
   position: absolute;
   background: linear-gradient(#C2976A, rosybrown);
   box-shadow: 5px 5px 7px -1px #cfcfcf;
   display: none; }
+
+#m, #q, #a, #f, .animalText, #s {
+  color: white;
+  text-align: center; }
 
 .popUpMegaphone {
   top: 13%;
@@ -68,25 +72,25 @@ body {
   transform: translateX(-50%);
   border-radius: 10px 10px 10px 10px; }
 
-#m, #q, #a, #f, .animalText, #s1, #s2 {
-  color: white;
-  text-align: center; }
-
 .popUpFamily {
   top: 12%;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 10px 10px 10px 10px; }
 
-.popUpSideFamily1 {
+.popUpSideFamily {
   top: 80%;
   right: 10%;
   border-radius: 10px 0px 10px 10px; }
 
-.popUpSideFamily2 {
-  top: 80%;
-  left: 10%;
-  border-radius: 10px 0px 10px 10px; }
+.dog .animalText, .horse .animalText, .pig .animalText {
+  display: none; }
+
+.dog:hover .animalText, .horse:hover .animalText, .pig:hover .animalText {
+  display: block;
+  -webkit-animation-name: jello;
+  animation-name: jello;
+  animation-duration: 1.5s; }
 
 .head {
   width: 100%; }
@@ -102,7 +106,8 @@ body {
   width: 100%;
   margin-top: 50px;
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  /*background: blue;*/ }
 
 .quiz {
   width: 10%;
