@@ -3,9 +3,8 @@
 {% block main %}
 
 <main>
-
-    <img class="quiz" src="{{ asset('assets/img/quiz.png') }}" alt="" onmouseover="PlaySound('quizSound')"
-         onmouseout="StopSound('quizSound')">
+    <a href="{{ path('quiz') }}"><img class="quiz" src="{{ asset('assets/img/quiz.png') }}" alt="" onmouseover="PlaySound('quizSound')"
+         onmouseout="StopSound('quizSound')"></a>
     <!--------------------------TITLE + INTRO VOCALE "Les Zaniméo"--------------------->
     <div>
         <div class="title">

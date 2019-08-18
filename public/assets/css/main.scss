@@ -1,13 +1,14 @@
-@import 'cssReset';
-@import 'popUp';
+@import '_cssReset';
+@import '_popUp';
 
-@import 'header';
-@import 'footer';
+@import '_header';
+@import '_footer';
 
-@import 'home';
+@import '_home';
+@import '_quiz';
 
-@import 'farm';
-@import 'bugs';
-@import 'birds';
+@import '_farm';
+@import '_bugs';
+@import '_birds';
 
-@import 'dog';
+@import '_dog';
