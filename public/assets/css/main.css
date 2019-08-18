@@ -45,14 +45,17 @@ table {
 body {
   font-family: "Avenir Next"; }
 
-.popUpMegaphone, .popUpQuiz, .popUpHome, .popUpFamily, .animalText, .popUpSideFamily {
+.popUpMegaphone, .popUpQuiz, .popUpHome, .animalText, .popUpFamily {
   padding: 10px;
   position: absolute;
   background: linear-gradient(#C2976A, rosybrown);
   box-shadow: 5px 5px 7px -1px #cfcfcf;
   display: none; }
 
-#m, #q, #a, #f, .animalText, #s {
+/*body {
+  background: blue;
+}*/
+#m, #q, #a, #f, .animalText, #popUpFamily {
   color: white;
   text-align: center; }
 
@@ -73,15 +76,10 @@ body {
   border-radius: 10px 10px 10px 10px; }
 
 .popUpFamily {
-  top: 12%;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 10px 10px 10px 10px; }
-
-.popUpSideFamily {
-  top: 80%;
-  right: 10%;
-  border-radius: 10px 0px 10px 10px; }
 
 .dog .animalText, .horse .animalText, .pig .animalText {
   display: none; }
@@ -202,6 +200,22 @@ body {
   88.8% {
     -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
     transform: skewX(-0.1953125deg) skewY(-0.1953125deg); } }
+.headFamily {
+  width: 100%; }
+
+.homeReturn {
+  width: 15%; }
+
+.homebutton {
+  width: 100%; }
+
+.homeReturnTitle {
+  width: 100%; }
+
+.vigne {
+  width: 85%;
+  float: right; }
+
 .titleFarm {
   width: 70%;
   position: absolute;
@@ -318,7 +332,18 @@ body {
 .birdsFamily img {
   width: 100%; }
 
-/* ------------------DOG PAGE-----------------*/
+.homeReturn {
+  width: 15%;
+  margin-left: 20px; }
+
+.homeReturn img {
+  width: 100%; }
+
+.homeButton {
+  width: 35px;
+  margin-left: 100px;
+  margin-top: 20px; }
+
 .contentAnimals {
   width: 100%;
   display: flex;

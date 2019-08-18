@@ -1,13 +1,11 @@
-{% extends 'base/base.html.twig' %}
+{% extends 'base/baseFamily.html.twig' %}
 
 {% block main %}
-
     <main>
         <div class="contentFamily">
             <div class="titleFarm">
                 <img src="{{ asset('assets/img/titleFarm.png') }}" alt="">
             </div>
-
             <!--------------------------IMAGE BIRDS--------------------------------->
             <div class="sideFamily1">
                 <img src="{{ asset('assets/img/birds.png') }}" alt="">
@@ -39,24 +37,12 @@
 
         <!--------------------------MESSAGES POP-UP--------------------------------->
         <div class="popUpFamily">
-            <span id="f">Clique sur ton animal préféré et écoute son histoire !</span>
+            <span id="family">Choisis ta famille d'animaux et écoute ce qu'ils ont à te raconter !</span>
         </div>
-
         <script>
             $( document ).ready(function() {
                 $('.popUpFamily').slideUp().delay(1000).slideDown()
-                $('.popUpFamily').slideDown().delay(4000).slideUp()
-            });
-        </script>
-
-        <div class="popUpSideFamily">
-            <span id="s">Clique ici pour découvrir les autres familles d'animaux !</span>
-        </div>
-
-        <script>
-            $( document ).ready(function() {
-                $('.popUpSideFamily').slideUp().delay(6000).slideDown()
-                $('.popUpSideFamily').slideDown().delay(4000).slideUp()
+                $('.popUpFamily').slideDown().delay(5000).slideUp()
             });
         </script>
 
