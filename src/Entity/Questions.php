@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -17,47 +19,66 @@ class Questions
     private $id;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="string", length=255)
      */
-    private $libelle_question;
+    private $libelle;
 
     /**
      * @ORM\Column(type="text")
      */
-    private $libelle_reponse;
+    private $resume;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
     private $Image;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Responses", mappedBy="questions")
+     */
+    private $responses;
+
+    public function __construct()
+    {
+        $this->responses = new ArrayCollection();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getResponses()
+    {
+        return $this->responses;
+    }
+
+    /**
+     * @param mixed $responses
+     */
+    public function setResponses($responses): void
+    {
+        $this->responses = $responses;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getLibelleQuestion(): ?string
+    public function getLibelle(): ?string
     {
-        return $this->libelle_question;
+        return $this->libelle;
     }
 
-    public function setLibelleQuestion(string $libelle_question): self
+    public function setLibelle(string $libelle): self
     {
-        $this->libelle_question = $libelle_question;
+        $this->libelle = $libelle;
 
         return $this;
     }
 
-    public function getLibelleReponse(): ?string
+    public function getResume(): ?string
     {
-        return $this->libelle_reponse;
-    }
-
-    public function setLibelleReponse(string $libelle_reponse): self
-    {
-        $this->libelle_reponse = $libelle_reponse;
-
-        return $this;
+        return $this->resume;
     }
 
     public function getImage(): ?string

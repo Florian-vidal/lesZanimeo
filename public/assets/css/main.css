@@ -229,12 +229,12 @@ body {
 .contentLeftQuiz img {
   width: 30%; }
 
-.contentRightQuiz, .contentFalseQuiz {
+.contentRightQuiz, .contentTextQuiz {
   width: 40%;
   padding: 20px;
   text-align: center; }
 
-.contentRightQuiz h1 {
+.contentRightQuiz h1, .contentTextQuiz h1 {
   color: #5eb5e0; }
 
 .questionNumber {
@@ -257,9 +257,6 @@ body {
 
 .contentImgQuiz img {
   width: 70%; }
-
-.contentFalseQuiz h1 {
-  color: crimson; }
 
 .homebutton {
   width: 100%; }
