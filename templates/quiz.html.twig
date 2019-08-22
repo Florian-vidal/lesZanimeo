@@ -1,0 +1,31 @@
+{% extends 'base/baseQuiz.html.twig' %}
+
+{% block main %}
+    <main>
+        <div class="contentQuiz">
+            <a href="{{ path('home_lesZanimeo') }}"><img class="homeButton" src="{{ asset('assets/img/home.svg') }}" alt=""></a>
+            <div class="quizHeader">
+                <img src="{{ asset('assets/img/quiz2.png') }}" alt="">
+            </div>
+
+            <div class="content2Quiz">
+                <div class="contentLeftQuiz">
+                    <img class="imgQuizTop" src="{{ asset('assets/img/farm.png') }}" alt="">
+                    <img class="imgQuizEnd" src="{{ asset('assets/img/bugs.png') }}" alt="">
+                    <img class="imgQuizTop" src="{{ asset('assets/img/birds.png') }}" alt="">
+                </div>
+
+                <div class="contentRightQuiz">
+                    <h1>Teste tes connaissances !</h1><br><br>
+                    <p>18 questions pour tester
+                        tes connaissances.<br>Lance-toi
+                        pour savoir si tu as bien
+                        tout retenu !</p><br><br>
+                    <div class="btn-group" role="group" aria-label="Button">
+                        <a href="{{ path('questions', {'id': 1}) }}"><button type="button" class="btn btn-info">Lancer le Quiz</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

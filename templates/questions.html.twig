@@ -1,0 +1,29 @@
+{% extends 'base/baseQuiz.html.twig' %}
+
+{% block main %}
+    <main>
+        <div class="contentQuiz">
+            <a href="{{ path('home_lesZanimeo') }}"><img class="homeButton" src="{{ asset('assets/img/home.svg') }}" alt=""></a>
+            <h1 class="questionNumber">{{ questions.libelle }}</h1>
+
+            <div class="contentQuestionsQuiz">
+                <div class="contentImgQuiz">
+                    <img src="{{ asset('assets/img') }}/{{ questions.image }}" alt="">
+                </div>
+
+                <div class="contentRightQuiz">
+                    <h1>VRAI OU FAUX ?</h1><br><br>
+                    <p>{{ questions.resume }}<br><br><br>
+
+                     <div class="btn-group" role="group" aria-label="Button">
+                            <a href="{{ path('responses', {'id': questions.responses.first.id}) }}"><button type="button" class="btn btn-info">VRAI</button></a>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Button">
+                        <a href="{{ path('responses', {'id': questions.responses.last.id}) }}"><button type="button" class="btn btn-info">FAUX</button></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
