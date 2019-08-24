@@ -3,18 +3,17 @@
 {% block main %}
     <main>
         <div class="contentQuiz">
-            <a href="{{ path('home_lesZanimeo') }}"><img class="homeButton" src="{{ asset('assets/img/home.svg') }}" alt=""></a>
+            <a href="{{ path('home_lesZanimeo') }}"><img class="homeButton" src="{{ asset('assets/img/main/home.svg') }}" alt=""></a>
             <h1 class="questionNumber">{{ responses.libelle }}</h1>
             <div class="contentQuestionsQuiz">
                 <div class="contentImgQuiz">
-                    <img src="{{ asset('assets/img') }}/{{ responses.image }}" alt="">
+                    <img src="{{ asset('assets/img/animals') }}/{{ responses.image }}" alt="">
                 </div>
                 <div class="contentTextQuiz">
                     <h1>{{ responses.message }}</h1><br><br>
                     <p>{{ responses.resume }}<br><br><br>
                     <div class="btn-group" role="group" aria-label="Button">
-                        <a href="{{ path('questions', {'id': 2}) }}"><button type="button" class="btn btn-info">Continuer</button></a>
-                        }
+                        <a href="{{ path('questions', {'id': questions.id+1}) }}"><button type="button" class="btn btn-info">Continuer</button></a>
                     </div>
                 </div>
 

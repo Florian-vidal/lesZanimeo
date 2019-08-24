@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\AnimauxRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -33,11 +34,16 @@ class AnimauxController extends AbstractController
     }
 
     /**
-     * @Route("dog", name="dog_page")
+     * @Route("animals{id}", name="animals")
      */
-    public function dogController()
+    public function questionsController(AnimauxRepository $animauxRepository, $id)
     {
-        return $this->render('animals/dog.html.twig');
+        $animals = $animauxRepository->find($id);
+        return $this->render('animals/animals.html.twig',
+            [
+                'animals' => $animals
+            ]
+        );
     }
 
 

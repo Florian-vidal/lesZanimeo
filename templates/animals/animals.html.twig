@@ -1,0 +1,23 @@
+{% extends 'base/baseAnimals.html.twig' %}
+
+{% block main %}
+
+    <main>
+        <h1 class="titleAnimals">{{ animals.name }}</h1>
+        <div class="contentAnimals">
+            <div class="animalPicture">
+                <img src="{{ asset('assets/img/animals') }}/{{ animals.image }}" alt="">
+            </div>
+            <div class="animalStory">
+                <p>{{ animals.description|nl2br }}</p>
+            </div>
+        </div>
+        <figure>
+            <figcaption>Ecoute mon histoire !</figcaption>
+            <br>
+            <audio controls src="{{ asset('assets/song') }}/{{ animals.audio }}"><code>audio</code> element.
+            </audio>
+        </figure>
+    </main>
+
+{% endblock %}

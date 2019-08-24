@@ -91,12 +91,12 @@ body {
 }
 
 .play {
-    background-image: url("../img/play.svg");
+    background-image: url("../img/main/play.svg");
     background-repeat: no-repeat;
 }
 
 .mute {
-    background-image: url("../img/mute.svg");
+    background-image: url("../img/main/mute.svg");
     background-repeat: no-repeat;
 }
 

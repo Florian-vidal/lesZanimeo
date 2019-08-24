@@ -1,30 +1,74 @@
-{% extends 'base/base.html.twig' %}
+{% extends 'base/baseFamily.html.twig' %}
 
 {% block main %}
-    <!--------------------------FARM IMG--------------------------------->
     <main>
         <div class="contentFamily">
+            <div class="titleFarm">
+                <img src="{{ asset('assets/img/main/titleFarm.png') }}" alt="">
+            </div>
+            <!--------------------------IMAGE FARM--------------------------------->
+            <div class="sideFamily1">
+                <a href="{{ path('farm_page') }}"><img src="{{ asset('assets/img/animals/farm.png') }}" alt=""></a>
+            </div>
+
+            <!--------------------------IMAGE BUGS--------------------------------->
             <div class="bugsFamily">
-                <img src="{{ asset('assets/img/bugs2.png') }}" alt="">
+                <img src="{{ asset('assets/img/animals/bugs.png') }}" alt="">
+                <div class="ladyBird">
+                    <a href="{{ path('animals', {'id': 7}) }}"><img src="{{ asset('assets/img/animals/ladyBirdHitbox.png') }}" alt="" onmouseover="PlaySound('dogSound')" onmouseout="StopSound('dogSound')">
+                        <div class="animalText">Je suis la coccinelle !</div>
+                    </a>
+                </div>
+
+
+
+
+            </div>
+
+            <!--------------------------IMAGE BIRDS--------------------------------->
+            <div class="sideFamily2">
+                <a href="{{ path('birds_page') }}"><img src="{{ asset('assets/img/animals/birds.png') }}" alt=""></a>
             </div>
         </div>
 
         <!--------------------------MESSAGES POP-UP--------------------------------->
         <div class="popUpFamily">
-            <span id="f">Clique sur ton animal préféré et écoute son histoire !</span>
+            <span id="family">Choisis ta famille d'animaux et écoute ce qu'ils ont à te raconter !</span>
         </div>
-
         <script>
             $( document ).ready(function() {
                 $('.popUpFamily').slideUp().delay(1000).slideDown()
-                $('.popUpFamily').slideDown().delay(4000).slideUp()
+                $('.popUpFamily').slideDown().delay(5000).slideUp()
+            });
+        </script>
+
+        <div class="popUpFamilyAnnexes1">
+            <span id="familyAnnexes">Tu peux voir les autres familles en cliquant ici !</span>
+        </div>
+        <script>
+            $( document ).ready(function() {
+                $('.popUpFamilyAnnexes1').slideUp().delay(7000).slideDown()
+                $('.popUpFamilyAnnexes1').slideDown().delay(5000).slideUp()
+            });
+        </script>
+
+        <div class="popUpFamilyAnnexes2">
+            <span id="familyAnnexes2">Et ici !</span>
+        </div>
+        <script>
+            $( document ).ready(function() {
+                $('.popUpFamilyAnnexes2').slideUp().delay(13000).slideDown()
+                $('.popUpFamilyAnnexes2').slideDown().delay(5000).slideUp()
             });
         </script>
 
         <!-----------------------------SONS POP-UP--------------------------------->
         <audio id='quizSound' src="{{ asset('assets/song/quiz.mp3') }}"/>
-        <audio id='dogSound' src="{{ asset('assets/song/dog.mp3') }}"/>
+        <audio id='ladyBirdSound' src="{{ asset('assets/song/ladyBird.mp3') }}"/>
         <audio id='horseSound' src="{{ asset('assets/song/horse.mp3') }}"/>
+        <audio id='pigSound' src="{{ asset('assets/song/pig.mp3') }}"/>
+        <audio id='pigSound' src="{{ asset('assets/song/pig.mp3') }}"/>
+        <audio id='pigSound' src="{{ asset('assets/song/pig.mp3') }}"/>
         <audio id='pigSound' src="{{ asset('assets/song/pig.mp3') }}"/>
 
         <script>
@@ -39,6 +83,5 @@
                 thissound.currentTime = 0;
             }
         </script>
-
     </main>
 {% endblock %}

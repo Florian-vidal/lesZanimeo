@@ -21,28 +21,24 @@
   align-items: center;
 }
 
-header h1 {
+.titleAnimals {
   font-size: 400%;
   text-align: center;
-  color: rosybrown;
+  color: #5eb5e0;
 }
 
-.dogPicture {
+.animalPicture {
   width: 20%;
   margin-left: 100px;
 }
 
-.dogPicture img {
+.animalPicture img {
   width: 100%;
 }
 
-.dogStory {
+.animalStory {
   width: 50%;
   margin: 50px;
-}
-
-.dogStory p {
-
 }
 
 figure {

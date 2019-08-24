@@ -3,12 +3,12 @@
 {% block main %}
 
 <main>
-    <a href="{{ path('quiz') }}"><img class="quiz" src="{{ asset('assets/img/quiz.png') }}" alt="" onmouseover="PlaySound('quizSound')"
+    <a href="{{ path('quiz') }}"><img class="quiz" src="{{ asset('assets/img/main/quiz.png') }}" alt="" onmouseover="PlaySound('quizSound')"
          onmouseout="StopSound('quizSound')"></a>
     <!--------------------------TITLE + INTRO VOCALE "Les Zaniméo"--------------------->
     <div>
         <div class="title">
-            <img src="{{ asset('assets/img/title2.png') }}" alt="">
+            <img src="{{ asset('assets/img/main/title.png') }}" alt="">
         </div>
         <object data="lesZanimeo.mp3" type="audio/x-mpeg" width="0" height="0">
             <param name="src" value="lesZanimeo.mp3"/>
@@ -17,7 +17,7 @@
             <param name="loop" value="false"/>
             <script type="text/javascript">
                 <!--
-                document.write('<embed src="{{ asset('assets/song/lesZanimeo.mp3') }}" width="0" height="0" controls="console" loop="false" autostart="true" ></embed>');
+                document.write('<embed src="{{ asset('assets/song/lesZanimeo.mp3') }}" width="0" height="0" controls="console" " + " loop="false" autostart="true" ></embed>');
                 //-->
             </script>
         </object>
@@ -27,7 +27,7 @@
     <div class="circleMegaphone">
     </div>
     <div class="button play">
-        <img src="{{ asset('assets/img/megaphone.svg') }}" id="player">
+        <img src="{{ asset('assets/img/main/megaphone.svg') }}" id="player">
     </div>
 
     <!---------------------------BACKGROUND AUDIO (SON NATURE)------------------------------->
@@ -64,9 +64,9 @@
 
     <!--------------------------IMAGES FAMILLES ANIMAUX--------------------------------->
     <div class="content">
-        <a href="{{ path('farm_page') }}" class="farmHome"><img src="{{ asset('assets/img/farm.png') }}" alt="" onmouseover="PlaySound('farmSound')" onmouseout="StopSound('farmSound')"></a>
-        <a href="{{ path('bugs_page') }}" class="bugsHome"><img src="{{ asset('assets/img/bugs.png') }}" alt="" onmouseover="PlaySound('bugsSound')" onmouseout="StopSound('bugsSound')"></a>
-        <a href="{{ path('birds_page') }}" class="birdsHome"><img src="{{ asset('assets/img/birds.png') }}" alt="" onmouseover="PlaySound('birdsSound')" onmouseout="StopSound('birdsSound')"></a>
+        <a href="{{ path('farm_page') }}" class="farmHome"><img src="{{ asset('assets/img/animals/farm.png') }}" alt="" onmouseover="PlaySound('farmSound')" onmouseout="StopSound('farmSound')"></a>
+        <a href="{{ path('bugs_page') }}" class="bugsHome"><img src="{{ asset('assets/img/animals/bugs.png') }}" alt="" onmouseover="PlaySound('bugsSound')" onmouseout="StopSound('bugsSound')"></a>
+        <a href="{{ path('birds_page') }}" class="birdsHome"><img src="{{ asset('assets/img/animals/birds.png') }}" alt="" onmouseover="PlaySound('birdsSound')" onmouseout="StopSound('birdsSound')"></a>
 
         <!--------------------------MESSAGES POP-UP--------------------------------->
         <div class="popUpMegaphone">

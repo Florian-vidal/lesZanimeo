@@ -84,7 +84,15 @@
   width: 46%;
 }
 
-.farmFamily img {
+.bugsFamily {
+  width: 43%;
+}
+
+.birdsFamily {
+  width: 48%;
+}
+
+.farmFamily img, .bugsFamily img, .birdsFamily img {
   width: 100%;
 }
 
@@ -108,13 +116,14 @@
   -webkit-transform: scale(1.2);
 }
 
-.dog, .horse, .pig {
+.dog, .horse, .pig, .rabbit, .sheep, .cow, .ladyBird, .snail, .pheasant, .toucan, .peacock, .parrot, .penguin, .parakeet {
   cursor: pointer;
   position: absolute;
   opacity: 1;
 }
 
-.dog img, .horse img, .pig img {
+.dog img, .horse img, .pig img, .rabbit img, .sheep img, .cow img, .ladyBird img, .snail img,
+.pheasant img, .toucan img, .peacock img, .parrot img, .penguin img, .parakeet img {
   width: 100%;
 }
 
@@ -135,4 +144,72 @@
   top: 57%;
   left: 50%;
 }
+
+.rabbit {
+  width: 8%;
+  top: 37%;
+  left: 53%;
+}
+
+.sheep {
+  width: 12%;
+  top: 49%;
+  left: 40%;
+}
+
+.cow {
+  width: 14%;
+  top: 38%;
+  left: 28%;
+}
+
+.ladyBird {
+  width: 8%;
+  top: 55%;
+  left: 60%;
+}
+
+.pheasant {
+  width: 13%;
+  top: 52%;
+  left: 45%;
+}
+
+.toucan {
+  width: 10%;
+  top: 26%;
+  left: 26%;
+}
+
+.peacock {
+  width: 12%;
+  top: 43%;
+  left: 37%;
+}
+
+.parrot {
+  width: 8%;
+  top: 40%;
+  left: 56%;
+}
+
+.penguin {
+  width: 10%;
+  top: 50%;
+  left: 64%;
+}
+
+.parakeet {
+  width: 8%;
+  top: 61%;
+  left: 29%;
+}
+
+.snail {
+  width: 78%;
+  top: 59%;
+  left: 52%;
+}
+
+
 

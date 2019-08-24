@@ -26,6 +26,16 @@ class Animaux
      */
     private $Image;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $description;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $audio;
+
     public function getName(): ?string
     {
         return $this->name;
@@ -46,6 +56,30 @@ class Animaux
     public function setImage(string $Image): self
     {
         $this->Image = $Image;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getAudio(): ?string
+    {
+        return $this->audio;
+    }
+
+    public function setAudio(string $audio): self
+    {
+        $this->audio = $audio;
 
         return $this;
     }

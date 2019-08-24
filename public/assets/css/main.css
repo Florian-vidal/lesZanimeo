@@ -45,7 +45,7 @@ table {
 body {
   font-family: "Avenir Next"; }
 
-.popUpMegaphone, .popUpQuiz, .popUpHome, .animalText, .popUpFamily {
+.popUpMegaphone, .popUpQuiz, .popUpHome, .animalText, .popUpFamily, .popUpFamilyAnnexes1, .popUpFamilyAnnexes2 {
   padding: 10px;
   position: absolute;
   background: linear-gradient(#C2976A, rosybrown);
@@ -55,19 +55,19 @@ body {
 /*body {
   background: blue;
 }*/
-#m, #q, #a, #f, .animalText, #popUpFamily {
+#m, #q, #a, #f, .animalText, #popUpFamily, #popUpFamilyAnnexes1, #popUpFamilyAnnexes2 {
   color: white;
   text-align: center; }
 
 .popUpMegaphone {
   top: 13%;
   right: 5%;
-  border-radius: 10px 0px 10px 10px; }
+  border-radius: 10px 0 10px 10px; }
 
 .popUpQuiz {
   top: 20%;
   left: 6%;
-  border-radius: 0px 10px 10px 10px; }
+  border-radius: 0 10px 10px 10px; }
 
 .popUpHome {
   top: 35%;
@@ -76,15 +76,31 @@ body {
   border-radius: 10px 10px 10px 10px; }
 
 .popUpFamily {
-  top: 15%;
+  top: 12%;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 10px 10px 10px 10px; }
 
-.dog .animalText, .horse .animalText, .pig .animalText {
+.popUpFamilyAnnexes1 {
+  top: 80%;
+  left: 20%;
+  transform: translateX(-50%);
+  border-radius: 0 10px 10px 10px; }
+
+.popUpFamilyAnnexes2 {
+  top: 80%;
+  right: 10%;
+  transform: translateX(-50%);
+  border-radius: 10px 0 10px 10px; }
+
+.dog .animalText, .horse .animalText, .pig .animalText, .rabbit .animalText, .sheep .animalText, .cow .animalText,
+.ladyBird .animalText, .snail .animalText,
+.pheasant .animalText, .toucan .animalText, .peacock .animalText, .parrot .animalText, .penguin .animalText, .parakeet .animalText {
   display: none; }
 
-.dog:hover .animalText, .horse:hover .animalText, .pig:hover .animalText {
+.dog:hover .animalText, .horse:hover .animalText, .pig:hover .animalText, .rabbit:hover .animalText, .sheep:hover .animalText,
+.cow:hover .animalText, .ladyBird:hover .animalText, .snail:hover .animalText,
+.pheasant:hover .animalText, .toucan:hover .animalText, .peacock:hover .animalText, .parrot:hover .animalText, .penguin:hover .animalText, .parakeet:hover .animalText {
   display: block;
   -webkit-animation-name: jello;
   animation-name: jello;
@@ -143,11 +159,11 @@ body {
   display: none; }
 
 .play {
-  background-image: url("../img/play.svg");
+  background-image: url("../img/main/play.svg");
   background-repeat: no-repeat; }
 
 .mute {
-  background-image: url("../img/mute.svg");
+  background-image: url("../img/main/mute.svg");
   background-repeat: no-repeat; }
 
 .circleMegaphone {
@@ -318,7 +334,13 @@ body {
 .farmFamily {
   width: 46%; }
 
-.farmFamily img {
+.bugsFamily {
+  width: 43%; }
+
+.birdsFamily {
+  width: 48%; }
+
+.farmFamily img, .bugsFamily img, .birdsFamily img {
   width: 100%; }
 
 /* ---------FAMILLES ANIMAUX ANNEXES----------*/
@@ -338,12 +360,13 @@ body {
   transform: scale(1.2);
   -webkit-transform: scale(1.2); }
 
-.dog, .horse, .pig {
+.dog, .horse, .pig, .rabbit, .sheep, .cow, .ladyBird, .snail, .pheasant, .toucan, .peacock, .parrot, .penguin, .parakeet {
   cursor: pointer;
   position: absolute;
   opacity: 1; }
 
-.dog img, .horse img, .pig img {
+.dog img, .horse img, .pig img, .rabbit img, .sheep img, .cow img, .ladyBird img, .snail img,
+.pheasant img, .toucan img, .peacock img, .parrot img, .penguin img, .parakeet img {
   width: 100%; }
 
 .dog {
@@ -361,21 +384,60 @@ body {
   top: 57%;
   left: 50%; }
 
-/* -------------------------------------BUGS PAGE---------------------------------*/
-.bugsFamily {
-  width: 43%;
-  margin: 0 auto; }
+.rabbit {
+  width: 8%;
+  top: 37%;
+  left: 53%; }
 
-.bugsFamily img {
-  width: 100%; }
+.sheep {
+  width: 12%;
+  top: 49%;
+  left: 40%; }
 
-/* -------------------------------------BIRDS PAGE---------------------------------*/
-.birdsFamily {
-  width: 48%;
-  margin: 0 auto; }
+.cow {
+  width: 14%;
+  top: 38%;
+  left: 28%; }
 
-.birdsFamily img {
-  width: 100%; }
+.ladyBird {
+  width: 8%;
+  top: 55%;
+  left: 60%; }
+
+.pheasant {
+  width: 13%;
+  top: 52%;
+  left: 45%; }
+
+.toucan {
+  width: 10%;
+  top: 26%;
+  left: 26%; }
+
+.peacock {
+  width: 12%;
+  top: 43%;
+  left: 37%; }
+
+.parrot {
+  width: 8%;
+  top: 40%;
+  left: 56%; }
+
+.penguin {
+  width: 10%;
+  top: 50%;
+  left: 64%; }
+
+.parakeet {
+  width: 8%;
+  top: 61%;
+  left: 29%; }
+
+.snail {
+  width: 78%;
+  top: 59%;
+  left: 52%; }
 
 .homeReturn {
   width: 15%;
@@ -395,19 +457,19 @@ body {
   justify-content: space-around;
   align-items: center; }
 
-header h1 {
+.titleAnimals {
   font-size: 400%;
   text-align: center;
-  color: rosybrown; }
+  color: #5eb5e0; }
 
-.dogPicture {
+.animalPicture {
   width: 20%;
   margin-left: 100px; }
 
-.dogPicture img {
+.animalPicture img {
   width: 100%; }
 
-.dogStory {
+.animalStory {
   width: 50%;
   margin: 50px; }
 

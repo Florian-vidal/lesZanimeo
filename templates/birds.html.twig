@@ -1,31 +1,96 @@
-{% extends 'base/base.html.twig' %}
+{% extends 'base/baseFamily.html.twig' %}
 
 {% block main %}
-    <!--------------------------FARM IMG--------------------------------->
     <main>
         <div class="contentFamily">
+            <div class="titleFarm">
+                <img src="{{ asset('assets/img/main/titleFarm.png') }}" alt="">
+            </div>
+            <!--------------------------IMAGE BUGS--------------------------------->
+            <div class="sideFamily1">
+                <a href="{{ path('bugs_page') }}"><img src="{{ asset('assets/img/animals/bugs.png') }}" alt=""></a>
+            </div>
+
+            <!--------------------------IMAGE BIRDS--------------------------------->
             <div class="birdsFamily">
-                <img src="{{ asset('assets/img/birds.png') }}" alt="">
+                <img src="{{ asset('assets/img/animals/birds.png') }}" alt="">
+                <div class="pheasant">
+                    <a href="{{ path('animals', {'id': 13}) }}"><img src="{{ asset('assets/img/animals/pheasantHitbox.png') }}" alt="" onmouseover="PlaySound('pheasantSound')" onmouseout="StopSound('pheasantSound')">
+                        <div class="animalText">Je suis le faisan !</div>
+                    </a>
+                </div>
+                <div class="toucan">
+                    <a href="{{ path('animals', {'id': 14}) }}"><img src="{{ asset('assets/img/animals/toucanHitbox.png') }}" alt="" onmouseover="PlaySound('toucanSound')" onmouseout="StopSound('toucanSound')">
+                        <div class="animalText">Je suis le toucan !</div>
+                    </a>
+                </div>
+                <div class="peacock">
+                    <a href="{{ path('animals', {'id': 15}) }}"><img src="{{ asset('assets/img/animals/peacockHitbox.png') }}" alt="" onmouseover="PlaySound('peacockSound')" onmouseout="StopSound('peacockSound')">
+                        <div class="animalText">Je suis le paon !</div>
+                    </a>
+                </div>
+                <div class="parrot">
+                    <a href="{{ path('animals', {'id': 16}) }}"><img src="{{ asset('assets/img/animals/parrotHitbox.png') }}" alt="" onmouseover="PlaySound('parrotSound')" onmouseout="StopSound('parrotSound')">
+                        <div class="animalText">Je suis le perroquet !</div>
+                    </a>
+                </div>
+                <div class="penguin">
+                    <a href="{{ path('animals', {'id': 17}) }}"><img src="{{ asset('assets/img/animals/penguinHitbox.png') }}" alt="" onmouseover="PlaySound('penguinSound')" onmouseout="StopSound('penguinSound')">
+                        <div class="animalText">Je suis le manchot !</div>
+                    </a>
+                </div>
+                <div class="parakeet">
+                    <a href="{{ path('animals', {'id': 18}) }}"><img src="{{ asset('assets/img/animals/parakeetHitbox.png') }}" alt="" onmouseover="PlaySound('parakeetSound')" onmouseout="StopSound('parakeetSound')">
+                        <div class="animalText">Je suis la perruche !</div>
+                    </a>
+                </div>
+            </div>
+
+            <!--------------------------IMAGE FARM--------------------------------->
+            <div class="sideFamily2">
+                <a href="{{ path('farm_page') }}"><img src="{{ asset('assets/img/animals/farm.png') }}" alt=""></a>
             </div>
         </div>
 
         <!--------------------------MESSAGES POP-UP--------------------------------->
         <div class="popUpFamily">
-            <span id="f">Clique sur ton animal préféré et écoute son histoire !</span>
+            <span id="family">Choisis ta famille d'animaux et écoute ce qu'ils ont à te raconter !</span>
         </div>
-
         <script>
             $( document ).ready(function() {
                 $('.popUpFamily').slideUp().delay(1000).slideDown()
-                $('.popUpFamily').slideDown().delay(4000).slideUp()
+                $('.popUpFamily').slideDown().delay(5000).slideUp()
+            });
+        </script>
+
+        <div class="popUpFamilyAnnexes1">
+            <span id="familyAnnexes">Tu peux voir les autres familles en cliquant ici !</span>
+        </div>
+        <script>
+            $( document ).ready(function() {
+                $('.popUpFamilyAnnexes1').slideUp().delay(7000).slideDown()
+                $('.popUpFamilyAnnexes1').slideDown().delay(5000).slideUp()
+            });
+        </script>
+
+        <div class="popUpFamilyAnnexes2">
+            <span id="familyAnnexes2">Et ici !</span>
+        </div>
+        <script>
+            $( document ).ready(function() {
+                $('.popUpFamilyAnnexes2').slideUp().delay(13000).slideDown()
+                $('.popUpFamilyAnnexes2').slideDown().delay(5000).slideUp()
             });
         </script>
 
         <!-----------------------------SONS POP-UP--------------------------------->
         <audio id='quizSound' src="{{ asset('assets/song/quiz.mp3') }}"/>
-        <audio id='dogSound' src="{{ asset('assets/song/dog.mp3') }}"/>
-        <audio id='horseSound' src="{{ asset('assets/song/horse.mp3') }}"/>
-        <audio id='pigSound' src="{{ asset('assets/song/pig.mp3') }}"/>
+        <audio id='pheasantSound' src="{{ asset('assets/song/pheasant.mp3') }}"/>
+        <audio id='toucanSound' src="{{ asset('assets/song/toucan.mp3') }}"/>
+        <audio id='peacockSound' src="{{ asset('assets/song/peacock.mp3') }}"/>
+        <audio id='parrotSound' src="{{ asset('assets/song/parrot.mp3') }}"/>
+        <audio id='penguinSound' src="{{ asset('assets/song/penguin.mp3') }}"/>
+        <audio id='parakeetSound' src="{{ asset('assets/song/parakeet.mp3') }}"/>
 
         <script>
             function PlaySound(soundobj) {
@@ -39,6 +104,5 @@
                 thissound.currentTime = 0;
             }
         </script>
-
     </main>
 {% endblock %}

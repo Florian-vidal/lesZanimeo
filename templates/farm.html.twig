@@ -4,34 +4,51 @@
     <main>
         <div class="contentFamily">
             <div class="titleFarm">
-                <img src="{{ asset('assets/img/titleFarm.png') }}" alt="">
+                <img src="{{ asset('assets/img/main/titleFarm.png') }}" alt="">
             </div>
             <!--------------------------IMAGE BIRDS--------------------------------->
             <div class="sideFamily1">
-                <img src="{{ asset('assets/img/birds.png') }}" alt="">
+                <a href="{{ path('birds_page') }}"><img src="{{ asset('assets/img/animals/birds.png') }}" alt=""></a>
             </div>
 
             <!--------------------------IMAGE FARM--------------------------------->
             <div class="farmFamily">
-                <img src="{{ asset('assets/img/farm.png') }}" alt="">
+                <img src="{{ asset('assets/img/animals/farm.png') }}" alt="">
                 <div class="dog">
-                    <a href="{{ path('dog_page') }}"><img src="{{ asset('assets/img/dogHitbox.png') }}" alt="" onmouseover="PlaySound('dogSound')" onmouseout="StopSound('dogSound')">
+                    <a href="{{ path('animals', {'id': 1}) }}"><img src="{{ asset('assets/img/animals/dogHitbox.png') }}" alt="" onmouseover="PlaySound('dogSound')" onmouseout="StopSound('dogSound')">
                         <div class="animalText">Je suis le Chien !</div>
                     </a>
                 </div>
                 <div class="horse">
-                    <img src="{{ asset('assets/img/horseHitbox.png') }}" alt="" onmouseover="PlaySound('horseSound')" onmouseout="StopSound('horseSound')">
-                    <div class="animalText">Je suis le Cheval !</div>
+                    <a href="{{ path('animals', {'id': 2}) }}"><img src="{{ asset('assets/img/animals/horseHitbox.png') }}" alt="" onmouseover="PlaySound('horseSound')" onmouseout="StopSound('horseSound')">
+                        <div class="animalText">Je suis le Cheval !</div>
+                    </a>
                 </div>
                 <div class="pig">
-                    <img src="{{ asset('assets/img/pigHitbox.png') }}" alt="" onmouseover="PlaySound('pigSound')" onmouseout="StopSound('pigSound')">
-                    <div class="animalText">Je suis le Cochon !</div>
+                    <a href="{{ path('animals', {'id': 3}) }}"><img src="{{ asset('assets/img/animals/pigHitbox.png') }}" alt="" onmouseover="PlaySound('pigSound')" onmouseout="StopSound('pigSound')">
+                        <div class="animalText">Je suis le Cochon !</div>
+                    </a>
+                </div>
+                <div class="rabbit">
+                    <a href="{{ path('animals', {'id': 4}) }}"><img src="{{ asset('assets/img/animals/rabbitHitbox.png') }}" alt="" onmouseover="PlaySound('rabbitSound')" onmouseout="StopSound('rabbitSound')">
+                        <div class="animalText">Je suis le Lapin !</div>
+                    </a>
+                </div>
+                <div class="sheep">
+                    <a href="{{ path('animals', {'id': 5}) }}"><img src="{{ asset('assets/img/animals/sheepHitbox.png') }}" alt="" onmouseover="PlaySound('sheepSound')" onmouseout="StopSound('sheepSound')">
+                        <div class="animalText">Je suis le Mouton !</div>
+                    </a>
+                </div>
+                <div class="cow">
+                    <a href="{{ path('animals', {'id': 6}) }}"><img src="{{ asset('assets/img/animals/cowHitbox.png') }}" alt="" onmouseover="PlaySound('cowSound')" onmouseout="StopSound('cowSound')">
+                        <div class="animalText">Je suis la vache !</div>
+                    </a>
                 </div>
             </div>
 
             <!--------------------------IMAGE BUGS--------------------------------->
             <div class="sideFamily2">
-                <img src="{{ asset('assets/img/bugs2.png') }}" alt="">
+                <a href="{{ path('bugs_page') }}"><img src="{{ asset('assets/img/animals/bugs.png') }}" alt=""></a>
             </div>
         </div>
 
@@ -46,11 +63,34 @@
             });
         </script>
 
+        <div class="popUpFamilyAnnexes1">
+            <span id="familyAnnexes">Tu peux voir les autres familles en cliquant ici !</span>
+        </div>
+        <script>
+            $( document ).ready(function() {
+                $('.popUpFamilyAnnexes1').slideUp().delay(7000).slideDown()
+                $('.popUpFamilyAnnexes1').slideDown().delay(5000).slideUp()
+            });
+        </script>
+
+        <div class="popUpFamilyAnnexes2">
+            <span id="familyAnnexes2">Et ici !</span>
+        </div>
+        <script>
+            $( document ).ready(function() {
+                $('.popUpFamilyAnnexes2').slideUp().delay(13000).slideDown()
+                $('.popUpFamilyAnnexes2').slideDown().delay(5000).slideUp()
+            });
+        </script>
+
         <!-----------------------------SONS POP-UP--------------------------------->
         <audio id='quizSound' src="{{ asset('assets/song/quiz.mp3') }}"/>
         <audio id='dogSound' src="{{ asset('assets/song/dog.mp3') }}"/>
         <audio id='horseSound' src="{{ asset('assets/song/horse.mp3') }}"/>
         <audio id='pigSound' src="{{ asset('assets/song/pig.mp3') }}"/>
+        <audio id='rabbitSound' src="{{ asset('assets/song/rabbit.mp3') }}"/>
+        <audio id='sheepSound' src="{{ asset('assets/song/sheep.mp3') }}"/>
+        <audio id='cowSound' src="{{ asset('assets/song/cow.mp3') }}"/>
 
         <script>
             function PlaySound(soundobj) {

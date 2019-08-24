@@ -3,12 +3,12 @@
 {% block main %}
     <main>
         <div class="contentQuiz">
-            <a href="{{ path('home_lesZanimeo') }}"><img class="homeButton" src="{{ asset('assets/img/home.svg') }}" alt=""></a>
+            <a href="{{ path('home_lesZanimeo') }}"><img class="homeButton" src="{{ asset('assets/img/main/home.svg') }}" alt=""></a>
             <h1 class="questionNumber">{{ questions.libelle }}</h1>
 
             <div class="contentQuestionsQuiz">
                 <div class="contentImgQuiz">
-                    <img src="{{ asset('assets/img') }}/{{ questions.image }}" alt="">
+                    <img src="{{ asset('assets/img/animals') }}/{{ questions.image }}" alt="">
                 </div>
 
                 <div class="contentRightQuiz">
@@ -16,10 +16,12 @@
                     <p>{{ questions.resume }}<br><br><br>
 
                      <div class="btn-group" role="group" aria-label="Button">
-                            <a href="{{ path('responses', {'id': questions.responses.first.id}) }}"><button type="button" class="btn btn-info">VRAI</button></a>
+                            <a href="{{ path('responses', {'id': questions.responses.first.id}) }}">
+                                <button type="button" class="btn btn-info">VRAI</button></a>
                     </div>
                     <div class="btn-group" role="group" aria-label="Button">
-                        <a href="{{ path('responses', {'id': questions.responses.last.id}) }}"><button type="button" class="btn btn-info">FAUX</button></a>
+                        <a href="{{ path('responses', {'id': questions.responses.last.id}) }}">
+                            <button type="button" class="btn btn-info">FAUX</button></a>
                     </div>
 
                 </div>
