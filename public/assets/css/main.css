@@ -94,13 +94,14 @@ body {
   border-radius: 10px 0 10px 10px; }
 
 .dog .animalText, .horse .animalText, .pig .animalText, .rabbit .animalText, .sheep .animalText, .cow .animalText,
-.ladyBird .animalText, .snail .animalText,
+.ladyBird .animalText, .snail .animalText, .grasshopper .animalText, .caterpillar .animalText, .spider .animalText, .dragonfly .animalText,
 .pheasant .animalText, .toucan .animalText, .peacock .animalText, .parrot .animalText, .penguin .animalText, .parakeet .animalText {
   display: none; }
 
 .dog:hover .animalText, .horse:hover .animalText, .pig:hover .animalText, .rabbit:hover .animalText, .sheep:hover .animalText,
-.cow:hover .animalText, .ladyBird:hover .animalText, .snail:hover .animalText,
-.pheasant:hover .animalText, .toucan:hover .animalText, .peacock:hover .animalText, .parrot:hover .animalText, .penguin:hover .animalText, .parakeet:hover .animalText {
+.cow:hover .animalText, .ladyBird:hover .animalText, .snail:hover .animalText, .grasshopper:hover .animalText,
+.caterpillar:hover .animalText, .spider:hover .animalText, .dragonfly:hover .animalText, .pheasant:hover .animalText,
+.toucan:hover .animalText, .peacock:hover .animalText, .parrot:hover .animalText, .penguin:hover .animalText, .parakeet:hover .animalText {
   display: block;
   -webkit-animation-name: jello;
   animation-name: jello;
@@ -245,12 +246,12 @@ body {
 .contentLeftQuiz img {
   width: 30%; }
 
-.contentRightQuiz, .contentTextQuiz {
+.contentRightQuiz, .contentTextQuiz, .contentScoreQuiz {
   width: 40%;
   padding: 20px;
   text-align: center; }
 
-.contentRightQuiz h1, .contentTextQuiz h1 {
+.contentRightQuiz h1, .contentTextQuiz h1, .contentScoreQuiz h1 {
   color: #5eb5e0; }
 
 .questionNumber {
@@ -274,10 +275,13 @@ body {
 .contentImgQuiz img {
   width: 70%; }
 
+.contentScoreQuiz {
+  margin: 0 auto; }
+
 .homebutton {
   width: 100%; }
 
-.titleFarm {
+.titleFarm, .titleBugs, .titleBirds {
   width: 70%;
   position: absolute;
   left: 50%;
@@ -288,7 +292,13 @@ body {
   animation-name: fadeIn;
   animation-duration: 1.5s; }
 
-.titleFarm img {
+.titleBugs {
+  top: 0; }
+
+.titleBirds {
+  top: 8%; }
+
+.titleFarm img, .titleBugs img, .titleBirds img {
   width: 100%; }
 
 /*--------------FONDU---------------*/
@@ -360,13 +370,14 @@ body {
   transform: scale(1.2);
   -webkit-transform: scale(1.2); }
 
-.dog, .horse, .pig, .rabbit, .sheep, .cow, .ladyBird, .snail, .pheasant, .toucan, .peacock, .parrot, .penguin, .parakeet {
+.dog, .horse, .pig, .rabbit, .sheep, .cow, .ladyBird, .snail, .grasshopper, .caterpillar, .spider, .dragonfly,
+.pheasant, .toucan, .peacock, .parrot, .penguin, .parakeet {
   cursor: pointer;
   position: absolute;
   opacity: 1; }
 
-.dog img, .horse img, .pig img, .rabbit img, .sheep img, .cow img, .ladyBird img, .snail img,
-.pheasant img, .toucan img, .peacock img, .parrot img, .penguin img, .parakeet img {
+.dog img, .horse img, .pig img, .rabbit img, .sheep img, .cow img, .ladyBird img, .snail img, .grasshopper img,
+.caterpillar img, .spider img, .dragonfly img, .pheasant img, .toucan img, .peacock img, .parrot img, .penguin img, .parakeet img {
   width: 100%; }
 
 .dog {
@@ -404,6 +415,31 @@ body {
   top: 55%;
   left: 60%; }
 
+.snail {
+  width: 8%;
+  top: 65%;
+  left: 54%; }
+
+.grasshopper {
+  width: 8%;
+  top: 40%;
+  left: 49%; }
+
+.caterpillar {
+  width: 12%;
+  top: 63%;
+  left: 37%; }
+
+.spider {
+  width: 15%;
+  top: 48%;
+  left: 30%; }
+
+.dragonfly {
+  width: 12%;
+  top: 23%;
+  left: 57%; }
+
 .pheasant {
   width: 13%;
   top: 52%;
@@ -433,11 +469,6 @@ body {
   width: 8%;
   top: 61%;
   left: 29%; }
-
-.snail {
-  width: 78%;
-  top: 59%;
-  left: 52%; }
 
 .homeReturn {
   width: 15%;

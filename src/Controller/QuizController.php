@@ -48,26 +48,27 @@ class QuizController extends AbstractController
         return $this->render('responses.html.twig',
             [
                 'responses' => $responses,
-                'questions' => $questions,
+                'questions' => $questions
             ]
         );
     }
 
     /**
-     * @Route("responseFalse", name="responseFalse")
+     * @Route("score", name="score")
      */
-    /*public function responseFalseController()
+    public function scoreController(QuestionsRepository $questionsRepository, ResponsesRepository $responsesRepository)
     {
-        return $this->render('responseFalse.html.twig');
-    }*/
+        $questions = $questionsRepository->findAll();
+        $responses = $responsesRepository->findAll();
+        return $this->render('score.html.twig',
+        [
+            'responses' => $responses,
+            'questions' => $questions
+        ]
+        );
+    }
 
-    /**
-     * @Route("responseTrue", name="responseTrue")
-     */
-    /*public function responseTrueController()
-    {
-        return $this->render('responseTrue.html.twig');
-    }*/
+
 
 
 

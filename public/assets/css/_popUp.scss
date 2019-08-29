@@ -56,14 +56,15 @@
 }
 
 .dog .animalText, .horse .animalText, .pig .animalText, .rabbit .animalText, .sheep .animalText, .cow .animalText,
-.ladyBird .animalText, .snail .animalText,
+.ladyBird .animalText, .snail .animalText, .grasshopper .animalText, .caterpillar .animalText, .spider .animalText, .dragonfly .animalText,
 .pheasant .animalText, .toucan .animalText, .peacock .animalText, .parrot .animalText, .penguin .animalText, .parakeet .animalText {
   display: none;
 }
 
 .dog:hover .animalText, .horse:hover .animalText, .pig:hover .animalText, .rabbit:hover .animalText , .sheep:hover .animalText ,
-.cow:hover .animalText , .ladyBird:hover .animalText, .snail:hover .animalText,
-.pheasant:hover .animalText, .toucan:hover .animalText, .peacock:hover .animalText, .parrot:hover .animalText, .penguin:hover .animalText, .parakeet:hover .animalText {
+.cow:hover .animalText , .ladyBird:hover .animalText, .snail:hover .animalText, .grasshopper:hover .animalText,
+.caterpillar:hover .animalText, .spider:hover .animalText, .dragonfly:hover .animalText, .pheasant:hover .animalText,
+.toucan:hover .animalText, .peacock:hover .animalText, .parrot:hover .animalText, .penguin:hover .animalText, .parakeet:hover .animalText {
   display: block;
   -webkit-animation-name: jello;
   animation-name: jello;

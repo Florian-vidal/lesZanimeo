@@ -3,8 +3,8 @@
 {% block main %}
     <main>
         <div class="contentFamily">
-            <div class="titleFarm">
-                <img src="{{ asset('assets/img/main/titleFarm.png') }}" alt="">
+            <div class="titleBugs">
+                <img src="{{ asset('assets/img/main/titleBugs.png') }}" alt="">
             </div>
             <!--------------------------IMAGE FARM--------------------------------->
             <div class="sideFamily1">
@@ -19,10 +19,31 @@
                         <div class="animalText">Je suis la coccinelle !</div>
                     </a>
                 </div>
-
-
-
-
+                <div class="snail">
+                    <a href="{{ path('animals', {'id': 8}) }}"><img src="{{ asset('assets/img/animals/snailHitbox.png') }}" alt="" onmouseover="PlaySound('dogSound')" onmouseout="StopSound('dogSound')">
+                        <div class="animalText">Je suis l'escargot !</div>
+                    </a>
+                </div>
+                <div class="grasshopper">
+                    <a href="{{ path('animals', {'id': 9}) }}"><img src="{{ asset('assets/img/animals/grasshopperHitbox.png') }}" alt="" onmouseover="PlaySound('dogSound')" onmouseout="StopSound('dogSound')">
+                        <div class="animalText">Je suis la sauterelle !</div>
+                    </a>
+                </div>
+                <div class="caterpillar">
+                    <a href="{{ path('animals', {'id': 10}) }}"><img src="{{ asset('assets/img/animals/caterpillarHitbox.png') }}" alt="" onmouseover="PlaySound('dogSound')" onmouseout="StopSound('dogSound')">
+                        <div class="animalText">Je suis la chenille !</div>
+                    </a>
+                </div>
+                <div class="spider">
+                    <a href="{{ path('animals', {'id': 11}) }}"><img src="{{ asset('assets/img/animals/spiderHitbox.png') }}" alt="" onmouseover="PlaySound('dogSound')" onmouseout="StopSound('dogSound')">
+                        <div class="animalText">Je suis l'araignée' !</div>
+                    </a>
+                </div>
+                <div class="dragonfly">
+                    <a href="{{ path('animals', {'id': 12}) }}"><img src="{{ asset('assets/img/animals/dragonflyHitbox.png') }}" alt="" onmouseover="PlaySound('dogSound')" onmouseout="StopSound('dogSound')">
+                        <div class="animalText">Je suis la libellule !</div>
+                    </a>
+                </div>
             </div>
 
             <!--------------------------IMAGE BIRDS--------------------------------->

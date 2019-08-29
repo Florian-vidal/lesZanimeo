@@ -13,10 +13,17 @@
                     <h1>{{ responses.message }}</h1><br><br>
                     <p>{{ responses.resume }}<br><br><br>
                     <div class="btn-group" role="group" aria-label="Button">
-                        <a href="{{ path('questions', {'id': questions.id+1}) }}"><button type="button" class="btn btn-info">Continuer</button></a>
+{#
+                        <a href="{{ path('questions', {'id': responses.questions.id+1}) }}"><button type="button" class="btn btn-info">Continuer</button></a>
+#}
+
+                        {% if responses.id >= 35 %}
+                            <a href="{{ path('score') }}"><button type="button" class="btn btn-info">Obtiens ton score !</button></a>
+                        {% else %}
+                            <a href="{{ path('questions', {'id': responses.questions.id+1}) }}"><button type="button" class="btn btn-info">Continuer</button></a>
+                        {% endif %}
                     </div>
                 </div>
-
             </div>
         </div>
     </main>

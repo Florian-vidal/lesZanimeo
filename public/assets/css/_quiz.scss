@@ -33,13 +33,13 @@ body {
   width: 30%
 }
 
-.contentRightQuiz, .contentTextQuiz {
+.contentRightQuiz, .contentTextQuiz, .contentScoreQuiz {
   width: 40%;
   padding: 20px;
   text-align: center;
 }
 
-.contentRightQuiz h1, .contentTextQuiz h1 {
+.contentRightQuiz h1, .contentTextQuiz h1, .contentScoreQuiz h1 {
   color: #5eb5e0;
 }
 
@@ -67,6 +67,12 @@ body {
 .contentImgQuiz img {
   width: 70%;
 }
+
+.contentScoreQuiz {
+  margin: 0 auto;
+}
+
+
 
 
 
