@@ -1,0 +1,33 @@
+{% extends 'base/baseQuiz.html.twig' %}
+
+{% block main %}
+
+    <div class="formLogin">
+        <h1>Contact</h1>
+        <div class="formLogin2">
+            <div class="form-group">
+                <label for="exampleInputEmail1"></label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1"></label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleTextarea"></label>
+                <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Message"></textarea>
+            </div>
+            <div class="form-group4">
+                <label for="exampleInputFile"></label>
+                <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+            </div>
+
+            <button type="submit" class="btn btn-success">Envoyer</button>
+            <a href="{{ path('home_lesZanimeo') }}">Retour</a>
+
+
+        </div>
+    </div>
+
+{% endblock %}

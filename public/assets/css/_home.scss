@@ -14,12 +14,25 @@
   display: none;
 }
 
+.sidenav {
+  background: rgba(254, 254, 254, 0.7);
+  text-align: center;
+  min-width: 200px;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 50px 50px;
+  border: 1px solid black;
+  font-size: 20px;
+}
+
 .farmHome, .bugsHome, .birdsHome {
   width: 28%;
 }
 
 .farmHome, .bugsHome, .birdsHome, .quiz {
-  cursor: pointer;
   /*---------ZOOM----------*/
   transition-property: transform;
   -webkit-transition-property: transform;

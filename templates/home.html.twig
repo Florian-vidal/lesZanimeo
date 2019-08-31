@@ -5,6 +5,21 @@
 <main>
     <a href="{{ path('quiz') }}"><img class="quiz" src="{{ asset('assets/img/main/quiz.png') }}" alt="" onmouseover="PlaySound('quizSound')"
          onmouseout="StopSound('quizSound')"></a>
+
+    <div class="sidenav">
+        {% if is_granted("ROLE_ADMIN") %}
+            {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+            <a href="{{ path('admin') }}">Espace Admin</a> |
+            <a href="{{ path('fos_user_security_logout') }}">Se déconnecter</a> |
+            <a href="{{ path('contact') }}">Contact</a>
+        {%  elseif is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+            <a href="{{ path('fos_user_security_logout') }}">Se déconnecter</a>
+        {% else %}
+            <a href="{{ path('admin') }}">Se connecter</a> |
+            <a href="{{ path('fos_user_registration_register') }}">S'inscrire</a>
+        {% endif %}
+    </div>
     <!--------------------------TITLE + INTRO VOCALE "Les Zaniméo"--------------------->
     <div>
         <div class="title">
@@ -120,6 +135,7 @@
                 thissound.currentTime = 0;
             }
         </script>
+
     </div>
 </main>
 

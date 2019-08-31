@@ -1,0 +1,16 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="formLogin">
+    <a href="{{ path('home_lesZanimeo') }}"><img class="homeButton" src="{{ asset('assets/img/main/home.svg') }}" alt=""></a>
+
+    <h1>Inscription</h1>
+    <div class="formLogin2">
+
+        {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+        {{ form_widget(form) }}
+        <div class="btnConnectLogin">
+            <input type="submit" class="btn btn-success" value="{{ 'registration.submit'|trans }}" />
+        </div>
+        {{ form_end(form) }}
+    </div>
+</div>

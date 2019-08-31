@@ -10,8 +10,8 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/", name="home_lesZanimeo")
-     */
+ * @Route("/", name="home_lesZanimeo")
+ */
     public function indexController(FamillesRepository $famillesRepository)
     {
         $familles = $famillesRepository->findAll();
@@ -21,6 +21,16 @@ class HomeController extends AbstractController
             ]
         );
     }
+
+    /**
+     * @Route("contact", name="contact")
+     */
+    public function contactController()
+    {
+        return $this->render('contact.html.twig');
+    }
+
+
 
 
 

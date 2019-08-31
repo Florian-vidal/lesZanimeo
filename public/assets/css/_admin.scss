@@ -1,0 +1,101 @@
+/* --------------------------------------------ADMIN---------------------------------*/
+.lastname {
+  background: blue;
+  display: flex;
+}
+
+.formulaire {
+  width: 50%;
+  margin: 0 auto;
+  background: #4DBDC5;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+}
+
+.container {
+  z-index: 2;
+}
+
+.row {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  justify-content: space-around;
+}
+
+.glyphicon-trash { color:rgb(209, 91, 71); }
+.glyphicon-plus { color: black; margin-left: 340px; }
+.panel-body { padding:0px; }
+.panel-heading { background-color: #4DBDC5; color: white;}
+.panel-footer .pagination { margin: 0; }
+.panel .glyphicon,.list-group-item .glyphicon { margin-right:5px; }
+.list-group-item:hover, a.list-group-item:focus {text-decoration: none;background-color: rgb(245, 245, 245);}
+.list-group { margin-bottom:0px; }
+
+.pictureAdmin {
+  width: 10%;
+}
+
+.pictureAdmin img {
+  width: 100%;
+}
+
+.login {
+  display: flex;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+#fos_user_registration_form {
+  margin: 0 auto;
+}
+
+#fos_user_registration_form li {
+  color: red;
+}
+
+#fos_user_registration_form_email, #fos_user_registration_form_username, #fos_user_registration_form_plainPassword_first, #fos_user_registration_form_plainPassword_second {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 5px;
+
+}
+
+/* --------------------------------------------ADMIN---------------------------------*/
+
+/* --------------------------------------------FORMULAIRE LOGIN---------------------------------*/
+.formLogin{
+  margin: 50px auto;
+}
+
+.formLogin h1 {
+  text-align: center;
+  margin: 30px;
+}
+
+.formLogin2 {
+  width: 50%;
+  margin: 0 auto;
+  background: #C2976A;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.formLogin2 button {
+  margin: 20px auto;
+  display: block;
+}
+
+.btnConnectLogin {
+  text-align: center;
+}
+
+.messageConfirmation {
+  text-align: center;
+  color: white;
+
+}
+

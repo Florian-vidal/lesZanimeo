@@ -45,6 +45,9 @@ table {
 body {
   font-family: "Avenir Next"; }
 
+a {
+  color: #000; }
+
 .popUpMegaphone, .popUpQuiz, .popUpHome, .animalText, .popUpFamily, .popUpFamilyAnnexes1, .popUpFamilyAnnexes2 {
   padding: 10px;
   position: absolute;
@@ -131,11 +134,23 @@ body {
   left: 0;
   display: none; }
 
+.sidenav {
+  background: rgba(254, 254, 254, 0.7);
+  text-align: center;
+  min-width: 200px;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 50px 50px;
+  border: 1px solid black;
+  font-size: 20px; }
+
 .farmHome, .bugsHome, .birdsHome {
   width: 28%; }
 
 .farmHome, .bugsHome, .birdsHome, .quiz {
-  cursor: pointer;
   /*---------ZOOM----------*/
   transition-property: transform;
   -webkit-transition-property: transform;
@@ -513,5 +528,104 @@ figure {
 .test {
   font-size: 600%;
   color: black; }
+
+/* --------------------------------------------ADMIN---------------------------------*/
+.lastname {
+  background: blue;
+  display: flex; }
+
+.formulaire {
+  width: 50%;
+  margin: 0 auto;
+  background: #4DBDC5;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex; }
+
+.container {
+  z-index: 2; }
+
+.row {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  justify-content: space-around; }
+
+.glyphicon-trash {
+  color: #d15b47; }
+
+.glyphicon-plus {
+  color: black;
+  margin-left: 340px; }
+
+.panel-body {
+  padding: 0px; }
+
+.panel-heading {
+  background-color: #4DBDC5;
+  color: white; }
+
+.panel-footer .pagination {
+  margin: 0; }
+
+.panel .glyphicon, .list-group-item .glyphicon {
+  margin-right: 5px; }
+
+.list-group-item:hover, a.list-group-item:focus {
+  text-decoration: none;
+  background-color: whitesmoke; }
+
+.list-group {
+  margin-bottom: 0px; }
+
+.pictureAdmin {
+  width: 10%; }
+
+.pictureAdmin img {
+  width: 100%; }
+
+.login {
+  display: flex; }
+
+.form-control {
+  margin-bottom: 20px; }
+
+#fos_user_registration_form {
+  margin: 0 auto; }
+
+#fos_user_registration_form li {
+  color: red; }
+
+#fos_user_registration_form_email, #fos_user_registration_form_username, #fos_user_registration_form_plainPassword_first, #fos_user_registration_form_plainPassword_second {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 5px; }
+
+/* --------------------------------------------ADMIN---------------------------------*/
+/* --------------------------------------------FORMULAIRE LOGIN---------------------------------*/
+.formLogin {
+  margin: 50px auto; }
+
+.formLogin h1 {
+  text-align: center;
+  margin: 30px; }
+
+.formLogin2 {
+  width: 50%;
+  margin: 0 auto;
+  background: #C2976A;
+  padding: 20px;
+  border-radius: 5px; }
+
+.formLogin2 button {
+  margin: 20px auto;
+  display: block; }
+
+.btnConnectLogin {
+  text-align: center; }
+
+.messageConfirmation {
+  text-align: center;
+  color: white; }
 
 /*# sourceMappingURL=main.css.map */
