@@ -1,0 +1,212 @@
+@media screen and (max-width: 640px) {
+
+  /* -----------------------------------HOME---------------------------------*/
+
+  .popUpMegaphone, .popUpQuiz, .popUpHome, .animalText, .popUpFamily, .popUpFamilyAnnexes1, .popUpFamilyAnnexes2 {
+    display: none!important;
+  }
+
+  .sidenav {
+    width: 100%;
+    height: 14%;
+    background: #f1f2f3;
+    border-radius: 0 0 0 0;
+  }
+
+  .head {
+  margin-top: 100px;
+  }
+
+  .content {
+    flex-wrap: wrap;
+  }
+
+  .quiz {
+    margin-top: 100px;
+    width: 15%;
+  }
+
+  .button {
+    position: absolute;
+    top: 11%;
+    right: -6%;
+  }
+
+  .circleMegaphone {
+    display: none!important;
+  }
+
+  .farmHome, .bugsHome, .birdsHome {
+    width: 80%;
+  }
+
+  .title {
+    width: 65%;
+  }
+
+  .homeButton {
+    width: 20%;
+    margin-left: 40%;
+  }
+
+  /* ---------------------HITBOX-----------------------*/
+
+  .sideFamily1, .sideFamily2 {
+    display: none;
+  }
+
+  .farmFamily {
+    width: 80%;
+  }
+
+  .bugsFamily {
+    width: 80%;
+  }
+
+  .birdsFamily {
+    width: 80%;
+  }
+
+  .titleBugs {
+    position: absolute;
+    top: 15%;
+  }
+
+  .titleBirds {
+    position: absolute;
+    top: 17%;
+  }
+
+  /* -----------------------------------ANIMALS---------------------------------*/
+
+  .questionNumber {
+  margin-top: 100px;
+
+}
+  .titleAnimals {
+    font-size: 50px;
+    margin-top: 100px;
+  }
+  .contentAnimals {
+    flex-wrap: wrap;
+  }
+
+  .animalPicture {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .animalStory {
+    width: 80%;
+  }
+
+  figure {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* ---------------------HITBOX-----------------------*/
+
+  .contentQuestionsQuiz {
+    display: block;
+    padding: 0;
+  }
+
+  .contentImgQuiz {
+    margin: 0 auto;
+    width: 50%;
+  }
+  .contentTextQuiz {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+  }
+  .contentLeftQuiz {
+    display: none;
+  }
+
+  .contentRightQuiz {
+    width: 100%;
+  }
+
+  .dog {
+    top: 37%;
+    right: 14%;
+  }
+
+  .horse {
+    top: 23%;
+  }
+
+  .pig {
+    top: 40%;
+    left: 56%;
+  }
+
+  .rabbit {
+    top: 31%;
+    left: 57%;
+  }
+
+  .sheep {
+    top: 36%;
+    left: 35%;
+  }
+
+  .cow {
+    width: 18%;
+    top: 30%;
+    left: 15%;
+  }
+
+  .homeButtonQuiz {
+    width: 20%;
+  }
+
+  .quiz2Button {
+    width: 20%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }

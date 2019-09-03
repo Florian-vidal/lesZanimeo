@@ -4,25 +4,43 @@ body {
 }*/
 .contentQuiz {
   background: #f1f2f3;
-  height: 100vh;
+  height: 800px;
 }
 
 .quizHeader {
+  padding: 30px;
+  display: flex;
+}
+
+.homeButtonQuiz {
+  width: 10%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.homeButtonQuiz img {
+  width: 100%;
+}
+
+.quiz2Button {
   width: 10%;
   margin: 0 auto;
 }
 
-.quizHeader img {
+.quiz2Button img {
   width: 100%;
 }
 
 .content2Quiz {
   width: 90%;
-  margin: 0 auto;
+  margin: 30px auto;
+  padding: 50px;
   background: white;
   border: solid 1px black;
   border-radius: 10px;
   display: flex;
+
 }
 
 .contentLeftQuiz {
@@ -44,7 +62,7 @@ body {
 }
 
 .questionNumber {
-  text-align: center;
+  margin: 50px auto;
 }
 
 .contentQuestionsQuiz {
@@ -56,7 +74,7 @@ body {
 }
 
 .contentImgQuiz {
-  width: 40%;
+  width: 30%;
   padding: 20px;
   border: solid 1px black;
   border-radius: 10px;
@@ -65,7 +83,8 @@ body {
 }
 
 .contentImgQuiz img {
-  width: 70%;
+  width: 100%;
+
 }
 
 .contentScoreQuiz {

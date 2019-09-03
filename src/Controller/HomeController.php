@@ -22,14 +22,6 @@ class HomeController extends AbstractController
         );
     }
 
-    /**
-     * @Route("contact", name="contact")
-     */
-    public function contactController()
-    {
-        return $this->render('contact.html.twig');
-    }
-
 
 
 

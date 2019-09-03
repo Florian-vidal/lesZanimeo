@@ -3,7 +3,7 @@
 {% block main %}
 
 <main>
-    <a href="{{ path('quiz') }}"><img class="quiz" src="{{ asset('assets/img/main/quiz.png') }}" alt="" onmouseover="PlaySound('quizSound')"
+    <a href="{{ path('quiz') }}"><img class="quiz" src="{{ asset('assets/img/main/quiz1.png') }}" alt="" onmouseover="PlaySound('quizSound')"
          onmouseout="StopSound('quizSound')"></a>
 
     <div class="sidenav">
@@ -17,7 +17,8 @@
             <a href="{{ path('fos_user_security_logout') }}">Se déconnecter</a>
         {% else %}
             <a href="{{ path('admin') }}">Se connecter</a> |
-            <a href="{{ path('fos_user_registration_register') }}">S'inscrire</a>
+            <a href="{{ path('fos_user_registration_register') }}">S'inscrire</a> |
+            <a href="{{ path('contact') }}">Contact</a>
         {% endif %}
     </div>
     <!--------------------------TITLE + INTRO VOCALE "Les Zaniméo"--------------------->

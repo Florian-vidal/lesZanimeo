@@ -3,10 +3,15 @@
 {% block main %}
     <main>
         <div class="contentQuiz">
-            <a href="{{ path('home_lesZanimeo') }}"><img class="homeButton" src="{{ asset('assets/img/main/home.svg') }}" alt=""></a>
             <div class="quizHeader">
-                <img src="{{ asset('assets/img/main/quiz2.png') }}" alt="">
+                <div class="homeButtonQuiz">
+                    <a href="{{ path('home_lesZanimeo') }}"><img src="{{ asset('assets/img/main/home2.jpg') }}" alt=""></a>
+                </div>
+                <div class="quiz2Button">
+                    <img src="{{ asset('assets/img/main/quiz2.png') }}" alt="">
+                </div>
             </div>
+
             <div class="content2Quiz">
                 <div class="contentScoreQuiz">
                     <h1>Voici ton score !</h1><br><br>

@@ -48,6 +48,9 @@ body {
 a {
   color: #000; }
 
+h1 {
+  margin: 0; }
+
 .popUpMegaphone, .popUpQuiz, .popUpHome, .animalText, .popUpFamily, .popUpFamilyAnnexes1, .popUpFamilyAnnexes2 {
   padding: 10px;
   position: absolute;
@@ -112,6 +115,12 @@ a {
 
 .head {
   width: 100%; }
+
+.homeButton {
+  position: absolute;
+  width: 10%;
+  left: 3%;
+  top: 2%; }
 
 .vigne {
   width: 85%;
@@ -193,6 +202,7 @@ a {
   border-radius: 50px;
   display: none; }
 
+/*--------------------------------------TITRE "LES ZANIMEO"---------------------------------*/
 .title {
   width: 40%;
   margin: 0 auto;
@@ -201,7 +211,6 @@ a {
   animation-name: jello;
   animation-duration: 1.5s; }
 
-/*--------------------------------------TITRE "LES ZANIMEO"---------------------------------*/
 .title img {
   width: 100%; }
 
@@ -238,18 +247,32 @@ body {
 }*/
 .contentQuiz {
   background: #f1f2f3;
-  height: 100vh; }
+  height: 800px; }
 
 .quizHeader {
+  padding: 30px;
+  display: flex; }
+
+.homeButtonQuiz {
+  width: 10%;
+  position: absolute;
+  top: 5%;
+  left: 5%; }
+
+.homeButtonQuiz img {
+  width: 100%; }
+
+.quiz2Button {
   width: 10%;
   margin: 0 auto; }
 
-.quizHeader img {
+.quiz2Button img {
   width: 100%; }
 
 .content2Quiz {
   width: 90%;
-  margin: 0 auto;
+  margin: 30px auto;
+  padding: 50px;
   background: white;
   border: solid 1px black;
   border-radius: 10px;
@@ -270,7 +293,7 @@ body {
   color: #5eb5e0; }
 
 .questionNumber {
-  text-align: center; }
+  margin: 50px auto; }
 
 .contentQuestionsQuiz {
   width: 90%;
@@ -280,7 +303,7 @@ body {
   justify-content: center; }
 
 .contentImgQuiz {
-  width: 40%;
+  width: 30%;
   padding: 20px;
   border: solid 1px black;
   border-radius: 10px;
@@ -288,7 +311,7 @@ body {
   text-align: center; }
 
 .contentImgQuiz img {
-  width: 70%; }
+  width: 100%; }
 
 .contentScoreQuiz {
   margin: 0 auto; }
@@ -492,11 +515,6 @@ body {
 .homeReturn img {
   width: 100%; }
 
-.homeButton {
-  width: 35px;
-  margin-left: 100px;
-  margin-top: 20px; }
-
 .contentAnimals {
   width: 100%;
   display: flex;
@@ -504,6 +522,7 @@ body {
   align-items: center; }
 
 .titleAnimals {
+  margin: 50px;
   font-size: 400%;
   text-align: center;
   color: #5eb5e0; }
@@ -627,5 +646,137 @@ figure {
 .messageConfirmation {
   text-align: center;
   color: white; }
+
+@media screen and (max-width: 640px) {
+  /* -----------------------------------HOME---------------------------------*/
+  .popUpMegaphone, .popUpQuiz, .popUpHome, .animalText, .popUpFamily, .popUpFamilyAnnexes1, .popUpFamilyAnnexes2 {
+    display: none !important; }
+
+  .sidenav {
+    width: 100%;
+    height: 14%;
+    background: #f1f2f3;
+    border-radius: 0 0 0 0; }
+
+  .head {
+    margin-top: 100px; }
+
+  .content {
+    flex-wrap: wrap; }
+
+  .quiz {
+    margin-top: 100px;
+    width: 15%; }
+
+  .button {
+    position: absolute;
+    top: 11%;
+    right: -6%; }
+
+  .circleMegaphone {
+    display: none !important; }
+
+  .farmHome, .bugsHome, .birdsHome {
+    width: 80%; }
+
+  .title {
+    width: 65%; }
+
+  .homeButton {
+    width: 20%;
+    margin-left: 40%; }
+
+  /* ---------------------HITBOX-----------------------*/
+  .sideFamily1, .sideFamily2 {
+    display: none; }
+
+  .farmFamily {
+    width: 80%; }
+
+  .bugsFamily {
+    width: 80%; }
+
+  .birdsFamily {
+    width: 80%; }
+
+  .titleBugs {
+    position: absolute;
+    top: 15%; }
+
+  .titleBirds {
+    position: absolute;
+    top: 17%; }
+
+  /* -----------------------------------ANIMALS---------------------------------*/
+  .questionNumber {
+    margin-top: 100px; }
+
+  .titleAnimals {
+    font-size: 50px;
+    margin-top: 100px; }
+
+  .contentAnimals {
+    flex-wrap: wrap; }
+
+  .animalPicture {
+    width: 50%;
+    margin: 0 auto; }
+
+  .animalStory {
+    width: 80%; }
+
+  figure {
+    width: 100%;
+    margin: 0; }
+
+  /* ---------------------HITBOX-----------------------*/
+  .contentQuestionsQuiz {
+    display: block;
+    padding: 0; }
+
+  .contentImgQuiz {
+    margin: 0 auto;
+    width: 50%; }
+
+  .contentTextQuiz {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px; }
+
+  .contentLeftQuiz {
+    display: none; }
+
+  .contentRightQuiz {
+    width: 100%; }
+
+  .dog {
+    top: 37%;
+    right: 14%; }
+
+  .horse {
+    top: 23%; }
+
+  .pig {
+    top: 40%;
+    left: 56%; }
+
+  .rabbit {
+    top: 31%;
+    left: 57%; }
+
+  .sheep {
+    top: 36%;
+    left: 35%; }
+
+  .cow {
+    width: 18%;
+    top: 30%;
+    left: 15%; }
+
+  .homeButtonQuiz {
+    width: 20%; }
+
+  .quiz2Button {
+    width: 20%; } }
 
 /*# sourceMappingURL=main.css.map */
