@@ -11,20 +11,23 @@
             </div>
 
             <div class="contentQuestionsQuiz">
+
+                <!---------------------------IMAGE ANIMAL------------------------------->
                 <div class="contentImgQuiz">
                     <img src="{{ asset('assets/img/animals') }}/{{ questions.image }}" alt="">
                 </div>
 
+                <!---------------------------CONTENU QUESTIONS------------------------------->
                 <div class="contentRightQuiz">
                     <h1>VRAI OU FAUX ?</h1><br><br>
                     <p>{{ questions.resume }}<br><br><br>
 
                      <div class="btn-group" role="group" aria-label="Button">
-                        <a href="{{ path('responses', {'id': questions.responses.first.id}) }}">
-                                <button type="button" class="btn btn-info">VRAI</button></a>
+                        <a href="{{ path('responses', {'id': questions.responses.first.id, 'goodResponses': goodResponses}) }}">
+                            <button type="button" class="btn btn-info">VRAI</button></a>
                     </div>
                     <div class="btn-group" role="group" aria-label="Button">
-                        <a href="{{ path('responses', {'id': questions.responses.last.id}) }}">
+                        <a href="{{ path('responses', {'id': questions.responses.last.id, 'goodResponses': goodResponses}) }}">
                             <button type="button" class="btn btn-info">FAUX</button></a>
                     </div>
 

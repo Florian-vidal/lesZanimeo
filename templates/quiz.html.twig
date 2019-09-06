@@ -3,9 +3,13 @@
 {% block main %}
         <div class="contentQuiz">
             <div class="quizHeader">
+
+                <!---------------------------BOUTON HOME------------------------------->
                 <div class="homeButtonQuiz">
                     <a href="{{ path('home_lesZanimeo') }}"><img src="{{ asset('assets/img/main/home2.jpg') }}" alt=""></a>
                 </div>
+
+                <!---------------------------BOUTON QUIZ------------------------------->
                 <div class="quiz2Button">
                     <img src="{{ asset('assets/img/main/quiz2.png') }}" alt="">
                 </div>
@@ -25,7 +29,7 @@
                         pour savoir si tu as bien
                         tout retenu !</p><br><br>
                     <div class="btn-group" role="group" aria-label="Button">
-                        <a href="{{ path('questions', {'id': 1}) }}"><button type="button" class="btn btn-info">Lancer le Quiz</button></a>
+                        <a href="{{ path('questions', {'id': 1, 'goodResponses': 0}) }}"><button type="button" class="btn btn-info">Lancer le Quiz</button></a>
                     </div>
                 </div>
             </div>

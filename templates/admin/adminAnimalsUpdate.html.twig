@@ -7,6 +7,7 @@
         <hr>
         <h1>Modification d'un animal</h1>
 
+        <!--------------------------FORMULAIRE MODIFICATION ANIMAL--------------------------------->
         {{ form_start(formAnimalsView) }}
 
         <div class="formLogin2">
@@ -34,6 +35,7 @@
 
             <a href="{{ path('admin') }}">Retour</a>
 
+            <!--------------------------MESSAGE DE CONFIRMATION DE MODIFICATION--------------------------------->
             <div class="messageConfirmation">
                 {% for messages in app.flashes %}
                     {% for message in messages %}

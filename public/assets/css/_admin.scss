@@ -1,4 +1,9 @@
-/* --------------------------------------------ADMIN---------------------------------*/
+.homeButtonAdmin {
+  position: absolute;
+  top: 8px;
+  width: 5%;
+}
+
 .lastname {
   background: blue;
   display: flex;
@@ -61,12 +66,9 @@
   width: 100%;
   margin-bottom: 20px;
   border-radius: 5px;
-
 }
 
-/* --------------------------------------------ADMIN---------------------------------*/
-
-/* --------------------------------------------FORMULAIRE LOGIN---------------------------------*/
+/* ------------------------FORMULAIRE LOGIN------------------------*/
 .formLogin{
   margin: 50px auto;
 }

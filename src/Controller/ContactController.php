@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Controller;
 
 use App\Entity\Contact;
@@ -10,49 +9,64 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\Exception;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
+use Symfony\Component\Validator\Tests\Constraints as Assert;
+use Doctrine\ORM\Mapping as ORM;
 
 class ContactController extends AbstractController
 {
+    /*-----Public et envoie en BDD pour client: formulaire de contact---------*/
+    /*-----ajouté une confirmation d'envoie-----------------*/
     /**
-     * @Route("/contact", name="contact")
+     * @Route("contact", name="contact")
      */
-    public function contactForm(Request $request, EntityManagerInterface $entityManager)
+    public function contact(EntityManagerInterface $entityManager, Request $request, \Swift_Mailer $mailer)
     {
         $contact = new Contact();
+
         $form = $this->createForm(ContactType::class, $contact);
-        $formContactView = $form->createView();
 
-        if ($request->isMethod('Post')) {
-
+        if ($request->isMethod('POST')) {
             $form->handleRequest($request);
 
-            $entityManager->persist($contact);
-            $entityManager->flush();
-
             if ($form->isSubmitted() && $form->isValid()) {
+                $message = (new \Swift_Message('Nouveau message'))
+                    ->setFrom($contact->getEmail())
+                    ->setTo('florian.vidal@lapiscine.pro')
+                    ->setBody(
+                        $this->renderView(
+                            '_mail.html.twig', [
+                                'prenom' => $contact->getPrenom(),
+                                'email' => $contact->getEmail(),
+                                'message' => $contact->getMessage()
+                            ]
+                        ),
+                        'text/html'
+                    );
 
-                $this->addFlash('Success', 'Inscription réussie !');
+                $mailer->send($message);
+
+                $entityManager->persist($contact);
+                $entityManager->flush();
+
+                $this->addFlash('success', 'Votre message a bien été envoyé, merci ! Nous y répondrons dès que possible.');
+
+                return $this->redirect($request->getUri());
 
             } else {
 
-                $this->addFlash('Fail', 'Echec de l\'inscription, veuillez réessayer.');
+                $this->addFlash('fail', 'Votre message n\'a pas pu être envoyé.');
+
+                return $this->render('contact.html.twig', [
+                    'contactForm' => $form->createView()
+                ]);
             }
         }
 
-        return $this->render('contact.html.twig',
-            [
-                'formContactView' => $formContactView
-            ]
-        );
+        return $this->render('contact.html.twig', [
+            'contactForm' => $form->createView()
+        ]);
     }
-
-
-
-
-
-
-
-
 
 
 }

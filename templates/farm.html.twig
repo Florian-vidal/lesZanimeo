@@ -6,6 +6,7 @@
             <div class="titleFarm">
                 <img src="{{ asset('assets/img/main/titleFarm.png') }}" alt="">
             </div>
+
             <!--------------------------IMAGE BIRDS--------------------------------->
             <div class="sideFamily1">
                 <a href="{{ path('birds_page') }}"><img src="{{ asset('assets/img/animals/birds.png') }}" alt=""></a>
@@ -56,53 +57,36 @@
         <div class="popUpFamily">
             <span id="family">Choisis ta famille d'animaux et écoute ce qu'ils ont à te raconter !</span>
         </div>
-        <script>
-            $( document ).ready(function() {
-                $('.popUpFamily').slideUp().delay(1000).slideDown()
-                $('.popUpFamily').slideDown().delay(5000).slideUp()
-            });
-        </script>
 
         <div class="popUpFamilyAnnexes1">
             <span id="familyAnnexes">Tu peux voir les autres familles en cliquant ici !</span>
         </div>
         <script>
             $( document ).ready(function() {
-                $('.popUpFamilyAnnexes1').slideUp().delay(7000).slideDown()
+                $('.popUpFamilyAnnexes1').slideUp().delay(7000).slideDown();
                 $('.popUpFamilyAnnexes1').slideDown().delay(5000).slideUp()
             });
         </script>
-
         <div class="popUpFamilyAnnexes2">
             <span id="familyAnnexes2">Et ici !</span>
         </div>
         <script>
             $( document ).ready(function() {
-                $('.popUpFamilyAnnexes2').slideUp().delay(13000).slideDown()
+                $('.popUpFamilyAnnexes2').slideUp().delay(13000).slideDown();
                 $('.popUpFamilyAnnexes2').slideDown().delay(5000).slideUp()
             });
         </script>
 
         <!-----------------------------SONS POP-UP--------------------------------->
         <audio id='quizSound' src="{{ asset('assets/song/quiz.mp3') }}"/>
-        <audio id='dogSound' src="{{ asset('assets/song/dog.mp3') }}"/>
+        <audio id='dogSound' src="{{ asset('assets/song/gitan.mp3') }}"/>
         <audio id='horseSound' src="{{ asset('assets/song/horse.mp3') }}"/>
         <audio id='pigSound' src="{{ asset('assets/song/pig.mp3') }}"/>
+{#
         <audio id='rabbitSound' src="{{ asset('assets/song/rabbit.mp3') }}"/>
+#}
         <audio id='sheepSound' src="{{ asset('assets/song/sheep.mp3') }}"/>
         <audio id='cowSound' src="{{ asset('assets/song/cow.mp3') }}"/>
 
-        <script>
-            function PlaySound(soundobj) {
-                var thissound=document.getElementById(soundobj);
-                thissound.play();
-            }
-
-            function StopSound(soundobj) {
-                var thissound=document.getElementById(soundobj);
-                thissound.pause();
-                thissound.currentTime = 0;
-            }
-        </script>
     </main>
 {% endblock %}

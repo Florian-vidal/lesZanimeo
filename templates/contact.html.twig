@@ -6,31 +6,32 @@
         <a href="{{ path('home_lesZanimeo') }}"><img class="homeButton" src="{{ asset('assets/img/main/home.jpg') }}" alt=""></a>
         <h1>Contact</h1>
 
-
-        {{ form_start(formContactView) }}
+        <!--------------------------FORMULAIRE CONTACT--------------------------------->
+        {{ form_start(contactForm, {'attr': {'novalidate': 'novalidate'}}) }}
 
         <div class="formLogin2">
             <div class="form-group">
-                {{ form_label(formContactView.prenom, 'Prénom', {'label_attr':{'class':'labelContact'}}) }}
-                {{ form_widget(formContactView.prenom, {'attr': {'class': 'form-control', 'placeholder': 'Quel est ton nom ?' }}) }}
+                {{ form_label(contactForm.prenom, 'Prénom', {'label_attr':{'class':'labelContact'}}) }}
+                {{ form_widget(contactForm.prenom, {'attr': {'class': 'form-control', 'placeholder': 'Quel est ton nom ?' }}) }}
             </div>
             <div class="form-group">
-                {{ form_label(formContactView.email, 'email', {'label_attr':{'class':'labelContact'}}) }}
-                {{ form_widget(formContactView.email, {'attr': {'class': 'form-control', 'placeholder': 'Quel est ton email ?' }}) }}
+                {{ form_label(contactForm.email, 'Email', {'label_attr':{'class':'labelContact'}}) }}
+                {{ form_widget(contactForm.email, {'attr': {'class': 'form-control', 'placeholder': 'Quel est ton email ?' }}) }}
             </div>
             <div class="form-group">
-                {{ form_label(formContactView.motdepasse, 'Mot de passe', {'label_attr':{'class':'labelContact'}}) }}
-                {{ form_widget(formContactView.motdepasse, {'attr': {'class': 'form-control', 'placeholder': 'Quel est ton mot de passe ?' }}) }}
+                {{ form_label(contactForm.motdepasse, 'Mot de passe', {'label_attr':{'class':'labelContact'}}) }}
+                {{ form_widget(contactForm.motdepasse, {'attr': {'class': 'form-control', 'placeholder': 'Quel est ton mot de passe ?' }}) }}
             </div>
             <div class="form-group">
-                {{ form_label(formContactView.message, 'Message', {'label_attr':{'class':'labelContact'}}) }}
-                {{ form_widget(formContactView.message, {'attr': {'class': 'form-control', 'placeholder': 'Quel est ton message ?' }}) }}
+                {{ form_label(contactForm.message, 'Message', {'label_attr':{'class':'labelContact'}}) }}
+                {{ form_widget(contactForm.message, {'attr': {'class': 'form-control', 'placeholder': 'Quel est ton message ?' }}) }}
             </div>
             <div class="form-group">
-                {{ form_label(formContactView.enregistrer) }}
-                {{ form_widget(formContactView.enregistrer , {'attr': {'class': 'btn btn-success'}}) }}
+                {{ form_label(contactForm.enregistrer) }}
+                {{ form_widget(contactForm.enregistrer , {'attr': {'class': 'btn btn-success'}}) }}
             </div>
 
+            <!--------------------------MESSAGE DE CONFIRMATION D'ENREGISTREMENT--------------------------------->
             <div class="messageConfirmation">
                 {% for messages in app.flashes %}
                     {% for message in messages %}
@@ -38,10 +39,9 @@
                     {% endfor %}
                 {% endfor %}
             </div>
-
         </div>
 
-        {{ form_end(formContactView) }}
+        {{ form_end(contactForm) }}
 
     </div>
 

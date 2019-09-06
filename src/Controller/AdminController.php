@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Controller;
 
 use App\Entity\Animaux;
@@ -13,6 +12,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\Exception;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class AdminController extends AbstractController
 {
@@ -52,8 +53,31 @@ class AdminController extends AbstractController
         if ($request->isMethod('Post')) {
 
             $form->handleRequest($request);
+            /** @var UploadedFile $imageFile */
+            $imageFile = $form['image']->getData();
 
-                $entityManager->persist($animal);
+            if ($imageFile) {
+                $originalFilename = pathinfo($imageFile->getClientOriginalName(), PATHINFO_FILENAME);
+
+                // Nécessaire pour inclure le nom du fichier en tant qu'URL
+                $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9] remove; Lower()', $originalFilename);
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $imageFile->guessExtension();
+
+                // Déplace le fichier dans le dossier des images de l'image
+                try {
+                    $imageFile->move(
+                        $this->getParameter('images_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+
+                }
+
+                // Met à jour l'image pour stocker le nouveau nom de l'image
+                $animal->setImage($newFilename);
+            }
+
+            $entityManager->persist($animal);
                 $entityManager->flush();
 
             if ($form->isSubmitted() && $form->isValid()) {

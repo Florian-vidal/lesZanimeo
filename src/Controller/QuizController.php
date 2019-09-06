@@ -24,46 +24,50 @@ class QuizController extends AbstractController
     }
 
     /**
-     * @Route("question{id}", name="questions")
+     * @Route("question{id}/{goodResponses}", name="questions")
      */
-    public function questionsController(QuestionsRepository $questionsRepository, ResponsesRepository $responsesRepository, $id)
+    public function questionsController($goodResponses, QuestionsRepository $questionsRepository, ResponsesRepository $responsesRepository, $id)
     {
         $responses = $responsesRepository->find($id);
         $questions = $questionsRepository->find($id);
         return $this->render('questions.html.twig',
         [
             'questions' => $questions,
-            'responses' => $responses
+            'responses' => $responses,
+            'goodResponses' => $goodResponses
             ]
         );
     }
 
     /**
-     * @Route("response{id}", name="responses")
+     * @Route("response{id}/{goodResponses}", name="responses")
      */
-    public function responsesController(QuestionsRepository $questionsRepository, ResponsesRepository $responsesRepository, $id)
+    public function responsesController($goodResponses, QuestionsRepository $questionsRepository, ResponsesRepository $responsesRepository, $id)
     {
         $questions = $questionsRepository->find($id);
         $responses = $responsesRepository->find($id);
         return $this->render('responses.html.twig',
             [
                 'responses' => $responses,
-                'questions' => $questions
+                'questions' => $questions,
+                'goodResponses' => $goodResponses
             ]
         );
     }
 
     /**
-     * @Route("score", name="score")
+     * @Route("score/{goodResponses}", name="score")
      */
-    public function scoreController(QuestionsRepository $questionsRepository, ResponsesRepository $responsesRepository)
+    public function scoreController($goodResponses, QuestionsRepository $questionsRepository, ResponsesRepository $responsesRepository)
     {
         $questions = $questionsRepository->findAll();
         $responses = $responsesRepository->findAll();
         return $this->render('score.html.twig',
         [
             'responses' => $responses,
-            'questions' => $questions
+            'questions' => $questions,
+            'goodResponses' => $goodResponses
+
         ]
         );
     }

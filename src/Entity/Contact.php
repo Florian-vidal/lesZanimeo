@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ContactRepository")
@@ -22,7 +24,9 @@ class Contact
     private $prenom;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=100, nullable=false)
+     * @Assert\NotBlank(message="Ce champ ne doit pas être vide.")
+     * @Assert\Email(message="Vous devez saisir une adresse mail valide.")
      */
     private $email;
 

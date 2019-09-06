@@ -5,19 +5,31 @@
     <main>
         <h1 class="titleAnimals">{{ animals.name }}</h1>
         <div class="contentAnimals">
+
+            <!---------------------------IMAGE ANIMAL------------------------------->
             <div class="animalPicture">
                 <img src="{{ asset('assets/img/animals') }}/{{ animals.image }}" alt="">
             </div>
+
+            <!---------------------------CONTENU ANIMAL------------------------------->
             <div class="animalStory">
                 <p>{{ animals.description|nl2br }}</p>
             </div>
         </div>
+
+        <!---------------------------LECTEUR AUDIO------------------------------->
         <figure>
             <figcaption>Ecoute mon histoire !</figcaption>
             <br>
             <audio controls src="{{ asset('assets/song') }}/{{ animals.audio }}"><code>audio</code> element.
             </audio>
         </figure>
+
+        <!---------------------------BOUTON PRECEDENT------------------------------->
+        <div class="return">
+            <a href="javascript:history.go(-1)"><img src="{{ asset('assets/img/main/return.svg') }}" alt=""></a>
+            <span>Retour</span>
+        </div>
     </main>
 
 {% endblock %}
