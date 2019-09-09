@@ -1,5 +1,7 @@
 //--------------------------HOME---------------------------------//
 
+document.write('<embed src="assets/song/lesZanimeo.mp3" width="0" height="0" controls="console" " + " loop="false" autostart="true" ></embed>');
+
 $( document ).ready(function() {
 
     $('.btn-next').on('click', function() {

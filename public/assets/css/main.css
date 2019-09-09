@@ -132,6 +132,7 @@ h1 {
 .content {
   width: 100%;
   margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: space-around;
   /*background: blue;*/ }
@@ -375,6 +376,7 @@ body {
 /*--------------END FONDU---------------*/
 .contentFamily {
   width: 100%;
+  margin-bottom: 50px;
   display: flex;
   justify-content: space-around;
   align-items: baseline; }

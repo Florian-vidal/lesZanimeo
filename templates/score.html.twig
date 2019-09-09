@@ -11,19 +11,22 @@
                     <img src="{{ asset('assets/img/main/quiz2.png') }}" alt="">
                 </div>
             </div>
-
             <div class="content2Quiz">
                 <div class="contentScoreQuiz">
                     <h1>Voici ton score !</h1><br><br>
                     {% if goodResponses > 1 %}
                         <p>Tu as répondu correctement à {{ goodResponses }} réponses, bravo !<br><br><br>
                     {% elseif goodResponses == 0 %}
-                        <p>Tu es un boloss petit, bravo !<br><br><br>
+                        <p>Tu n'as aucune bonne réponse, je t'invite à revoir les descriptions des animaux et à reessayer le Quiz !<br><br><br>
                     {% else %}
                         <p>Tu as répondu correctement à {{ goodResponses }} réponse, bravo !<br><br><br>
                     {% endif %}
                     <div class="btn-group" role="group" aria-label="Button">
-                        <a href="{{ path('questions', {'id': 1, 'goodResponses': 0}) }}"><button type="button" class="btn btn-info">Relancer le Quiz</button></a>
+                        <a href="{{ path('questions', {'id': 1, 'goodResponses': 0}) }}"><button type="button" class="btn btn-info">Relancer le Quiz</button></a> &nbsp; &nbsp
+{#
+                        <a href="{{ path('score', {'goodResponses': goodResponses })}}"><button type="button" class="btn btn-info">Reçois ton score par mail !</button></a>
+#}
+                        <form action="#" method="post"><input type="submit" value="Score" name="submit" class="btn btn-info"></form>
                     </div>
                 </div>
             </div>

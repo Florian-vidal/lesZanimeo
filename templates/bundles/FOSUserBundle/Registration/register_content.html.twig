@@ -7,7 +7,19 @@
     <div class="formLogin2">
 
         {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
-        {{ form_widget(form) }}
+
+        {{ form_label(form.username, 'Pseudo', {'label_attr':{'class':'labelContact'}}) }}
+        {{ form_widget(form.username, {'attr': {'class': 'form-control', 'placeholder': 'Quel est ton pseudo ?' }}) }}
+
+        {{ form_label(form.email, 'Email', {'label_attr':{'class':'labelContact'}}) }}
+        {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Quel est ton mail ?' }}) }}
+
+        {{ form_label(form.plainPassword.first, 'Mot de passe', {'label_attr':{'class':'labelContact'}}) }}
+        {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control', 'placeholder': 'Quel est ton mot de passe ?' }}) }}
+
+        {{ form_label(form.plainPassword.second, 'Confirmation', {'label_attr':{'class':'labelContact'}}) }}
+        {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control', 'placeholder': 'Merci de confirmer ton mot de passe' }}) }}
+
         <div class="btnConnectLogin">
             <input type="submit" class="btn btn-success" value="{{ 'registration.submit'|trans }}" />
         </div>

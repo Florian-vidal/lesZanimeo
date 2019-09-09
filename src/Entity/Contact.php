@@ -35,16 +35,6 @@ class Contact
      */
     private $message;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $motdepasse;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
     public function getPrenom(): ?string
     {
         return $this->prenom;
@@ -77,18 +67,6 @@ class Contact
     public function setMessage(string $message): self
     {
         $this->message = $message;
-
-        return $this;
-    }
-
-    public function getMotdepasse(): ?string
-    {
-        return $this->motdepasse;
-    }
-
-    public function setMotdepasse(string $motdepasse): self
-    {
-        $this->motdepasse = $motdepasse;
 
         return $this;
     }
