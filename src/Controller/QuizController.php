@@ -59,23 +59,6 @@ class QuizController extends AbstractController
     }
 
     /**
-     * @Route("score/{goodResponses}", name="score")
-     */
-    /*public function scoreController($goodResponses, QuestionsRepository $questionsRepository, ResponsesRepository $responsesRepository)
-    {
-        $questions = $questionsRepository->findAll();
-        $responses = $responsesRepository->findAll();
-        return $this->render('score.html.twig',
-        [
-            'responses' => $responses,
-            'questions' => $questions,
-            'goodResponses' => $goodResponses
-
-        ]
-        );
-    }*/
-
-    /**
      * @Route("/score/{goodResponses}", name="score")
      */
     public function sendMail($goodResponses, EntityManagerInterface $entityManager, Request $request, \Swift_Mailer $mailer, QuestionsRepository $questionsRepository, ResponsesRepository $responsesRepository)
@@ -85,12 +68,9 @@ class QuizController extends AbstractController
 
         $user = $this->getUser();
 
-
-
         if ($request->isMethod('POST')) {
 
             if ($_POST["submit"]) {
-                DD("test ok");
                 $message = (new \Swift_Message('Score'))
                     ->setFrom(['ezekielsxm@gmail.com' => 'Les Zaniméo'])
                     ->setTo($user->getEmail());
@@ -106,20 +86,17 @@ class QuizController extends AbstractController
                 );
 
                 $mailer->send($message);
+                $this->addFlash('Success', 'Le score a bien été envoyé !');
 
             }
-
         }
         return $this->render('score.html.twig',
             [
                 'responses' => $responses,
                 'questions' => $questions,
                 'goodResponses' => $goodResponses,
-
-
             ]
         );
-
     }
 
 

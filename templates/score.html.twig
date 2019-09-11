@@ -15,21 +15,27 @@
                 <div class="contentScoreQuiz">
                     <h1>Voici ton score !</h1><br><br>
                     {% if goodResponses > 1 %}
-                        <p>Tu as répondu correctement à {{ goodResponses }} réponses, bravo !<br><br><br>
+                        <p>Tu as répondu correctement à {{ goodResponses }} réponses, bravo {{ app.user.username }} !<br><br><br>
                     {% elseif goodResponses == 0 %}
                         <p>Tu n'as aucune bonne réponse, je t'invite à revoir les descriptions des animaux et à reessayer le Quiz !<br><br><br>
                     {% else %}
                         <p>Tu as répondu correctement à {{ goodResponses }} réponse, bravo !<br><br><br>
                     {% endif %}
                     <div class="btn-group" role="group" aria-label="Button">
-                        <a href="{{ path('questions', {'id': 1, 'goodResponses': 0}) }}"><button type="button" class="btn btn-info">Relancer le Quiz</button></a> &nbsp; &nbsp
-{#
-                        <a href="{{ path('score', {'goodResponses': goodResponses })}}"><button type="button" class="btn btn-info">Reçois ton score par mail !</button></a>
-#}
-                        <form action="#" method="post"><input type="submit" value="Score" name="submit" class="btn btn-info"></form>
+                        <a href="{{ path('questions', {'id': 1, 'goodResponses': 0}) }}"><button type="button" class="btn btn-info">Relancer le Quiz</button></a><br><br>
+                        <form action="#" method="post"><input type="submit" value="Obtiens ton score par mail" name="submit" class="btn btn-info"></form>
                     </div>
                 </div>
             </div>
+            <div class="messageConfirmation">
+                {% for messages in app.flashes %}
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                {% endfor %}
+            </div>
         </div>
+
+
     </main>
 {% endblock %}

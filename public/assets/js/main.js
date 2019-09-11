@@ -1,6 +1,8 @@
 //--------------------------HOME---------------------------------//
 
+/*
 document.write('<embed src="assets/song/lesZanimeo.mp3" width="0" height="0" controls="console" " + " loop="false" autostart="true" ></embed>');
+*/
 
 $( document ).ready(function() {
 
@@ -42,6 +44,11 @@ $( document ).ready(function() {
 $( document ).ready(function() {
     $('.popUpHome').slideUp().delay(12000).slideDown();
     $('.popUpHome').slideDown().delay(5000).slideUp();
+});
+
+$( document ).ready(function() {
+    $('.popUpRegistration').slideUp().delay(18000).slideDown();
+    $('.popUpRegistration').slideDown().delay(5000).slideUp();
 });
 
 //------------BACKGROUND AUDIO ON/OFF--------------//

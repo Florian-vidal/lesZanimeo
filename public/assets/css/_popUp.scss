@@ -1,8 +1,11 @@
-.popUpMegaphone, .popUpQuiz, .popUpHome, .animalText, .popUpFamily, .popUpFamilyAnnexes1, .popUpFamilyAnnexes2 {
+.popUpMegaphone, .popUpQuiz, .popUpHome, .popUpRegistration, .animalText, .popUpFamily, .popUpFamilyAnnexes1, .popUpFamilyAnnexes2 {
   padding: 10px;
   position: absolute;
-  background: linear-gradient(#C2976A, rosybrown);
-  box-shadow: 5px 5px 7px -1px rgba(207,207,207,1);
+  /*background: linear-gradient(#C2976A, rosybrown);*/
+  background: white;
+  color: #94EB00;
+  border: 1px solid #94EB00;
+  box-shadow: 3px 3px 5px -1px rgba(207,207,207,0.5);
   display: none;
 }
 
@@ -10,19 +13,20 @@
   background: blue;
 }*/
 
-#m, #q, #a, #f, .animalText, #popUpFamily, #popUpFamilyAnnexes1, #popUpFamilyAnnexes2 {
-  color: white;
+#m, #q, #a, #f, #r, .animalText, #popUpFamily, #popUpFamilyAnnexes1, #popUpFamilyAnnexes2 {
+  color: #64CC00;
   text-align: center;
+  font-size: x-large;
 }
 
 .popUpMegaphone {
-  top: 13%;
+  top: 11%;
   right: 5%;
   border-radius: 10px 0 10px 10px;
 }
 
 .popUpQuiz {
-  top: 20%;
+  top: 19%;
   left: 6%;
   border-radius: 0 10px 10px 10px;
 }
@@ -55,6 +59,12 @@
   border-radius: 10px 0 10px 10px;
 }
 
+.popUpRegistration {
+  top: 13%;
+  right: 29%;
+  border-radius: 10px 10px 10px 10px;
+}
+
 .dog .animalText, .horse .animalText, .pig .animalText, .rabbit .animalText, .sheep .animalText, .cow .animalText,
 .ladyBird .animalText, .snail .animalText, .grasshopper .animalText, .caterpillar .animalText, .spider .animalText, .dragonfly .animalText,
 .pheasant .animalText, .toucan .animalText, .peacock .animalText, .parrot .animalText, .penguin .animalText, .parakeet .animalText {
@@ -70,3 +80,4 @@
   animation-name: jello;
   animation-duration: 1.5s;
 }
+

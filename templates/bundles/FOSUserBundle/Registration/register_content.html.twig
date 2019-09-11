@@ -21,7 +21,7 @@
         {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control', 'placeholder': 'Merci de confirmer ton mot de passe' }}) }}
 
         <div class="btnConnectLogin">
-            <input type="submit" class="btn btn-success" value="{{ 'registration.submit'|trans }}" />
+            <input type="submit" class="btn btn-success" value="{{ 'registration.submit'|trans }}" name="submit"/>
         </div>
         {{ form_end(form) }}
     </div>

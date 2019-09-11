@@ -6,7 +6,7 @@
 
                 <!---------------------------BOUTON HOME------------------------------->
                 <div class="homeButtonQuiz">
-                    <a href="{{ path('home_lesZanimeo') }}"><img src="{{ asset('assets/img/main/home2.jpg') }}" alt=""></a>
+                    <a href="{{ path('home_lesZanimeo') }}"><img src="{{ asset('assets/img/main/home2.jpg') }}" alt="Retour à l'accueil"></a>
                 </div>
 
                 <!---------------------------BOUTON QUIZ------------------------------->
@@ -23,11 +23,8 @@
                 </div>
 
                 <div class="contentRightQuiz">
-                    <h1>Teste tes connaissances !</h1><br><br>
-                    <p>18 questions pour tester
-                        tes connaissances.<br>Lance-toi
-                        pour savoir si tu as bien
-                        tout retenu !</p><br><br>
+                    <h1>Bienvenue {{ app.user.username }}, teste tes connaissances !</h1><br><br>
+                    <p>18 questions sur tes animaux préférés.<br><br>Lance-toi pour savoir si tu as bien tout retenu !</p><br><br>
                     <div class="btn-group" role="group" aria-label="Button">
                         <a href="{{ path('questions', {'id': 1, 'goodResponses': 0}) }}"><button type="button" class="btn btn-info">Lancer le Quiz</button></a>
                     </div>

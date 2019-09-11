@@ -51,27 +51,31 @@ a {
 h1 {
   margin: 0; }
 
-.popUpMegaphone, .popUpQuiz, .popUpHome, .animalText, .popUpFamily, .popUpFamilyAnnexes1, .popUpFamilyAnnexes2 {
+.popUpMegaphone, .popUpQuiz, .popUpHome, .popUpRegistration, .animalText, .popUpFamily, .popUpFamilyAnnexes1, .popUpFamilyAnnexes2 {
   padding: 10px;
   position: absolute;
-  background: linear-gradient(#C2976A, rosybrown);
-  box-shadow: 5px 5px 7px -1px #cfcfcf;
+  /*background: linear-gradient(#C2976A, rosybrown);*/
+  background: white;
+  color: #94EB00;
+  border: 1px solid #94EB00;
+  box-shadow: 3px 3px 5px -1px rgba(207, 207, 207, 0.5);
   display: none; }
 
 /*body {
   background: blue;
 }*/
-#m, #q, #a, #f, .animalText, #popUpFamily, #popUpFamilyAnnexes1, #popUpFamilyAnnexes2 {
-  color: white;
-  text-align: center; }
+#m, #q, #a, #f, #r, .animalText, #popUpFamily, #popUpFamilyAnnexes1, #popUpFamilyAnnexes2 {
+  color: #64CC00;
+  text-align: center;
+  font-size: x-large; }
 
 .popUpMegaphone {
-  top: 13%;
+  top: 11%;
   right: 5%;
   border-radius: 10px 0 10px 10px; }
 
 .popUpQuiz {
-  top: 20%;
+  top: 19%;
   left: 6%;
   border-radius: 0 10px 10px 10px; }
 
@@ -98,6 +102,11 @@ h1 {
   right: 10%;
   transform: translateX(-50%);
   border-radius: 10px 0 10px 10px; }
+
+.popUpRegistration {
+  top: 13%;
+  right: 29%;
+  border-radius: 10px 10px 10px 10px; }
 
 .dog .animalText, .horse .animalText, .pig .animalText, .rabbit .animalText, .sheep .animalText, .cow .animalText,
 .ladyBird .animalText, .snail .animalText, .grasshopper .animalText, .caterpillar .animalText, .spider .animalText, .dragonfly .animalText,
@@ -195,12 +204,13 @@ h1 {
 .circleMegaphone {
   width: 80px;
   height: 80px;
-  background: linear-gradient(#C2976A, rosybrown);
+  background: #64CC00;
   position: absolute;
   top: 0;
   right: 0;
   margin: 18px;
   border-radius: 50px;
+  border: 1px solid white;
   display: none; }
 
 /*--------------------------------------TITRE "LES ZANIMEO"---------------------------------*/
@@ -248,7 +258,7 @@ body {
 }*/
 .contentQuiz {
   background: #f1f2f3;
-  height: 800px; }
+  height: 1000px; }
 
 .quizHeader {
   padding: 30px;
@@ -316,6 +326,14 @@ body {
 
 .contentScoreQuiz {
   margin: 0 auto; }
+
+.messageConfirmation {
+  background: linear-gradient(#C2976A, rosybrown);
+  width: 300px;
+  height: 50px;
+  margin: 0 auto;
+  line-height: 50px;
+  border-radius: 10px; }
 
 .homebutton {
   width: 100%; }

@@ -43,6 +43,13 @@ class AdminController extends AbstractController
 
     /**
      * @Route("/admin/form_animals_insert", name="form_animals_insert")
+     * Méthode qui permet d'ajouter un animal
+     * Je créé tout d'abord mon formulaire d'insertion dans mon fichier Twig "adminAnimalsInsert.html.twig" avec la variable "formAnimalsView".
+     * Cette variable est générée grâce à la méthode "createView" présente ci-dessous.
+     * La variable stocke le résultat de la méthode "createForm" qui a pour but de générer une représentation abstraite du formulaire (objet)
+     * + l'instance de l'entité Animaux. "Handle Request" fait le lien entre les données entrées et le formulaire.
+     * J'ai implémenté une méthode pour pouvoir chercher une image depuis son ordinateur grâce à un bouton "choisir un fichier".
+     * Aussi, j'ai mis en place un message de confirmation ou d'infirmation en cas de résussite/échec de soumission du formulaire.
      */
     public function insertAnimals(Request $request, EntityManagerInterface $entityManager, AnimauxRepository $animauxRepository)
     {
@@ -78,7 +85,7 @@ class AdminController extends AbstractController
             }
 
             $entityManager->persist($animal);
-                $entityManager->flush();
+            $entityManager->flush();
 
             if ($form->isSubmitted() && $form->isValid()) {
 

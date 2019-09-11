@@ -12,16 +12,16 @@
             </div>
 
             <!---------------------------CONTENU ANIMAL------------------------------->
-            <div class="animalStory">
+            <article class="animalStory">
                 <p>{{ animals.description|nl2br }}</p>
-            </div>
+            </article>
         </div>
 
         <!---------------------------LECTEUR AUDIO------------------------------->
         <figure>
             <figcaption>Ecoute mon histoire !</figcaption>
             <br>
-            <audio controls src="{{ asset('assets/song') }}/{{ animals.audio }}"><code>audio</code> element.
+            <audio controls src="{{ asset('assets/song') }}/{{ animals.audio }}"><code>audio</code>element.
             </audio>
         </figure>
 

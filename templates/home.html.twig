@@ -3,16 +3,16 @@
 {% block main %}
 
 <main>
-    <a href="{{ path('quiz') }}"><img class="quiz" src="{{ asset('assets/img/main/quiz1.png') }}" alt="" role="tabpanel" aria-labelledby="quizTab" onmouseover="PlaySound('quizSound')"
+    <a href="{{ path('quiz') }}"><img class="quiz" src="{{ asset('assets/img/main/quiz1.png') }}" alt="Ceci est un bouton pour accéder au Quiz" tabindex="2" onmouseover="PlaySound('quizSound')"
          onmouseout="StopSound('quizSound')"></a>
 
     <!--------------------------NAVBAR CONNECTION--------------------->
-    <div class="sidenav">
+    <nav class="sidenav" role="navigation" aria-label="Menu principal">
         {% if is_granted("ROLE_ADMIN") %}
             {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
             <a href="{{ path('admin') }}">Espace Admin</a> |
             <a href="{{ path('fos_user_security_logout') }}">Se déconnecter</a> |
-            <a href="{{ path('contact') }}">Contact</a>
+            <a href="{{ path('contact') }}" alt="Appuyer sur Entrer pour remplir un formulaire de contact">Contact</a>
         {%  elseif is_granted("IS_AUTHENTICATED_REMEMBERED") %}
             {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
             <a href="{{ path('fos_user_security_logout') }}">Se déconnecter</a>
@@ -21,20 +21,33 @@
             <a href="{{ path('fos_user_registration_register') }}">S'inscrire</a> |
             <a href="{{ path('contact') }}">Contact</a>
         {% endif %}
-    </div>
+    </nav>
 
     <!--------------------------TITRE + INTRO VOCALE "Les Zaniméo"--------------------->
     <div>
         <div class="title">
             <img src="{{ asset('assets/img/main/title.png') }}" alt="">
         </div>
+        <object data="lesZanimeo.mp3" type="audio/x-mpeg" width="0" height="0">
+            <param name="src" value="lesZanimeo.mp3"/>
+            <param name="controls" value="console"/>
+            <param name="autostart" value="true"/>
+            <param name="loop" value="false"/>
+            <script type="text/javascript">
+                <!--
+                document.write('<embed src="{{ asset('assets/song/lesZanimeo.mp3') }}" width="0" height="0" controls="console" " + " loop="false" autostart="true" ></embed>');
+                //-->
+            </script>
+        </object>
     </div>
+
+
 
     <!---------------------------ICONE MEGAPHONE------------------------------->
     <div class="circleMegaphone">
     </div>
     <div class="button play">
-        <img src="{{ asset('assets/img/main/megaphone.svg') }}" id="player">
+        <img src="{{ asset('assets/img/main/megaphone.svg') }}" id="player" alt="Vous pouvez désactiver le son d'arrière plan en activant ce bouton" tabindex="1">
     </div>
 
     <!---------------------------BACKGROUND AUDIO (SON NATURE)------------------------------->
@@ -44,9 +57,9 @@
 
     <!--------------------------3 IMAGES FAMILLES ANIMAUX--------------------------------->
     <div class="content">
-        <a href="{{ path('farm_page') }}" class="farmHome"><img src="{{ asset('assets/img/animals/farm.png') }}" alt="" onmouseover="PlaySound('farmSound')" onmouseout="StopSound('farmSound')"></a>
-        <a href="{{ path('bugs_page') }}" class="bugsHome"><img src="{{ asset('assets/img/animals/bugs.png') }}" alt="" onmouseover="PlaySound('bugsSound')" onmouseout="StopSound('bugsSound')"></a>
-        <a href="{{ path('birds_page') }}" class="birdsHome"><img src="{{ asset('assets/img/animals/birds.png') }}" alt="" onmouseover="PlaySound('birdsSound')" onmouseout="StopSound('birdsSound')"></a>
+        <a href="{{ path('farm_page') }}" class="farmHome"><img src="{{ asset('assets/img/animals/farm.png') }}" alt="Accéder aux animaux de la ferme" onmouseover="PlaySound('farmSound')" onmouseout="StopSound('farmSound')"></a>
+        <a href="{{ path('bugs_page') }}" class="bugsHome"><img src="{{ asset('assets/img/animals/bugs.png') }}" alt="Accéder aux insectes" onmouseover="PlaySound('bugsSound')" onmouseout="StopSound('bugsSound')"></a>
+        <a href="{{ path('birds_page') }}" class="birdsHome"><img src="{{ asset('assets/img/animals/birds.png') }}" alt="Accéder aux oiseaux" onmouseover="PlaySound('birdsSound')" onmouseout="StopSound('birdsSound')"></a>
 
         <!--------------------------MESSAGES POP-UP--------------------------------->
         <div class="popUpMegaphone">
@@ -57,6 +70,9 @@
         </div>
         <div class="popUpHome">
             <span id="a">Choisis ta famille d'animaux et écoute ce qu'ils ont à te raconter !</span>
+        </div>
+        <div class="popUpRegistration">
+            <span id="r">Avant de jouer au Quiz, nous t'invitons à t'inscrire sur le site !</span>
         </div>
 
         <!-----------------------------SONS POP-UP--------------------------------->
