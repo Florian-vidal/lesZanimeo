@@ -6,11 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
-<body>
-    <p>Bravo, tu as obtenu le score de {{ goodResponses }}</p>
-
-    <div class="certificat">
-        <img src="" alt="">
-    </div>
-</body>
+    <body>
+        {% if goodResponses > 1 %}
+        <p>Bravo {{ app.user.username }} ! Tu as répondu correctement à {{ goodResponses }} réponses. Voici ton super certificat !<br><br><br>
+            {% elseif goodResponses == 0 %}
+        <p>Bravo {{ app.user.username }} ! Tu as terminé le Quiz. Retente ta chance avec ce que tu as appris sur les animaux. Voici ton super certificat !<br><br><br>
+            {% else %}
+        <p>Bravo {{ app.user.username }} ! Tu as répondu correctement à {{ goodResponses }} réponse. Voici ton super certificat !<br><br><br>
+            {% endif %}
+    </body>
 </html>

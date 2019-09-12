@@ -54,16 +54,13 @@ h1 {
 .popUpMegaphone, .popUpQuiz, .popUpHome, .popUpRegistration, .animalText, .popUpFamily, .popUpFamilyAnnexes1, .popUpFamilyAnnexes2 {
   padding: 10px;
   position: absolute;
-  /*background: linear-gradient(#C2976A, rosybrown);*/
   background: white;
   color: #94EB00;
   border: 1px solid #94EB00;
   box-shadow: 3px 3px 5px -1px rgba(207, 207, 207, 0.5);
-  display: none; }
+  display: none;
+  font-size: x-large; }
 
-/*body {
-  background: blue;
-}*/
 #m, #q, #a, #f, #r, .animalText, #popUpFamily, #popUpFamilyAnnexes1, #popUpFamilyAnnexes2 {
   color: #64CC00;
   text-align: center;
@@ -92,13 +89,13 @@ h1 {
   border-radius: 10px 10px 10px 10px; }
 
 .popUpFamilyAnnexes1 {
-  top: 80%;
-  left: 20%;
+  top: 79%;
+  left: 28%;
   transform: translateX(-50%);
   border-radius: 0 10px 10px 10px; }
 
 .popUpFamilyAnnexes2 {
-  top: 80%;
+  top: 79%;
   right: 10%;
   transform: translateX(-50%);
   border-radius: 10px 0 10px 10px; }
@@ -143,8 +140,7 @@ h1 {
   margin-top: 50px;
   margin-bottom: 50px;
   display: flex;
-  justify-content: space-around;
-  /*background: blue;*/ }
+  justify-content: space-around; }
 
 .quiz {
   width: 10%;
@@ -252,6 +248,9 @@ h1 {
   88.8% {
     -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
     transform: skewX(-0.1953125deg) skewY(-0.1953125deg); } }
+.messageConfirmation {
+  text-align: center; }
+
 /*
 body {
   background: blue;
@@ -326,14 +325,6 @@ body {
 
 .contentScoreQuiz {
   margin: 0 auto; }
-
-.messageConfirmation {
-  background: linear-gradient(#C2976A, rosybrown);
-  width: 300px;
-  height: 50px;
-  margin: 0 auto;
-  line-height: 50px;
-  border-radius: 10px; }
 
 .homebutton {
   width: 100%; }
@@ -439,7 +430,7 @@ body {
   width: 100%; }
 
 .dog {
-  width: 12%;
+  width: 10%;
   top: 52%;
   right: 25%; }
 
@@ -449,13 +440,13 @@ body {
   left: 40%; }
 
 .pig {
-  width: 12%;
-  top: 57%;
+  width: 10%;
+  top: 55%;
   left: 50%; }
 
 .rabbit {
   width: 8%;
-  top: 37%;
+  top: 36%;
   left: 53%; }
 
 .sheep {
@@ -474,7 +465,7 @@ body {
   left: 60%; }
 
 .snail {
-  width: 8%;
+  width: 6%;
   top: 65%;
   left: 54%; }
 
@@ -576,8 +567,8 @@ figure {
 .return {
   width: 50px;
   position: absolute;
-  top: 90%;
-  left: 10%; }
+  left: 10%;
+  margin: 20px; }
 
 .next {
   width: 50px;
@@ -588,7 +579,7 @@ figure {
 .homeButtonAdmin {
   position: absolute;
   top: 8px;
-  width: 5%; }
+  width: 10%; }
 
 .lastname {
   background: blue;
@@ -615,7 +606,7 @@ figure {
 
 .glyphicon-plus {
   color: black;
-  margin-left: 340px; }
+  margin-left: 829px; }
 
 .panel-body {
   padding: 0px; }
@@ -663,7 +654,7 @@ figure {
 
 /* ------------------------FORMULAIRE LOGIN------------------------*/
 .formLogin {
-  margin: 50px auto; }
+  margin: 100px auto; }
 
 .formLogin h1 {
   text-align: center;
@@ -684,17 +675,16 @@ figure {
   text-align: center; }
 
 .messageConfirmation {
-  text-align: center;
-  color: white; }
+  color: black; }
 
 @media screen and (max-width: 640px) {
   /* -----------------------------------HOME---------------------------------*/
-  .popUpMegaphone, .popUpQuiz, .popUpHome, .animalText, .popUpFamily, .popUpFamilyAnnexes1, .popUpFamilyAnnexes2 {
+  .popUpMegaphone, .popUpQuiz, .popUpHome, .popUpRegistration, .animalText, .popUpFamily, .popUpFamilyAnnexes1, .popUpFamilyAnnexes2 {
     display: none !important; }
 
   .sidenav {
     width: 100%;
-    height: 14%;
+    height: 15%;
     background: #f1f2f3;
     border-radius: 0 0 0 0; }
 
@@ -726,7 +716,67 @@ figure {
     width: 20%;
     margin-left: 40%; }
 
+  /* -----------------------------------------ADMIN------------------------------------*/
+  .formLogin {
+    width: 90%; }
+
+  .formLogin2 {
+    width: 90%; }
+
+  .homeButtonAdmin {
+    width: 20%; }
+
+  .glyphicon-plus {
+    margin-left: 100px; }
+
+  /* ---------------------QUIZ-----------------------*/
+  .contentQuiz {
+    height: 110vh; }
+
+  .content2Quiz {
+    display: block; }
+
+  .quizHeader {
+    padding: 10px; }
+
+  .contentQuestionsQuiz {
+    display: block;
+    padding: 0; }
+
+  .contentImgQuiz {
+    margin: 0 auto;
+    width: 50%; }
+
+  .contentTextQuiz {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px; }
+
+  .contentTextQuiz h1 {
+    font-size: xx-large; }
+
+  .contentLeftQuiz {
+    display: none; }
+
+  .contentRightQuiz {
+    width: 100%; }
+
+  .contentRightQuiz h1 {
+    font-size: xx-large; }
+
+  .contentScoreQuiz {
+    width: 100%; }
+
+  .btnScore {
+    text-align: center; }
+
   /* ---------------------HITBOX-----------------------*/
+  .homeButtonQuiz {
+    width: 20%; }
+
+  .quiz2Button {
+    width: 20%; }
+
   .sideFamily1, .sideFamily2 {
     display: none; }
 
@@ -746,6 +796,92 @@ figure {
   .titleBirds {
     position: absolute;
     top: 17%; }
+
+  .dog {
+    width: 13%;
+    top: 37%;
+    right: 14%; }
+
+  .horse {
+    top: 23%; }
+
+  .pig {
+    top: 41%;
+    left: 51%;
+    width: 18%; }
+
+  .rabbit {
+    top: 31%;
+    left: 57%; }
+
+  .sheep {
+    top: 39%;
+    left: 37%; }
+
+  .cow {
+    width: 18%;
+    top: 30%;
+    left: 15%; }
+
+  .pheasant {
+    width: 16%;
+    top: 41%;
+    left: 48%; }
+
+  .toucan {
+    width: 15%;
+    top: 22%;
+    left: 11%; }
+
+  .peacock {
+    width: 19%;
+    top: 32%;
+    left: 30%; }
+
+  .parrot {
+    width: 15%;
+    top: 33%;
+    left: 59%; }
+
+  .penguin {
+    width: 15%;
+    top: 36%;
+    left: 75%; }
+
+  .parakeet {
+    width: 15%;
+    top: 40%;
+    left: 16%; }
+
+  .ladyBird {
+    width: 12%;
+    top: 41%;
+    left: 69%; }
+
+  .snail {
+    width: 13%;
+    top: 45%;
+    left: 55%; }
+
+  .grasshopper {
+    width: 12%;
+    top: 32%;
+    left: 51%; }
+
+  .caterpillar {
+    width: 18%;
+    top: 45%;
+    left: 28%; }
+
+  .spider {
+    width: 28%;
+    top: 36%;
+    left: 15%; }
+
+  .dragonfly {
+    width: 23%;
+    top: 22%;
+    left: 62%; }
 
   /* -----------------------------------ANIMALS---------------------------------*/
   .questionNumber {
@@ -767,56 +903,6 @@ figure {
 
   figure {
     width: 100%;
-    margin: 0; }
-
-  /* ---------------------HITBOX-----------------------*/
-  .contentQuestionsQuiz {
-    display: block;
-    padding: 0; }
-
-  .contentImgQuiz {
-    margin: 0 auto;
-    width: 50%; }
-
-  .contentTextQuiz {
-    width: 100%;
-    padding: 0;
-    margin-top: 20px; }
-
-  .contentLeftQuiz {
-    display: none; }
-
-  .contentRightQuiz {
-    width: 100%; }
-
-  .dog {
-    top: 37%;
-    right: 14%; }
-
-  .horse {
-    top: 23%; }
-
-  .pig {
-    top: 40%;
-    left: 56%; }
-
-  .rabbit {
-    top: 31%;
-    left: 57%; }
-
-  .sheep {
-    top: 36%;
-    left: 35%; }
-
-  .cow {
-    width: 18%;
-    top: 30%;
-    left: 15%; }
-
-  .homeButtonQuiz {
-    width: 20%; }
-
-  .quiz2Button {
-    width: 20%; } }
+    margin: 0; } }
 
 /*# sourceMappingURL=main.css.map */

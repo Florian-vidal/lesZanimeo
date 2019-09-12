@@ -21,16 +21,14 @@
                 <div class="contentRightQuiz">
                     <h1>VRAI OU FAUX ?</h1><br><br>
                     <p>{{ questions.resume }}<br><br><br>
-
                      <div class="btn-group" role="group" aria-label="Button">
                         <a href="{{ path('responses', {'id': questions.responses.first.id, 'goodResponses': goodResponses}) }}">
-                            <button type="button" class="btn btn-info">VRAI</button></a>
+                            <button type="button" class="btn btn-info">VRAI</button></a>&nbsp;&nbsp;
                     </div>
                     <div class="btn-group" role="group" aria-label="Button">
                         <a href="{{ path('responses', {'id': questions.responses.last.id, 'goodResponses': goodResponses}) }}">
                             <button type="button" class="btn btn-info">FAUX</button></a>
                     </div>
-
                 </div>
             </div>
         </div>

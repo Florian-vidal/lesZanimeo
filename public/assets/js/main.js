@@ -70,10 +70,7 @@ function StopSound(soundobj) {
 //---------------------------------------FARM--------------------------------------//
 
 //-------------MESSAGES POP-UP------------------//
-$( document ).ready(function() {
-    $('.popUpFamily').slideUp().delay(1000).slideDown();
-    $('.popUpFamily').slideDown().delay(5000).slideUp();
-});
+
 
 //-------------SONS POP-UP------------------//
 

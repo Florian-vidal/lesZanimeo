@@ -17,11 +17,10 @@
                     <img src="{{ asset('assets/img/animals') }}/{{ responses.image }}" alt="">
                 </div>
 
-                <!---------------------------CONTENU QUESTIONS------------------------------->
+                <!---------------------------CONTENU REPONSES------------------------------->
                 <div class="contentTextQuiz">
                     <h1>{{ responses.message }}</h1><br><br>
                     <p>{{ responses.resume }}<br><br><br>
-                    <div class="btn-group btn-next" role="group" aria-label="Button">
 
                         <!---------------------------CONDITION SCORE------------------------------->
                         {% if responses.id >= 35 %}

@@ -23,7 +23,11 @@
                 </div>
 
                 <div class="contentRightQuiz">
-                    <h1>Bienvenue {{ app.user.username }}, teste tes connaissances !</h1><br><br>
+                    {%  if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        <h1>Bienvenue {{ app.user.username }}, teste tes connaissances !</h1><br><br>
+                    {% else %}
+                        <h1>Bienvenue, teste tes connaissances !</h1><br><br>
+                    {% endif %}
                     <p>18 questions sur tes animaux préférés.<br><br>Lance-toi pour savoir si tu as bien tout retenu !</p><br><br>
                     <div class="btn-group" role="group" aria-label="Button">
                         <a href="{{ path('questions', {'id': 1, 'goodResponses': 0}) }}"><button type="button" class="btn btn-info">Lancer le Quiz</button></a>

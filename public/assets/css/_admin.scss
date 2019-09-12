@@ -1,7 +1,7 @@
 .homeButtonAdmin {
   position: absolute;
   top: 8px;
-  width: 5%;
+  width: 10%;
 }
 
 .lastname {
@@ -29,7 +29,7 @@
 }
 
 .glyphicon-trash { color:rgb(209, 91, 71); }
-.glyphicon-plus { color: black; margin-left: 340px; }
+.glyphicon-plus { color: black; margin-left: 829px; }
 .panel-body { padding:0px; }
 .panel-heading { background-color: #4DBDC5; color: white;}
 .panel-footer .pagination { margin: 0; }
@@ -69,8 +69,9 @@
 }
 
 /* ------------------------FORMULAIRE LOGIN------------------------*/
+
 .formLogin{
-  margin: 50px auto;
+  margin: 100px auto;
 }
 
 .formLogin h1 {
@@ -96,8 +97,6 @@
 }
 
 .messageConfirmation {
-  text-align: center;
-  color: white;
-
+  color: black;
 }
 

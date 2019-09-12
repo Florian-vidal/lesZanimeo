@@ -4,7 +4,6 @@
   margin-bottom: 50px;
   display: flex;
   justify-content: space-around;
-  /*background: blue;*/
 }
 
 .quiz {
@@ -52,6 +51,7 @@
 }
 
 /*--------------------------------------MEGAPHONE---------------------------------*/
+
 .button {
   cursor: pointer;
   position: absolute;
@@ -69,7 +69,6 @@
 .mute {
   background-image: url("../img/main/mute.svg");
   background-repeat: no-repeat;
-
 }
 
 .circleMegaphone {
@@ -143,4 +142,9 @@
     transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
   }
 }
+
+.messageConfirmation {
+  text-align: center;
+}
+
 

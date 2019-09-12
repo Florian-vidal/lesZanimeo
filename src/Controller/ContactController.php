@@ -32,7 +32,7 @@ class ContactController extends AbstractController
             if ($form->isSubmitted() && $form->isValid()) {
                 $message = (new \Swift_Message('Nouveau message'))
                     ->setFrom($contact->getEmail())
-                    ->setTo('ezekielsxm@@gmail.com')
+                    ->setTo('ezekielsxm@gmail.com')
                     ->setBody(
                         $this->renderView(
                             '_mail.html.twig', [
@@ -49,7 +49,7 @@ class ContactController extends AbstractController
                 $entityManager->persist($contact);
                 $entityManager->flush();
 
-                $this->addFlash('success', 'Votre message a bien été envoyé, merci ! Nous y répondrons dès que possible.');
+                $this->addFlash('success', 'Ton message a bien été envoyé, merci ! Nous y répondrons dès que possible.');
 
                 return $this->redirect($request->getUri());
 

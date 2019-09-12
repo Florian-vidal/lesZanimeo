@@ -55,12 +55,18 @@
 
         <!--------------------------MESSAGES POP-UP--------------------------------->
         <div class="popUpFamily">
-            <span id="family">Choisis ta famille d'animaux et écoute ce qu'ils ont à te raconter !</span>
+            <span id="family">Choisis un animal et écoute ce qu'il a à te raconter !</span>
         </div>
 
         <div class="popUpFamilyAnnexes1">
             <span id="familyAnnexes">Tu peux voir les autres familles en cliquant ici !</span>
         </div>
+        <script>
+            $( document ).ready(function() {
+                $('.popUpFamily').slideUp().delay(1000).slideDown();
+                $('.popUpFamily').slideDown().delay(5000).slideUp();
+            });
+        </script>
         <script>
             $( document ).ready(function() {
                 $('.popUpFamilyAnnexes1').slideUp().delay(7000).slideDown();
@@ -72,7 +78,7 @@
         </div>
         <script>
             $( document ).ready(function() {
-                $('.popUpFamilyAnnexes2').slideUp().delay(13000).slideDown();
+                $('.popUpFamilyAnnexes2').slideUp().delay(12500).slideDown();
                 $('.popUpFamilyAnnexes2').slideDown().delay(5000).slideUp()
             });
         </script>

@@ -21,10 +21,10 @@
                     {% else %}
                         <p>Tu as répondu correctement à {{ goodResponses }} réponse, bravo !<br><br><br>
                     {% endif %}
-                    <div class="btn-group" role="group" aria-label="Button">
-                        <a href="{{ path('questions', {'id': 1, 'goodResponses': 0}) }}"><button type="button" class="btn btn-info">Relancer le Quiz</button></a><br><br>
-                        <form action="#" method="post"><input type="submit" value="Obtiens ton score par mail" name="submit" class="btn btn-info"></form>
-                    </div>
+                </div>
+                <div class="btnScore">
+                    <a href="{{ path('questions', {'id': 1, 'goodResponses': 0}) }}"><button type="button" class="btn btn-info">Relancer le Quiz</button></a><br><br>
+                    <form action="#" method="post"><input type="submit" value="Reçois ton super certificat par mail !" name="submit" class="btn btn-success" id="btnCertificat"></form>
                 </div>
             </div>
             <div class="messageConfirmation">

@@ -1,17 +1,14 @@
 .popUpMegaphone, .popUpQuiz, .popUpHome, .popUpRegistration, .animalText, .popUpFamily, .popUpFamilyAnnexes1, .popUpFamilyAnnexes2 {
   padding: 10px;
   position: absolute;
-  /*background: linear-gradient(#C2976A, rosybrown);*/
   background: white;
   color: #94EB00;
   border: 1px solid #94EB00;
   box-shadow: 3px 3px 5px -1px rgba(207,207,207,0.5);
   display: none;
-}
+  font-size: x-large;
 
-/*body {
-  background: blue;
-}*/
+}
 
 #m, #q, #a, #f, #r, .animalText, #popUpFamily, #popUpFamilyAnnexes1, #popUpFamilyAnnexes2 {
   color: #64CC00;
@@ -46,14 +43,14 @@
 }
 
 .popUpFamilyAnnexes1 {
-  top: 80%;
-  left: 20%;
+  top: 79%;
+  left: 28%;
   transform: translateX(-50%);
   border-radius: 0 10px 10px 10px;
 }
 
 .popUpFamilyAnnexes2 {
-  top: 80%;
+  top: 79%;
   right: 10%;
   transform: translateX(-50%);
   border-radius: 10px 0 10px 10px;

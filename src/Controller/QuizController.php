@@ -8,6 +8,7 @@ use App\Entity\Questions;
 use App\Entity\Responses;
 use App\Entity\Quiz;
 use App\Repository\FamillesRepository;
+use Swift_Attachment;
 use Symfony\Component\HttpFoundation\Request;
 use App\Repository\QuestionsRepository;
 use App\Repository\ResponsesRepository;
@@ -84,6 +85,8 @@ class QuizController extends AbstractController
                     ),
                     'text/html'
                 );
+
+                $message->attach(Swift_Attachment::fromPath('assets/img/main/certificat.jpg') ->setDisposition('inline'));
 
                 $mailer->send($message);
                 $this->addFlash('Success', 'Le score a bien été envoyé !');
