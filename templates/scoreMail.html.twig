@@ -7,12 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
     <body>
-        {% if goodResponses > 1 %}
-        <p>Bravo {{ app.user.username }} ! Tu as répondu correctement à {{ goodResponses }} réponses. Voici ton super certificat !<br><br><br>
-            {% elseif goodResponses == 0 %}
-        <p>Bravo {{ app.user.username }} ! Tu as terminé le Quiz. Retente ta chance avec ce que tu as appris sur les animaux. Voici ton super certificat !<br><br><br>
-            {% else %}
-        <p>Bravo {{ app.user.username }} ! Tu as répondu correctement à {{ goodResponses }} réponse. Voici ton super certificat !<br><br><br>
-            {% endif %}
+    <h1>Merci d'avoir répondu à notre Quiz, voici ton super certificat de participation !</h1>
+
+    {% if goodResponses > 1 %}
+            <p>Tu as répondu correctement à {{ goodResponses }} réponses, bravo {{ app.user.username }} !<br><br><br>
+         {% elseif goodResponses == 0 %}
+            <p>Bravo {{ app.user.username }} ! Tu as terminé le Quiz. Retente ta chance avec ce que tu as appris sur les animaux.<br><br><br>
+        {% else %}
+            <p>Tu as répondu correctement à {{ goodResponses }} réponse, bravo {{ app.user.username }} !<br><br><br>
+        {% endif %}
+
+        Visite du site : <a href="home.html.twig">www.lesZaniméo.fr</a>
+
     </body>
 </html>

@@ -30,12 +30,12 @@
 
 .glyphicon-trash { color:rgb(209, 91, 71); }
 .glyphicon-plus { color: black; margin-left: 829px; }
-.panel-body { padding:0px; }
+.panel-body { padding:0; }
 .panel-heading { background-color: #4DBDC5; color: white;}
 .panel-footer .pagination { margin: 0; }
 .panel .glyphicon,.list-group-item .glyphicon { margin-right:5px; }
 .list-group-item:hover, a.list-group-item:focus {text-decoration: none;background-color: rgb(245, 245, 245);}
-.list-group { margin-bottom:0px; }
+.list-group { margin-bottom:0; }
 
 .pictureAdmin {
   width: 10%;
@@ -81,8 +81,13 @@
 
 .formLogin2 {
   width: 50%;
+  height: 500px;
   margin: 0 auto;
+  background-image: url("../img/intro2.jpg");
+  background-size: cover;
+  /*
   background: #C2976A;
+  */
   padding: 20px;
   border-radius: 5px;
 }
@@ -92,6 +97,31 @@
   display: block;
 }
 
+.formLogin3 {
+  width: 90%;
+  height: 90%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin: 25px auto;
+}
+
+.form-group {
+  margin-top: 37px;
+}
+
+.btn-light {
+  background: #8959A8;
+  border: white;
+  color: white;
+}
+
+.labelContact {
+  color: #8959A8;
+  font-weight: bold;
+  padding-bottom: 7px;
+}
+
 .btnConnectLogin {
   text-align: center;
 }
@@ -99,4 +129,3 @@
 .messageConfirmation {
   color: black;
 }
-

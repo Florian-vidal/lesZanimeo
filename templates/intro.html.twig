@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Les Zaniméo, intro</title>
+    <meta http-equiv="refresh" content="10;url=/leszanimeo/public/home">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+</head>
+<body>
+    <main>
+        <div class="intro">
+            <div class="intro2">
+                <div class="title">
+                    <img src="{{ asset('assets/img/main/title.png') }}" alt="">
+                </div>
+                <div class="intro3">
+                    <div class="pigIntro">
+                        <h1>Bienvenue ! <br><br>
+                            Pour profiter pleinement de l'expérience du site, active le son sur ton appareil !
+                            <img src="{{ asset('assets/img/iconSong.jpg') }}" alt="">
+                        </h1>
+                    </div>
+                    <div class="lienHome">
+                        <a href="{{ path('home_lesZanimeo') }}">Visiter le site</a>
+                    </div>
+
+                    <!--------------------------TITRE + INTRO VOCALE "Les Zaniméo"--------------------->
+                    <object data="lesZanimeo.mp3" type="audio/x-mpeg" width="0" height="0">
+                        <param name="src" value="lesZanimeo.mp3"/>
+                        <param name="controls" value="console"/>
+                        <param name="autostart" value="true"/>
+                        <param name="loop" value="false"/>
+                        <script type="text/javascript">
+                            <!--
+                            document.write('<embed src="{{ asset('assets/song/lesZanimeo.mp3') }}" width="0" height="0" controls="console" " + " loop="false" autostart="true" ></embed>');
+                            //-->
+                        </script>
+                    </object>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
+</body>
+</html>

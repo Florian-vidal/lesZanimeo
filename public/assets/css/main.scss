@@ -1,16 +1,20 @@
 @import '_cssReset';
-@import '_popUp';
 
 @import '_header';
 @import '_footer';
+@import '_popUp';
+
+@import '_intro';
+
 
 @import '_home';
+
+@import '_admin';
+
 @import '_quiz';
 
 @import 'family';
 
 @import 'animals';
-
-@import '_admin';
 
 @import '_responsive';

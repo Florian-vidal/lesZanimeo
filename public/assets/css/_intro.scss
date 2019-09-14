@@ -1,0 +1,43 @@
+.intro {
+  background-image: url("../img/intro2.jpg");
+  background-size: cover;
+  height: 100vh;
+  padding: 50px;
+}
+
+.intro2 {
+  width: 90%;
+  height: 90%;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+.intro2 .title {
+  width: 60%;
+}
+
+.intro3 {
+  width: 70%;
+  margin: 100px auto;
+}
+
+.pigIntro {
+  color: #F5871F;
+  text-transform: uppercase;
+}
+
+.pigIntro h1 {
+  text-align: center;
+}
+
+.pigIntro img {
+  width: 20%;
+  margin: 20px;
+}
+
+.lienHome {
+  position: absolute;
+  right: 10%;
+}

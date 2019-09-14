@@ -2,6 +2,45 @@
 
   /* -----------------------------------HOME---------------------------------*/
 
+  .intro {
+    padding: 10px;
+  }
+
+  .intro2 {
+    width: 90%;
+    height: 90%;
+    margin: 40px auto;
+    padding: 10px;
+  }
+
+  .intro2 .title {
+    width: 100%;
+    margin-top: 80px;
+  }
+
+  .intro3 {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .intro3 h1 {
+    font-size: x-large;
+  }
+
+  .pigIntro img {
+    position: absolute;
+    left: 35%;
+    top: 60%;
+  }
+
+  .lienHome {
+    position: absolute;
+    right: 10%;
+    bottom: 14%;
+  }
+
+  /* -----------------------------------HOME---------------------------------*/
+
   .popUpMegaphone, .popUpQuiz, .popUpHome, .popUpRegistration, .animalText, .popUpFamily, .popUpFamilyAnnexes1, .popUpFamilyAnnexes2 {
     display: none !important;
   }
@@ -289,4 +328,7 @@
     width: 100%;
     margin: 0;
   }
+
+
+
 }

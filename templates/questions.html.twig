@@ -19,7 +19,7 @@
 
                 <!---------------------------CONTENU QUESTIONS------------------------------->
                 <div class="contentRightQuiz">
-                    <h1>VRAI OU FAUX ?</h1><br><br>
+                    <h1 class="questionMessage">VRAI OU FAUX ?</h1><br><br>
                     <p>{{ questions.resume }}<br><br><br>
                      <div class="btn-group" role="group" aria-label="Button">
                         <a href="{{ path('responses', {'id': questions.responses.first.id, 'goodResponses': goodResponses}) }}">

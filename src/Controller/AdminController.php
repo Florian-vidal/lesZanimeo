@@ -141,6 +141,15 @@ class AdminController extends AbstractController
 
                 $entityManager->persist($animals);
                 $entityManager->flush();
+
+                if ($form->isSubmitted() && $form->isValid()) {
+
+                    $this->addFlash('Success', 'L\'animal a bien été modifié !');
+
+                } else {
+
+                    $this->addFlash('Fail', 'L\'animal n\'a pas été modifié, veuillez réessayer.');
+                }
             }
         }
 

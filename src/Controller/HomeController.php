@@ -12,9 +12,19 @@ use Symfony\Component\HttpFoundation\Request;
 
 class HomeController extends AbstractController
 {
+
+
     /**
- * @Route("/", name="home_lesZanimeo")
- */
+     * @Route("/", name="intro")
+     */
+    public function introController()
+    {
+        return $this->render('intro.html.twig');
+    }
+
+    /**
+     * @Route("home", name="home_lesZanimeo")
+     */
     public function indexController(FamillesRepository $famillesRepository)
     {
         $familles = $famillesRepository->findAll();

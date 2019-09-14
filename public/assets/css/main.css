@@ -51,6 +51,22 @@ a {
 h1 {
   margin: 0; }
 
+.head {
+  width: 100%; }
+
+.homeButton {
+  position: absolute;
+  width: 10%;
+  left: 3%;
+  top: 2%; }
+
+.vigne {
+  width: 85%;
+  float: right; }
+
+.foot, .herbe {
+  width: 100%; }
+
 .popUpMegaphone, .popUpQuiz, .popUpHome, .popUpRegistration, .animalText, .popUpFamily, .popUpFamilyAnnexes1, .popUpFamilyAnnexes2 {
   padding: 10px;
   position: absolute;
@@ -102,7 +118,7 @@ h1 {
 
 .popUpRegistration {
   top: 13%;
-  right: 29%;
+  right: 27%;
   border-radius: 10px 10px 10px 10px; }
 
 .dog .animalText, .horse .animalText, .pig .animalText, .rabbit .animalText, .sheep .animalText, .cow .animalText,
@@ -119,21 +135,41 @@ h1 {
   animation-name: jello;
   animation-duration: 1.5s; }
 
-.head {
-  width: 100%; }
+.intro {
+  background-image: url("../img/intro2.jpg");
+  background-size: cover;
+  height: 100vh;
+  padding: 50px; }
 
-.homeButton {
+.intro2 {
+  width: 90%;
+  height: 90%;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  margin: 20px auto; }
+
+.intro2 .title {
+  width: 60%; }
+
+.intro3 {
+  width: 70%;
+  margin: 100px auto; }
+
+.pigIntro {
+  color: #F5871F;
+  text-transform: uppercase; }
+
+.pigIntro h1 {
+  text-align: center; }
+
+.pigIntro img {
+  width: 20%;
+  margin: 20px; }
+
+.lienHome {
   position: absolute;
-  width: 10%;
-  left: 3%;
-  top: 2%; }
-
-.vigne {
-  width: 85%;
-  float: right; }
-
-.foot, .herbe {
-  width: 100%; }
+  right: 10%; }
 
 .content {
   width: 100%;
@@ -251,10 +287,133 @@ h1 {
 .messageConfirmation {
   text-align: center; }
 
-/*
-body {
+.homeButtonAdmin {
+  position: absolute;
+  top: 8px;
+  width: 10%; }
+
+.lastname {
   background: blue;
-}*/
+  display: flex; }
+
+.formulaire {
+  width: 50%;
+  margin: 0 auto;
+  background: #4DBDC5;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex; }
+
+.container {
+  z-index: 2; }
+
+.row {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  justify-content: space-around; }
+
+.glyphicon-trash {
+  color: #d15b47; }
+
+.glyphicon-plus {
+  color: black;
+  margin-left: 829px; }
+
+.panel-body {
+  padding: 0; }
+
+.panel-heading {
+  background-color: #4DBDC5;
+  color: white; }
+
+.panel-footer .pagination {
+  margin: 0; }
+
+.panel .glyphicon, .list-group-item .glyphicon {
+  margin-right: 5px; }
+
+.list-group-item:hover, a.list-group-item:focus {
+  text-decoration: none;
+  background-color: whitesmoke; }
+
+.list-group {
+  margin-bottom: 0; }
+
+.pictureAdmin {
+  width: 10%; }
+
+.pictureAdmin img {
+  width: 100%; }
+
+.login {
+  display: flex; }
+
+.form-control {
+  margin-bottom: 20px; }
+
+#fos_user_registration_form {
+  margin: 0 auto; }
+
+#fos_user_registration_form li {
+  color: red; }
+
+#fos_user_registration_form_email, #fos_user_registration_form_username, #fos_user_registration_form_plainPassword_first, #fos_user_registration_form_plainPassword_second {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 5px; }
+
+/* ------------------------FORMULAIRE LOGIN------------------------*/
+.formLogin {
+  margin: 100px auto; }
+
+.formLogin h1 {
+  text-align: center;
+  margin: 30px; }
+
+.formLogin2 {
+  width: 50%;
+  height: 500px;
+  margin: 0 auto;
+  background-image: url("../img/intro2.jpg");
+  background-size: cover;
+  /*
+  background: #C2976A;
+  */
+  padding: 20px;
+  border-radius: 5px; }
+
+.formLogin2 button {
+  margin: 20px auto;
+  display: block; }
+
+.formLogin3 {
+  width: 90%;
+  height: 90%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin: 25px auto; }
+
+.form-group {
+  margin-top: 37px; }
+
+.btn-light {
+  background: #8959A8;
+  border: white;
+  color: white; }
+
+.labelContact {
+  color: #8959A8;
+  font-weight: bold;
+  padding-bottom: 7px; }
+
+.btnConnectLogin {
+  text-align: center; }
+
+.messageConfirmation {
+  color: black; }
+
 .contentQuiz {
   background: #f1f2f3;
   height: 1000px; }
@@ -279,7 +438,7 @@ body {
 .quiz2Button img {
   width: 100%; }
 
-.content2Quiz {
+.content1Quiz {
   width: 90%;
   margin: 30px auto;
   padding: 50px;
@@ -287,6 +446,14 @@ body {
   border: solid 1px black;
   border-radius: 10px;
   display: flex; }
+
+.content2Quiz {
+  width: 90%;
+  margin: 30px auto;
+  padding: 50px;
+  background: white;
+  border: solid 1px black;
+  border-radius: 10px; }
 
 .contentLeftQuiz {
   width: 60%; }
@@ -299,11 +466,23 @@ body {
   padding: 20px;
   text-align: center; }
 
-.contentRightQuiz h1, .contentTextQuiz h1, .contentScoreQuiz h1 {
+.contentScoreQuiz {
+  margin: 0 auto; }
+
+.contentRightQuiz h1, .contentScoreQuiz h1 {
   color: #5eb5e0; }
 
 .questionNumber {
   margin: 50px auto; }
+
+.bravoResponse {
+  color: #4E8F00; }
+
+.desoleResponse {
+  color: #C82333; }
+
+.questionMessage {
+  color: #5eb5e0; }
 
 .contentQuestionsQuiz {
   width: 90%;
@@ -323,8 +502,8 @@ body {
 .contentImgQuiz img {
   width: 100%; }
 
-.contentScoreQuiz {
-  margin: 0 auto; }
+.btnScore {
+  text-align: center; }
 
 .homebutton {
   width: 100%; }
@@ -402,7 +581,7 @@ body {
 .farmFamily img, .bugsFamily img, .birdsFamily img {
   width: 100%; }
 
-/* ---------FAMILLES ANIMAUX ANNEXES----------*/
+/* -------------------------------FAMILLES ANIMAUX ANNEXES-----------------------------*/
 .sideFamily1, .sideFamily2 {
   cursor: pointer;
   width: 15%;
@@ -576,108 +755,38 @@ figure {
   top: 90%;
   right: 10%; }
 
-.homeButtonAdmin {
-  position: absolute;
-  top: 8px;
-  width: 10%; }
-
-.lastname {
-  background: blue;
-  display: flex; }
-
-.formulaire {
-  width: 50%;
-  margin: 0 auto;
-  background: #4DBDC5;
-  padding: 20px;
-  border-radius: 5px;
-  display: flex; }
-
-.container {
-  z-index: 2; }
-
-.row {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  justify-content: space-around; }
-
-.glyphicon-trash {
-  color: #d15b47; }
-
-.glyphicon-plus {
-  color: black;
-  margin-left: 829px; }
-
-.panel-body {
-  padding: 0px; }
-
-.panel-heading {
-  background-color: #4DBDC5;
-  color: white; }
-
-.panel-footer .pagination {
-  margin: 0; }
-
-.panel .glyphicon, .list-group-item .glyphicon {
-  margin-right: 5px; }
-
-.list-group-item:hover, a.list-group-item:focus {
-  text-decoration: none;
-  background-color: whitesmoke; }
-
-.list-group {
-  margin-bottom: 0px; }
-
-.pictureAdmin {
-  width: 10%; }
-
-.pictureAdmin img {
-  width: 100%; }
-
-.login {
-  display: flex; }
-
-.form-control {
-  margin-bottom: 20px; }
-
-#fos_user_registration_form {
-  margin: 0 auto; }
-
-#fos_user_registration_form li {
-  color: red; }
-
-#fos_user_registration_form_email, #fos_user_registration_form_username, #fos_user_registration_form_plainPassword_first, #fos_user_registration_form_plainPassword_second {
-  display: flex;
-  width: 100%;
-  margin-bottom: 20px;
-  border-radius: 5px; }
-
-/* ------------------------FORMULAIRE LOGIN------------------------*/
-.formLogin {
-  margin: 100px auto; }
-
-.formLogin h1 {
-  text-align: center;
-  margin: 30px; }
-
-.formLogin2 {
-  width: 50%;
-  margin: 0 auto;
-  background: #C2976A;
-  padding: 20px;
-  border-radius: 5px; }
-
-.formLogin2 button {
-  margin: 20px auto;
-  display: block; }
-
-.btnConnectLogin {
-  text-align: center; }
-
-.messageConfirmation {
-  color: black; }
-
 @media screen and (max-width: 640px) {
+  /* -----------------------------------HOME---------------------------------*/
+  .intro {
+    padding: 10px; }
+
+  .intro2 {
+    width: 90%;
+    height: 90%;
+    margin: 40px auto;
+    padding: 10px; }
+
+  .intro2 .title {
+    width: 100%;
+    margin-top: 80px; }
+
+  .intro3 {
+    width: 100%;
+    margin-top: 20px; }
+
+  .intro3 h1 {
+    font-size: x-large; }
+
+  .pigIntro img {
+    position: absolute;
+    left: 35%;
+    top: 60%; }
+
+  .lienHome {
+    position: absolute;
+    right: 10%;
+    bottom: 14%; }
+
   /* -----------------------------------HOME---------------------------------*/
   .popUpMegaphone, .popUpQuiz, .popUpHome, .popUpRegistration, .animalText, .popUpFamily, .popUpFamilyAnnexes1, .popUpFamilyAnnexes2 {
     display: none !important; }

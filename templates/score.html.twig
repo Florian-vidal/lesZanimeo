@@ -14,17 +14,31 @@
             <div class="content2Quiz">
                 <div class="contentScoreQuiz">
                     <h1>Voici ton score !</h1><br><br>
-                    {% if goodResponses > 1 %}
-                        <p>Tu as répondu correctement à {{ goodResponses }} réponses, bravo {{ app.user.username }} !<br><br><br>
-                    {% elseif goodResponses == 0 %}
-                        <p>Tu n'as aucune bonne réponse, je t'invite à revoir les descriptions des animaux et à reessayer le Quiz !<br><br><br>
-                    {% else %}
-                        <p>Tu as répondu correctement à {{ goodResponses }} réponse, bravo !<br><br><br>
+
+                    {%  if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        {% if goodResponses > 1 %}
+                            <p>Tu as répondu correctement à {{ goodResponses }} réponses, bravo {{ app.user.username }} !<br><br><br>
+                        {% elseif goodResponses == 0 %}
+                            <p>Tu n'as aucune bonne réponse {{ app.user.username }}, je t'invite à revoir les descriptions des animaux et à reessayer le Quiz !<br><br><br>
+                        {% else %}
+                            <p>Tu as répondu correctement à {{ goodResponses }} réponse, bravo {{ app.user.username }} !<br><br><br>
+                        {% endif %}
+                     {% else %}
+                        {% if goodResponses > 1 %}
+                            <p>Tu as répondu correctement à {{ goodResponses }} réponses, bravo !<br><br><br>
+                        {% elseif goodResponses == 0 %}
+                            <p>Tu n'as aucune bonne réponse, je t'invite à revoir les descriptions des animaux et à reessayer le Quiz !<br><br><br>
+                        {% else %}
+                            <p>Tu as répondu correctement à {{ goodResponses }} réponse, bravo !<br><br><br>
+                        {% endif %}
                     {% endif %}
+
                 </div>
                 <div class="btnScore">
                     <a href="{{ path('questions', {'id': 1, 'goodResponses': 0}) }}"><button type="button" class="btn btn-info">Relancer le Quiz</button></a><br><br>
-                    <form action="#" method="post"><input type="submit" value="Reçois ton super certificat par mail !" name="submit" class="btn btn-success" id="btnCertificat"></form>
+                    {%  if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        <form action="#" method="post"><input type="submit" value="Reçois ton super certificat par mail !" name="submit" class="btn btn-success" id="btnCertificat"></form>
+                    {% endif %}
                 </div>
             </div>
             <div class="messageConfirmation">
