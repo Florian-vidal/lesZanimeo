@@ -2,23 +2,17 @@
 
 namespace App\Controller;
 
-use App\Entity\Contact;
-use App\Form\ContactType;
-use App\Entity\Questions;
-use App\Entity\Responses;
-use App\Entity\Quiz;
-use App\Repository\FamillesRepository;
 use Swift_Attachment;
 use Symfony\Component\HttpFoundation\Request;
 use App\Repository\QuestionsRepository;
 use App\Repository\ResponsesRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class QuizController extends AbstractController
 {
+    // ROUTE DU QUIZ ---------------------------------------------------------------------------------------------------
     /**
      * @Route("quiz", name="quiz")
      */
@@ -27,6 +21,7 @@ class QuizController extends AbstractController
         return $this->render('quiz.html.twig');
     }
 
+    // ROUTE DES QUESTIONS ---------------------------------------------------------------------------------------------
     /**
      * @Route("question{id}/{goodResponses}", name="questions")
      */
@@ -34,6 +29,7 @@ class QuizController extends AbstractController
     {
         $responses = $responsesRepository->find($id);
         $questions = $questionsRepository->find($id);
+
         return $this->render('questions.html.twig',
             [
                 'questions' => $questions,
@@ -43,6 +39,7 @@ class QuizController extends AbstractController
         );
     }
 
+    // ROUTE DES REPONSES ----------------------------------------------------------------------------------------------
     /**
      * @Route("response{id}/{goodResponses}", name="responses")
      */
@@ -50,6 +47,7 @@ class QuizController extends AbstractController
     {
         $questions = $questionsRepository->find($id);
         $responses = $responsesRepository->find($id);
+
         return $this->render('responses.html.twig',
             [
                 'responses' => $responses,
@@ -59,6 +57,7 @@ class QuizController extends AbstractController
         );
     }
 
+    // ROUTE DU SCORE --------------------------------------------------------------------------------------------------
     /**
      * @Route("/score/{goodResponses}", name="score")
      */
@@ -90,9 +89,9 @@ class QuizController extends AbstractController
 
                 $mailer->send($message);
                 $this->addFlash('Success', 'Le score a bien été envoyé !');
-
             }
         }
+
         return $this->render('score.html.twig',
             [
                 'responses' => $responses,
@@ -101,9 +100,5 @@ class QuizController extends AbstractController
             ]
         );
     }
-
-
-
-
 
 }

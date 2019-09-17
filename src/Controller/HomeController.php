@@ -4,16 +4,11 @@ namespace App\Controller;
 
 use App\Repository\FamillesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Component\HttpFoundation\Request;
-
 
 class HomeController extends AbstractController
 {
-
-
+    // ROUTE PAGE INTRO ----------------------------------------------------------------------------------------------
     /**
      * @Route("/", name="intro")
      */
@@ -22,6 +17,7 @@ class HomeController extends AbstractController
         return $this->render('intro.html.twig');
     }
 
+    // ROUTE PAGE D'ACCUEIL ----------------------------------------------------------------------------------------------
     /**
      * @Route("home", name="home_lesZanimeo")
      */
@@ -34,10 +30,5 @@ class HomeController extends AbstractController
             ]
         );
     }
-
-
-
-
-
 
 }

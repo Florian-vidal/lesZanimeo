@@ -2,7 +2,7 @@
 
 namespace App\Form;
 
-use App\Entity\Animaux;
+use App\Entity\Questions;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -10,13 +10,13 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Validator\Constraints\File;
 
-class AnimalsType extends AbstractType
+class QuestionsType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('description')
+            ->add('libelle')
+            ->add('resume')
             ->add('image',FileType::class, [
                 'label' => 'image',
                 'mapped' => false,
@@ -27,7 +27,6 @@ class AnimalsType extends AbstractType
                     ])
                 ]
             ])
-            ->add('audio')
             ->add('enregistrer', SubmitType::class)
         ;
     }
@@ -35,7 +34,7 @@ class AnimalsType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Animaux::class,
+            'data_class' => Questions::class,
         ]);
     }
 }

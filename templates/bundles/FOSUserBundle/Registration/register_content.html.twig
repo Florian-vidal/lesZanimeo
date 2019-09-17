@@ -2,10 +2,10 @@
 
 <div class="formLogin">
     <a href="{{ path('home_lesZanimeo') }}"><img class="homeButton" src="{{ asset('assets/img/main/home.jpg') }}" alt=""></a>
-
     <h1>Inscription</h1>
     <div class="formLogin2">
         <div class="formLogin3">
+
             {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
 
             {{ form_label(form.username, 'Pseudo', {'label_attr':{'class':'labelContact'}}) }}
@@ -23,7 +23,9 @@
             <div class="btnConnectLogin">
                 <input type="submit" class="btn btn-light" value="{{ 'registration.submit'|trans }}" name="submit"/>
             </div>
+
             {{ form_end(form) }}
+
         </div>
     </div>
 </div>

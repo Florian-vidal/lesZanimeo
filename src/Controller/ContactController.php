@@ -8,15 +8,10 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Routing\Exception;
-use Symfony\Component\Validator\Validator\ValidatorInterface;
-use Symfony\Component\Validator\Tests\Constraints as Assert;
-use Doctrine\ORM\Mapping as ORM;
 
 class ContactController extends AbstractController
 {
-    /*-----Public et envoie en BDD pour client: formulaire de contact---------*/
-    /*-----ajouté une confirmation d'envoie-----------------*/
+    // ROUTE PAGE CONTACT ----------------------------------------------------------------------------------------------
     /**
      * @Route("contact", name="contact")
      */
@@ -57,16 +52,19 @@ class ContactController extends AbstractController
 
                 $this->addFlash('fail', 'Votre message n\'a pas pu être envoyé.');
 
-                return $this->render('contact.html.twig', [
-                    'contactForm' => $form->createView()
-                ]);
+                return $this->render('contact.html.twig',
+                    [
+                        'contactForm' => $form->createView()
+                    ]
+                );
             }
         }
 
-        return $this->render('contact.html.twig', [
-            'contactForm' => $form->createView()
-        ]);
+        return $this->render('contact.html.twig',
+            [
+                'contactForm' => $form->createView()
+            ]
+        );
     }
-
 
 }

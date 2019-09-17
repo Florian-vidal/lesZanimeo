@@ -1,0 +1,52 @@
+{% extends 'base/baseQuiz.html.twig' %}
+
+{% block main %}
+
+    <div class="formLogin">
+        <h1>Espace Admin</h1>
+        <hr>
+        <h1>Modification d'une résponse</h1>
+
+        <!--------------------------FORMULAIRE MODIFICATION REPONSE--------------------------------->
+        {{ form_start(formResponsesView) }}
+
+        <div class="formLogin2">
+            <div class="formLogin3">
+                <div class="form-group">
+                    {{ form_label(formResponsesView.libelle, 'Libellé', {'label_attr':{'class':'labelContact'}}) }}
+                    {{ form_widget(formResponsesView.libelle, {'attr': {'class': 'form-control', 'placeholder': 'Veuiller renseigner un libellé' }}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(formResponsesView.resume, 'Résumé', {'label_attr':{'class':'labelContact'}}) }}
+                    {{ form_widget(formResponsesView.resume, {'attr': {'class': 'form-control', 'placeholder': 'Veuiller renseigner une réponse' }}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(formResponsesView.message, 'Message', {'label_attr':{'class':'labelContact'}}) }}
+                    {{ form_widget(formResponsesView.message, {'attr': {'class': 'form-control', 'placeholder': 'Veuiller renseigner un message' }}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(formResponsesView.image, 'Image', {'label_attr':{'class':'labelContact'}}) }}
+                    {{ form_widget(formResponsesView.image, {'attr': {'class': 'form-control', 'placeholder': 'Veuiller renseigner une URL' }}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(formResponsesView.enregistrer) }}
+                    {{ form_widget(formResponsesView.enregistrer , {'attr': {'class': 'btn btn-light'}}) }}
+                </div>
+
+                <a href="{{ path('admin') }}">Retour</a>
+
+                <!--------------------------MESSAGE DE CONFIRMATION DE MODIFICATION--------------------------------->
+                <div class="messageConfirmation">
+                    {% for messages in app.flashes %}
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        {{ form_end(formResponsesView) }}
+
+    </div>
+{% endblock %}

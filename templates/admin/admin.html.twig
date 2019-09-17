@@ -10,7 +10,7 @@
         {% endif %}
         <hr>
         <div class="row">
-            <div class="col-md-8 adminListBook">
+            <div class="col-md-3 adminListBook">
                 <div class="panel">
                     <div class="panel-heading">
                         <span>Liste des animaux</span>
@@ -40,6 +40,72 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-3 adminListBook">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <span>Liste des questions</span>
+
+                        <!--------------------------BOUTON AJOUT D'UNE QUESTION--------------------------------->
+                        <a href="{{ path('form_questions_insert')}}"><span class="glyphicon glyphicon-plus"></span>Ajout</a>
+                    </div>
+
+                    <!--------------------------LISTE DES QUESTIONS--------------------------------->
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            {% for element in questions %}
+                                <li class="list-group-item">
+                                    <div class="pictureAdmin">
+                                        <img src="{{ asset('assets/img/animals') }}/{{ element.image }}">
+                                    </div>
+                                    {{ element.libelle }}
+
+                                    <!--------------------------BOUTONS MODIF ET SUPPR QUESTION--------------------------------->
+                                    <div class="pull-right action-buttons">
+                                        <a href="{{ path('form_questions_update', {'id': element.id}) }}"><span class="glyphicon glyphicon-pencil"></span></a>
+                                        <a href="{{ path('questions_delete', {'id': element.id}) }}"><span class="glyphicon glyphicon-trash"></span></a>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 adminListBook">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <span>Liste des réponses</span>
+
+                        <!--------------------------BOUTON AJOUT D'UNE REPONSE--------------------------------->
+                        <a href="{{ path('form_responses_insert')}}"><span class="glyphicon glyphicon-plus"></span>Ajout</a>
+                    </div>
+
+                    <!--------------------------LISTE DES RESPONSES--------------------------------->
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            {% for element in responses %}
+                                <li class="list-group-item">
+                                    <div class="pictureAdmin">
+                                        <img src="{{ asset('assets/img/animals') }}/{{ element.image }}">
+                                    </div>
+                                    {{ element.libelle }}
+                                    {{ element.message }}
+
+                                    <!--------------------------BOUTONS MODIF ET SUPPR REPONSE--------------------------------->
+                                    <div class="pull-right action-buttons">
+                                        <a href="{{ path('form_responses_update', {'id': element.id}) }}"><span class="glyphicon glyphicon-pencil"></span></a>
+                                        <a href="{{ path('responses_delete', {'id': element.id}) }}"><span class="glyphicon glyphicon-trash"></span></a>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
 
 {% endblock %}

@@ -29,7 +29,7 @@
 }
 
 .glyphicon-trash { color:rgb(209, 91, 71); }
-.glyphicon-plus { color: black; margin-left: 829px; }
+.glyphicon-plus { color: black; margin-left: 130px; }
 .panel-body { padding:0; }
 .panel-heading { background-color: #4DBDC5; color: white;}
 .panel-footer .pagination { margin: 0; }
@@ -68,7 +68,7 @@
   border-radius: 5px;
 }
 
-/* ------------------------FORMULAIRE LOGIN------------------------*/
+/*-------------------------------------------------FORMULAIRE LOGIN---------------------------------------------------*/
 
 .formLogin{
   margin: 100px auto;
@@ -85,9 +85,6 @@
   margin: 0 auto;
   background-image: url("../img/intro2.jpg");
   background-size: cover;
-  /*
-  background: #C2976A;
-  */
   padding: 20px;
   border-radius: 5px;
 }
@@ -116,7 +113,7 @@
   color: white;
 }
 
-.labelContact {
+.labelContact, .labelInsertAnimals {
   color: #8959A8;
   font-weight: bold;
   padding-bottom: 7px;

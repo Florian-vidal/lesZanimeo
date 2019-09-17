@@ -19,35 +19,6 @@ class FamillesRepository extends ServiceEntityRepository
         parent::__construct($registry, Familles::class);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     // /**
     //  * @return Familles[] Returns an array of Familles objects
     //  */
