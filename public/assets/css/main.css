@@ -73,8 +73,8 @@ h1 {
   padding: 10px;
   position: absolute;
   background: white;
-  color: #94EB00;
-  border: 1px solid #94EB00;
+  color: #64CC00;
+  border: 1px solid #64CC00;
   box-shadow: 3px 3px 5px -1px rgba(207, 207, 207, 0.5);
   display: none;
   font-size: x-large; }
@@ -178,7 +178,8 @@ h1 {
   margin-top: 50px;
   margin-bottom: 50px;
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  align-items: baseline; }
 
 .quiz {
   width: 10%;
@@ -197,7 +198,7 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 0 0 50px 50px;
-  border: 1px solid black;
+  border: 1px solid #64CC00;
   font-size: 20px; }
 
 .farmHome, .bugsHome, .birdsHome {
@@ -410,6 +411,35 @@ h1 {
 .messageConfirmation {
   color: black; }
 
+.deleteSecurity {
+  cursor: pointer; }
+
+.deleteSecurityModal {
+  margin-top: 16px;
+  display: none;
+  position: fixed;
+  z-index: 77;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 200px;
+  border: 2px solid red;
+  background-color: white;
+  text-align: center;
+  color: black; }
+
+.securityResponses {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  padding: 30px;
+  cursor: pointer;
+  color: black !important; }
+
+.valid {
+  margin-top: 16px; }
+
 .contentQuiz {
   background: #f1f2f3;
   height: 1000px; }
@@ -579,7 +609,9 @@ h1 {
 
 /*-----------------------------------------------FAMILLES ANIMAUX ANNEXES---------------------------------------------*/
 .sideFamily1, .sideFamily2 {
+  /*
   cursor: pointer;
+  */
   width: 15%;
   opacity: 0.5;
   transition-property: transform;
@@ -607,13 +639,13 @@ h1 {
 /*--------------------------------------------------------HITBOX------------------------------------------------------*/
 .dog {
   width: 10%;
-  top: 52%;
-  right: 25%; }
+  top: 50%;
+  right: 28%; }
 
 .horse {
-  width: 15%;
-  top: 20%;
-  left: 40%; }
+  width: 11%;
+  top: 28%;
+  left: 41%; }
 
 .pig {
   width: 10%;
@@ -792,7 +824,8 @@ figure {
     width: 100%;
     height: 15%;
     background: #f1f2f3;
-    border-radius: 0 0 0 0; }
+    border-radius: 0 0 0 0;
+    font-size: 25px; }
 
   .head {
     margin-top: 100px; }
@@ -880,8 +913,8 @@ figure {
     width: 20%; }
 
   .quiz2Button {
-    width: 20%; }
-
+    width: 20%; } }
+@media screen and (max-width: 640px) and (max-width: 640px) {
   /*----------------------------------------------------FAMILY--------------------------------------------------------*/
   .sideFamily1, .sideFamily2 {
     display: none; }

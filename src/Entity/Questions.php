@@ -75,10 +75,20 @@ class Questions
         return $this;
     }
 
+    /**
+     * @param mixed $resume
+     */
+    public function setResume($resume): void
+    {
+        $this->resume = $resume;
+    }
+
     public function getResume(): ?string
     {
         return $this->resume;
     }
+
+
 
     public function getImage(): ?string
     {

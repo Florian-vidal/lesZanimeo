@@ -4,6 +4,7 @@
   margin-bottom: 50px;
   display: flex;
   justify-content: space-around;
+  align-items: baseline;
 }
 
 .quiz {
@@ -24,7 +25,7 @@
   left: 50%;
   transform: translateX(-50%);
   border-radius: 0 0 50px 50px;
-  border: 1px solid black;
+  border: 1px solid $green;
   font-size: 20px;
 }
 
@@ -51,7 +52,6 @@
 }
 
 /*------------------------------------------------------MEGAPHONE-----------------------------------------------------*/
-
 .button {
   cursor: pointer;
   position: absolute;
@@ -74,7 +74,7 @@
 .circleMegaphone {
   width: 80px;
   height: 80px;
-  background: #64CC00;
+  background: $green;
   position: absolute;
   top: 0;
   right: 0;
@@ -141,5 +141,3 @@
     transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
   }
 }
-
-

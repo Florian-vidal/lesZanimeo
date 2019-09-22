@@ -22,9 +22,15 @@
 
                         <!---------------------------CONDITION SCORE------------------------------->
                         {% if responses.id >= 35 %}
-                            <h1 class="bravoResponse">{{ responses.message }}</h1><br><br>
-                            <p>{{ responses.resume }}</p><br><br>
-                            <a href="{{ path('score', { 'goodResponses': goodResponses }) }}"><button type="button" class="btn btn-info">Obtiens ton score !</button></a>
+                            {% if responses.message == 'BRAVO, BONNE REPONSE !' %}
+                                <h1 class="bravoResponse">{{ responses.message }}</h1><br><br>
+                                <p>{{ responses.resume }}</p><br><br>
+                                <a href="{{ path('score', { 'goodResponses': goodResponses }) }}"><button type="button" class="btn btn-info">Obtiens ton score !</button></a>
+                            {% else %}
+                                <h1 class="desoleResponse">{{ responses.message }}</h1><br><br>
+                                <p>{{ responses.resume }}</p><br><br>
+                                <a href="{{ path('score', { 'goodResponses': goodResponses }) }}"><button type="button" class="btn btn-info">Obtiens ton score !</button></a>
+                            {% endif %}
                         {% elseif responses.message == 'BRAVO, BONNE REPONSE !' %}
                             <h1 class="bravoResponse">{{ responses.message }}</h1><br><br>
                             <p>{{ responses.resume }}</p><br><br>
@@ -33,7 +39,7 @@
                             <h1 class="desoleResponse">{{ responses.message }}</h1><br><br>
                             <p>{{ responses.resume }}</p><br><br>
                             <a href="{{ path('questions', {'id': responses.questions.id+1, 'goodResponses': goodResponses }) }}"><button type="button" class="btn btn-info">Continuer</button></a>
-                    {% endif %}
+                        {% endif %}
                     </div>
                 </div>
             </div>

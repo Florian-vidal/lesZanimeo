@@ -17,13 +17,18 @@ class ContactController extends AbstractController
      */
     public function contact(EntityManagerInterface $entityManager, Request $request, \Swift_Mailer $mailer)
     {
+        // Je créé une instance de l'entité Contact et je créé une représentation abstraite (form = formulaire) avec les
+        // champs voulus
         $contact = new Contact();
-
         $form = $this->createForm(ContactType::class, $contact);
 
+        //Si la méthode est POST, si le formulaire est envoyé
         if ($request->isMethod('POST')) {
+
+            //Le formulaire récupère les infos de la requête
             $form->handleRequest($request);
 
+            // Je reçois un mail depuis mon nouveau user enregistré dans ma table contact
             if ($form->isSubmitted() && $form->isValid()) {
                 $message = (new \Swift_Message('Nouveau message'))
                     ->setFrom($contact->getEmail())
@@ -41,6 +46,8 @@ class ContactController extends AbstractController
 
                 $mailer->send($message);
 
+                // L'objet instancié est supprimé et annule les modifications apportées aux objets mis en file d'attente
+                // dans la base de données. Synchronise la base de données.
                 $entityManager->persist($contact);
                 $entityManager->flush();
 

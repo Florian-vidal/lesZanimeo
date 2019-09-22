@@ -48,6 +48,7 @@
     height: 15%;
     background: #f1f2f3;
     border-radius: 0 0 0 0;
+    font-size: 25px;
   }
 
   .head {
@@ -164,164 +165,166 @@
     width: 20%;
   }
 
-  /*----------------------------------------------------FAMILY--------------------------------------------------------*/
-  .sideFamily1, .sideFamily2 {
-    display: none;
-  }
+  @media screen and (max-width: 640px) {
 
-  .farmFamily {
-    width: 80%;
-  }
+    /*----------------------------------------------------FAMILY--------------------------------------------------------*/
+    .sideFamily1, .sideFamily2 {
+      display: none;
+    }
 
-  .bugsFamily {
-    width: 80%;
-  }
+    .farmFamily {
+      width: 80%;
+    }
 
-  .birdsFamily {
-    width: 80%;
-  }
+    .bugsFamily {
+      width: 80%;
+    }
 
-  .titleBugs {
-    position: absolute;
-    top: 15%;
-  }
+    .birdsFamily {
+      width: 80%;
+    }
 
-  .titleBirds {
-    position: absolute;
-    top: 17%;
-  }
+    .titleBugs {
+      position: absolute;
+      top: 15%;
+    }
 
-  /*----------------------------------------------------HITBOX--------------------------------------------------------*/
-  .dog {
-    width: 13%;
-    top: 37%;
-    right: 14%;
-  }
+    .titleBirds {
+      position: absolute;
+      top: 17%;
+    }
 
-  .horse {
-    top: 23%;
-  }
+    /*----------------------------------------------------HITBOX--------------------------------------------------------*/
+    .dog {
+      width: 13%;
+      top: 37%;
+      right: 14%;
+    }
 
-  .pig {
-    top: 41%;
-    left: 51%;
-    width: 18%;
-  }
+    .horse {
+      top: 23%;
+    }
 
-  .rabbit {
-    top: 31%;
-    left: 57%;
-  }
+    .pig {
+      top: 41%;
+      left: 51%;
+      width: 18%;
+    }
 
-  .sheep {
-    top: 39%;
-    left: 37%;
-  }
+    .rabbit {
+      top: 31%;
+      left: 57%;
+    }
 
-  .cow {
-    width: 18%;
-    top: 30%;
-    left: 15%;
-  }
+    .sheep {
+      top: 39%;
+      left: 37%;
+    }
 
-  .pheasant {
-    width: 16%;
-    top: 41%;
-    left: 48%;
-  }
+    .cow {
+      width: 18%;
+      top: 30%;
+      left: 15%;
+    }
 
-  .toucan {
-    width: 15%;
-    top: 22%;
-    left: 11%;
-  }
+    .pheasant {
+      width: 16%;
+      top: 41%;
+      left: 48%;
+    }
 
-  .peacock {
-    width: 19%;
-    top: 32%;
-    left: 30%;
-  }
+    .toucan {
+      width: 15%;
+      top: 22%;
+      left: 11%;
+    }
 
-  .parrot {
-    width: 15%;
-    top: 33%;
-    left: 59%;
-  }
+    .peacock {
+      width: 19%;
+      top: 32%;
+      left: 30%;
+    }
 
-  .penguin {
-    width: 15%;
-    top: 36%;
-    left: 75%;
-  }
+    .parrot {
+      width: 15%;
+      top: 33%;
+      left: 59%;
+    }
 
-  .parakeet {
-    width: 15%;
-    top: 40%;
-    left: 16%;
-  }
+    .penguin {
+      width: 15%;
+      top: 36%;
+      left: 75%;
+    }
 
-  .ladyBird {
-    width: 12%;
-    top: 41%;
-    left: 69%;
-  }
+    .parakeet {
+      width: 15%;
+      top: 40%;
+      left: 16%;
+    }
 
-  .snail {
-    width: 13%;
-    top: 45%;
-    left: 55%;
-  }
+    .ladyBird {
+      width: 12%;
+      top: 41%;
+      left: 69%;
+    }
 
-  .grasshopper {
-    width: 12%;
-    top: 32%;
-    left: 51%;
-  }
+    .snail {
+      width: 13%;
+      top: 45%;
+      left: 55%;
+    }
 
-  .caterpillar {
-    width: 18%;
-    top: 45%;
-    left: 28%;
-  }
+    .grasshopper {
+      width: 12%;
+      top: 32%;
+      left: 51%;
+    }
 
-  .spider {
-    width: 28%;
-    top: 36%;
-    left: 15%;
-  }
+    .caterpillar {
+      width: 18%;
+      top: 45%;
+      left: 28%;
+    }
 
-  .dragonfly {
-    width: 23%;
-    top: 22%;
-    left: 62%;
-  }
+    .spider {
+      width: 28%;
+      top: 36%;
+      left: 15%;
+    }
 
-  /* --------------------------------------------------ANIMALS--------------------------------------------------------*/
-  .questionNumber {
-    margin-top: 100px;
-  }
+    .dragonfly {
+      width: 23%;
+      top: 22%;
+      left: 62%;
+    }
 
-  .titleAnimals {
-    font-size: 50px;
-    margin-top: 100px;
-  }
+    /* --------------------------------------------------ANIMALS--------------------------------------------------------*/
+    .questionNumber {
+      margin-top: 100px;
+    }
 
-  .contentAnimals {
-    flex-wrap: wrap;
-  }
+    .titleAnimals {
+      font-size: 50px;
+      margin-top: 100px;
+    }
 
-  .animalPicture {
-    width: 50%;
-    margin: 0 auto;
-  }
+    .contentAnimals {
+      flex-wrap: wrap;
+    }
 
-  .animalStory {
-    width: 80%;
-  }
+    .animalPicture {
+      width: 50%;
+      margin: 0 auto;
+    }
 
-  figure {
-    width: 100%;
-    margin: 0;
-  }
+    .animalStory {
+      width: 80%;
+    }
 
+    figure {
+      width: 100%;
+      margin: 0;
+    }
+  }
 }

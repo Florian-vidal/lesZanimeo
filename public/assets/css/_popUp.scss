@@ -2,15 +2,15 @@
   padding: 10px;
   position: absolute;
   background: white;
-  color: #94EB00;
-  border: 1px solid #94EB00;
+  color: $green;
+  border: 1px solid $green;
   box-shadow: 3px 3px 5px -1px rgba(207,207,207,0.5);
   display: none;
   font-size: x-large;
 }
 
 #m, #q, #a, #f, #r, .animalText, #popUpFamily, #popUpFamilyAnnexes1, #popUpFamilyAnnexes2 {
-  color: #64CC00;
+  color: $green;
   text-align: center;
   font-size: x-large;
 }

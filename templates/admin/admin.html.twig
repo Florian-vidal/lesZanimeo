@@ -32,7 +32,14 @@
                                     <!--------------------------BOUTONS MODIF ET SUPPR ANIMAL--------------------------------->
                                     <div class="pull-right action-buttons">
                                         <a href="{{ path('form_animals_update', {'id': element.id}) }}"><span class="glyphicon glyphicon-pencil"></span></a>
-                                        <a href="{{ path('animals_delete', {'id': element.id}) }}"><span class="glyphicon glyphicon-trash"></span></a>
+                                        <span class="glyphicon glyphicon-trash deleteSecurity"></span></a>
+                                    </div>
+                                    <div class="deleteSecurityModal">
+                                        <p class="valid">Voulez-vous vraiment supprimer ?</p>
+                                        <div class="securityResponses">
+                                            <a href="{{ path('animals_delete', {'id': element.id}) }}"><button type="button" class="btn btn-primary">Oui</button></a>&nbsp;&nbsp;
+                                            <button type="button" class="btn btn-danger closeModal">Non</button>
+                                        </div>
                                     </div>
                                 </li>
                             {% endfor %}
@@ -63,7 +70,14 @@
                                     <!--------------------------BOUTONS MODIF ET SUPPR QUESTION--------------------------------->
                                     <div class="pull-right action-buttons">
                                         <a href="{{ path('form_questions_update', {'id': element.id}) }}"><span class="glyphicon glyphicon-pencil"></span></a>
-                                        <a href="{{ path('questions_delete', {'id': element.id}) }}"><span class="glyphicon glyphicon-trash"></span></a>
+                                        <span class="glyphicon glyphicon-trash deleteSecurity"></span></a>
+                                    </div>
+                                    <div class="deleteSecurityModal">
+                                        <p class="valid">Voulez-vous vraiment supprimer ?</p>
+                                        <div class="securityResponses">
+                                            <a href="{{ path('questions_delete', {'id': element.id}) }}"><button type="button" class="btn btn-primary">Oui</button></a>&nbsp;&nbsp;
+                                            <button type="button" class="btn btn-danger closeModal">Non</button>
+                                        </div>
                                     </div>
                                 </li>
                             {% endfor %}
@@ -95,7 +109,14 @@
                                     <!--------------------------BOUTONS MODIF ET SUPPR REPONSE--------------------------------->
                                     <div class="pull-right action-buttons">
                                         <a href="{{ path('form_responses_update', {'id': element.id}) }}"><span class="glyphicon glyphicon-pencil"></span></a>
-                                        <a href="{{ path('responses_delete', {'id': element.id}) }}"><span class="glyphicon glyphicon-trash"></span></a>
+                                        <span class="glyphicon glyphicon-trash deleteSecurity"></span></a>
+                                    </div>
+                                    <div class="deleteSecurityModal">
+                                        <p class="valid">Voulez-vous vraiment supprimer ?</p>
+                                        <div class="securityResponses">
+                                            <a href="{{ path('responses_delete', {'id': element.id}) }}"><button type="button" class="btn btn-primary">Oui</button></a>&nbsp;&nbsp;
+                                            <button type="button" class="btn btn-danger closeModal">Non</button>
+                                        </div>
                                     </div>
                                 </li>
                             {% endfor %}
@@ -103,6 +124,8 @@
                     </div>
                 </div>
             </div>
+
+
 
 
 

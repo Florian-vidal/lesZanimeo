@@ -20,6 +20,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class AdminController extends AbstractController
 {
+
     // ROUTE DE L'ESPACE ADMIN ACCUEIL -----------------------------------------------------------------------------------------
     /**
      * @Route("/admin", name="admin")
@@ -30,8 +31,12 @@ class AdminController extends AbstractController
         $questions = $questionsRepository->findAll();
         $responses = $responsesRepository->findAll();
 
+        // Si l'utilisateur est authentifié
         if ($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')) {
+
+            // Si l'utilisateur est un admin, il a accès à l'espace admin
             if ($this->container->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
+
                 return $this->render('admin/admin.html.twig',
                     [
                         'animals'=>$animals,
@@ -39,9 +44,13 @@ class AdminController extends AbstractController
                         'responses'=>$responses
                     ]
                 );
+
+                // Sinon, il est redirigé vers l'accueil
             } else {
                 return $this->redirectToRoute('home_lesZanimeo');
             }
+
+            // Sinon, il est redirigé vers la page de connexion
         } else {
             return $this->redirectToRoute('fos_user_security_login');
         }
@@ -275,13 +284,6 @@ class AdminController extends AbstractController
     // ROUTE DE L'INSERT REPONSES ESPACE ADMIN ----------------------------------------------------------------------------------
     /**
      * @Route("/admin/form_responses_insert", name="form_responses_insert")
-     * Méthode qui permet d'ajouter un animal
-     * Je créé tout d'abord mon formulaire d'insertion dans mon fichier Twig "adminAnimalsInsert.html.twig" avec la variable "formAnimalsView".
-     * Cette variable est générée grâce à la méthode "createView" présente ci-dessous.
-     * La variable stocke le résultat de la méthode "createForm" qui a pour but de générer une représentation abstraite du formulaire (objet)
-     * + l'instance de l'entité Animaux. "Handle Request" fait le lien entre les données entrées et le formulaire.
-     * J'ai implémenté une méthode pour pouvoir chercher une image depuis son ordinateur grâce à un bouton "choisir un fichier".
-     * Aussi, j'ai mis en place un message de confirmation ou d'infirmation en cas de résussite/échec de soumission du formulaire.
      */
     public function insertResponses(Request $request, EntityManagerInterface $entityManager, ResponsesRepository $responsesRepository)
     {

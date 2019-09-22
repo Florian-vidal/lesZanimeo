@@ -1,3 +1,13 @@
+$(document).ready(function(){
+    $('.deleteSecurity').on('click', function() {
+        $('.deleteSecurityModal').fadeIn();
+    });
+
+    $('.closeModal').on('click', function() {
+        $('.deleteSecurityModal').fadeOut();
+    });
+});
+
 $( document ).ready(function() {
     $('.btn-next').on('click', function() {
         if ($('.contentTextQuiz h1').text('BRAVO, BONNE REPONSE !')) {

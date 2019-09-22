@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AnimauxController extends AbstractController
 {
+
     // ROUTE DES ANIMAUX DE LA FERME ----------------------------------------------------------------------------------
     /**
      * @Route("farm", name="farm_page")
@@ -16,6 +17,7 @@ class AnimauxController extends AbstractController
     {
         return $this->render('farm.html.twig');
     }
+
 
     // ROUTE DES INSECTES ----------------------------------------------------------------------------------------------
     /**
@@ -26,6 +28,7 @@ class AnimauxController extends AbstractController
         return $this->render('bugs.html.twig');
     }
 
+
     // ROUTE DES OISEAUX -----------------------------------------------------------------------------------------------
     /**
      * @Route("birds", name="birds_page")
@@ -34,6 +37,7 @@ class AnimauxController extends AbstractController
     {
         return $this->render('birds.html.twig');
     }
+
 
     // ROUTE DES ANIMAUX ----------------------------------------------------------------------------------------------
     /**

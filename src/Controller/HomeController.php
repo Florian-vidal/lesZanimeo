@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Repository\FamillesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -21,14 +20,9 @@ class HomeController extends AbstractController
     /**
      * @Route("home", name="home_lesZanimeo")
      */
-    public function indexController(FamillesRepository $famillesRepository)
+    public function indexController()
     {
-        $familles = $famillesRepository->findAll();
-        return $this->render('home.html.twig',
-            [
-                'familles'=>$familles
-            ]
-        );
+        return $this->render('home.html.twig');
     }
 
 }

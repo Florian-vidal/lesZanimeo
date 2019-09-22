@@ -107,7 +107,9 @@
 
 /*-----------------------------------------------FAMILLES ANIMAUX ANNEXES---------------------------------------------*/
 .sideFamily1, .sideFamily2 {
+  /*
   cursor: pointer;
+  */
   width: 15%;
   opacity: 0.5;
   transition-property: transform;
@@ -140,14 +142,14 @@
 /*--------------------------------------------------------HITBOX------------------------------------------------------*/
 .dog {
   width: 10%;
-  top: 52%;
-  right: 25%;
+  top: 50%;
+  right: 28%;
 }
 
 .horse {
-  width: 15%;
-  top: 20%;
-  left: 40%;
+  width: 11%;
+  top: 28%;
+  left: 41%;
 }
 
 .pig {
