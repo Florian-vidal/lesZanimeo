@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\AnimauxRepository;
 use Swift_Attachment;
 use Symfony\Component\HttpFoundation\Request;
 use App\Repository\QuestionsRepository;
@@ -27,7 +28,7 @@ class QuizController extends AbstractController
     /**
      * @Route("question{id}/{goodResponses}", name="questions")
      */
-    public function questionsController($goodResponses, QuestionsRepository $questionsRepository, ResponsesRepository $responsesRepository, $id)
+    public function questionsController($id, $goodResponses, QuestionsRepository $questionsRepository, ResponsesRepository $responsesRepository)
     {
         // Avec la méthode find du repository, je récupère les questions et les responses dans la BDD qui a l'id qui
         // correspond à la wildcard(id) et je les stockent dans deux nouvelles variables puis je les envoient à la vue
@@ -102,7 +103,7 @@ class QuizController extends AbstractController
                 $message->attach(Swift_Attachment::fromPath('assets/img/main/certificat.jpg') ->setDisposition('inline'));
 
                 $mailer->send($message);
-                $this->addFlash('Success', 'Le score a bien été envoyé !');
+                $this->addFlash('Success', 'Le score a bien été envoyé, va vite voir ta boîte mail !');
             }
         }
 

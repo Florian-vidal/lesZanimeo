@@ -120,7 +120,7 @@ h1 {
 
 .popUpRegistration {
   top: 13%;
-  right: 27%;
+  right: 31%;
   border-radius: 10px 10px 10px 10px; }
 
 .dog .animalText, .horse .animalText, .pig .animalText, .rabbit .animalText, .sheep .animalText, .cow .animalText,
@@ -502,10 +502,10 @@ h1 {
   margin: 50px auto; }
 
 .bravoResponse {
-  color: #4E8F00; }
+  color: #1ED33C; }
 
 .desoleResponse {
-  color: #C82333; }
+  color: #FF4933; }
 
 .questionMessage {
   color: #5eb5e0; }
@@ -538,15 +538,17 @@ h1 {
   width: 70%;
   position: absolute;
   left: 50%;
-  top: 18%;
   transform: translateX(-50%);
   z-index: -1;
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
   animation-duration: 1.5s; }
 
+.titleFarm {
+  top: 15%; }
+
 .titleBugs {
-  top: 0; }
+  top: -5%; }
 
 .titleBirds {
   top: 8%; }

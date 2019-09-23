@@ -16,7 +16,7 @@ class ContactType extends AbstractType
             ->add('prenom')
             ->add('email')
             ->add('message')
-            ->add('enregistrer', SubmitType::class)
+            ->add('envoyer', SubmitType::class)
         ;
     }
 

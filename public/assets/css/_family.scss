@@ -6,7 +6,6 @@
   width: 70%;
   position: absolute;
   left: 50%;
-  top: 18%;
   transform: translateX(-50%);
   z-index: -1;
   -webkit-animation-name: fadeIn;
@@ -14,8 +13,13 @@
   animation-duration: 1.5s;
 }
 
+.titleFarm {
+  top: 15%;
+
+}
+
 .titleBugs {
-  top: 0;
+  top: -5%;
 }
 
 .titleBirds {
