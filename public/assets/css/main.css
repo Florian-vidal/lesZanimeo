@@ -556,7 +556,7 @@ h1 {
 .titleFarm img, .titleBugs img, .titleBirds img {
   width: 100%; }
 
-/*------------------------------------------------FONDU TITLE FAMILY--------------------------------------------------*/
+/*------------------FONDU TITLE FAMILY------------------------*/
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0; }
@@ -589,7 +589,8 @@ h1 {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
-/*--------------END FONDU---------------*/
+/*---------------------------END FONDU------------------------*/
+/*-----------------------------------------------FAMILLES ANIMAUX---------------------------------------------*/
 .contentFamily {
   width: 100%;
   margin-bottom: 50px;
@@ -598,7 +599,7 @@ h1 {
   align-items: baseline; }
 
 .farmFamily {
-  width: 46%; }
+  width: 50%; }
 
 .bugsFamily {
   width: 43%; }
@@ -930,9 +931,13 @@ figure {
   .birdsFamily {
     width: 80%; }
 
+  .titleFarm {
+    position: absolute;
+    top: 20%; }
+
   .titleBugs {
     position: absolute;
-    top: 15%; }
+    top: 14%; }
 
   .titleBirds {
     position: absolute;
